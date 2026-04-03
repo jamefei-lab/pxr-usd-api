@@ -1,0 +1,40 @@
+Repository Licensing Notice
+
+This repository contains a mixture of:
+
+1. Third-party mirrored documentation materials and branding-derived assets.
+2. Original repository-authored scripts, annotations, editorial notes, and structural modifications.
+
+Third-Party Materials
+
+Third-party documentation content, trademarks, logos, and branding remain the property of their respective owners. No license is granted by this repository for third-party materials except to the extent independently permitted by the applicable rights holder or by law.
+
+Original Repository Contributions
+
+Except where otherwise noted, original repository-authored scripts, code changes, editorial annotations, and explanatory additions in this repository are licensed under the MIT License below.
+
+MIT License
+
+Copyright (c) 2026 jamefei-lab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+This license applies only to original repository-authored contributions and
+does not supersede or replace any rights applicable to third-party materials
+included in this repository.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

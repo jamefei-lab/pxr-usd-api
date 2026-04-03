@@ -1,0 +1,33 @@
+NOTICE
+
+Project: Unofficial pxr USD API Reference
+Repository: https://github.com/jamefei-lab/pxr-usd-api
+
+This repository is an unofficial community-maintained reference for the NVIDIA Omniverse `pxr` Python API.
+
+Non-affiliation
+
+This project is not affiliated with, endorsed by, sponsored by, or approved by NVIDIA.
+
+Trademarks
+
+NVIDIA, Omniverse, and related names, marks, and logos are trademarks or registered trademarks of NVIDIA and their respective owners.
+
+Source references
+
+- NVIDIA Omniverse pxr Python documentation:
+  https://docs.omniverse.nvidia.com/kit/docs/pxr-usd-api/latest/pxr.html
+- OpenUSD C++ API reference:
+  https://openusd.org/release/api/index.html
+
+Purpose
+
+This repository republishes mirrored documentation structure and adds locally validated Python signatures, runtime-tested notes, and editorial annotations for compatibility research and developer reference.
+
+Copyright and ownership
+
+Original mirrored documentation content, third-party assets, and branding-derived materials remain the property of their respective owners. Repository-authored scripts, annotations, and editorial additions are described in the repository LICENSE file.
+
+Accuracy
+
+Where possible, API signatures and return values are validated against a local Kit 110.0.0 runtime. When a detail cannot be verified confidently, the documentation is intentionally conservative.

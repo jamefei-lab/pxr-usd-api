@@ -51,23 +51,30 @@ def insert_banner(text: str, prefix: str) -> str:
     banner = f"""
   <div class="unofficial-site-banner" role="note">
     <strong>Unofficial reference.</strong> This site is community-maintained and is not affiliated with, endorsed by, or sponsored by NVIDIA.
-    API names follow the NVIDIA Omniverse pxr Python docs; signatures are locally validated against Kit 110.0.0 where possible.
-    See the <a href="https://docs.omniverse.nvidia.com/kit/docs/pxr-usd-api/latest/pxr.html" rel="noopener" target="_blank">official NVIDIA docs</a>
-    and <a href="https://openusd.org/release/api/index.html" rel="noopener" target="_blank">OpenUSD C++ reference</a>.
+    It republishes and annotates mirrored documentation for compatibility research and developer reference only.
+    See the <a href="{prefix}about.html">About / Legal Notice</a>,
+    the <a href="https://docs.omniverse.nvidia.com/kit/docs/pxr-usd-api/latest/pxr.html" rel="noopener" target="_blank">official NVIDIA docs</a>,
+    and the <a href="https://openusd.org/release/api/index.html" rel="noopener" target="_blank">OpenUSD C++ reference</a>.
   </div>
 """
-    marker = "</div>\n\n  \n    <header class=\"bd-header navbar navbar-expand-lg bd-navbar d-print-none\">"
-    if "unofficial-site-banner" in text:
-        return text
-    return text.replace(
-        '<div class="pst-async-banner-revealer d-none">\n  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>\n</div>',
-        '<div class="pst-async-banner-revealer d-none">\n  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>\n</div>'
-        + banner,
+    updated = re.sub(
+        r'\s*<div class="unofficial-site-banner" role="note">.*?</div>\s*',
+        "\n",
+        text,
+        count=1,
+        flags=re.S,
+    )
+    return re.sub(
+        r'(<div class="pst-async-banner-revealer d-none">\s*<aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>\s*</div>)',
+        r"\1" + banner,
+        updated,
+        count=1,
+        flags=re.S,
     )
 
 
 def replace_footer(text: str, prefix: str) -> str:
-    footer = """
+    footer = f"""
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
   <div class="footer-items__start">
@@ -83,7 +90,7 @@ def replace_footer(text: str, prefix: str) -> str:
     <div class="footer-item"><p class="last-updated">
       This site republishes and annotates documentation for compatibility research and internal developer reference.
       <br/>
-      Prefer the official docs for canonical source material.
+      See the <a href="{prefix}about.html">About / Legal Notice</a> page and prefer the official docs for canonical source material.
     </p></div>
   </div>
 </div>
@@ -102,24 +109,27 @@ def replace_footer(text: str, prefix: str) -> str:
 def append_css() -> None:
     css_path = ROOT / "_static" / "custom.css"
     css = css_path.read_text(encoding="utf-8")
-    marker = "/* unofficial site de-branding */"
-    if marker in css:
-        return
-    css += """
+    block = """
 
 /* unofficial site de-branding */
 .unofficial-site-banner {
-    background: #fff4d6;
-    border-bottom: 1px solid #e7d09a;
-    color: #3a2e08;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    padding: 0.85rem 1.25rem;
+    background: linear-gradient(90deg, #fff1eb 0%, #ffe5db 100%);
+    border-bottom: 2px solid #cf5c36;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+    color: #561f0d;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    padding: 0.95rem 1.25rem;
 }
 
 .unofficial-site-banner a {
-    color: #6b4d00;
+    color: #8a2f11;
+    font-weight: 600;
     text-decoration: underline;
+}
+
+.unofficial-site-banner strong {
+    color: #8f1d00;
 }
 
 .docs-brand {
@@ -142,7 +152,60 @@ def append_css() -> None:
     font-size: 1.1rem;
     margin: 0;
 }
+
+.notice-card {
+    background: linear-gradient(180deg, #fff9f5 0%, #fff3eb 100%);
+    border: 1px solid #f0c0ab;
+    border-left: 6px solid #cf5c36;
+    border-radius: 10px;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 1.1rem;
+}
+
+.notice-card h2,
+.notice-card p {
+    margin-top: 0;
+}
+
+.notice-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.9rem;
+}
+
+.notice-card__actions a {
+    border: 1px solid #cf5c36;
+    border-radius: 999px;
+    color: #8f1d00;
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+}
+
+.notice-card__actions a:hover {
+    background: rgba(207, 92, 54, 0.08);
+}
+
+.legal-page h1 {
+    margin-bottom: 1rem;
+}
+
+.legal-page h2 {
+    margin-top: 1.8rem;
+}
 """
+    if "/* unofficial site de-branding */" in css:
+        css = re.sub(
+            r"\n/\* unofficial site de-branding \*/.*",
+            block,
+            css,
+            count=1,
+            flags=re.S,
+        )
+    else:
+        css += block
     css_path.write_text(css, encoding="utf-8")
 
 
