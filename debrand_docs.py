@@ -38,6 +38,26 @@ def replace_nav_brand(text: str, prefix: str) -> str:
     )
 
 
+def insert_legal_nav_link(text: str, prefix: str) -> str:
+    link = (
+        f'<div class="navbar-item"><a class="legal-nav-link" href="{prefix}about.html">About / Legal Notice</a></div>\n'
+    )
+    if 'class="legal-nav-link"' in text:
+        text = re.sub(
+            r'<div class="navbar-item"><a class="legal-nav-link" href="[^"]+">About / Legal Notice</a></div>\s*',
+            "",
+            text,
+            count=1,
+            flags=re.S,
+        )
+    return re.sub(
+        r'(<div class="me-auto navbar-header-items__center">\s*)',
+        r"\1" + link,
+        text,
+        count=1,
+    )
+
+
 def remove_social_links(text: str) -> str:
     return re.sub(
         r'<div class="navbar-item"><ul class="navbar-icon-links".*?</ul></div>',
@@ -218,6 +238,7 @@ def main() -> None:
         updated = text
         updated = replace_titles(updated)
         updated = replace_nav_brand(updated, prefix)
+        updated = insert_legal_nav_link(updated, prefix)
         updated = remove_social_links(updated)
         updated = insert_banner(updated, prefix)
         updated = replace_footer(updated, prefix)
