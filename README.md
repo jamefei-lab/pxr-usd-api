@@ -1,8 +1,13 @@
 # pxr-usd-api
 
-Enhanced offline HTML docs for NVIDIA Omniverse Kit `pxr` Python APIs.
+Unofficial community-maintained reference for NVIDIA Omniverse Kit `pxr` Python APIs.
 
-This repository contains a locally mirrored copy of the NVIDIA `pxr-usd-api` docs for Kit `110.0.0`, with progressively enriched Python signatures, return types, and notes validated from local Kit runtime behavior where possible.
+This repository contains an annotated mirror of the NVIDIA `pxr-usd-api` docs for Kit `110.0.0`, with progressively enriched Python signatures, return types, and notes validated from local Kit runtime behavior where possible.
+
+This project is not affiliated with, endorsed by, or sponsored by NVIDIA. NVIDIA, Omniverse, and related marks are trademarks or registered trademarks of NVIDIA and their respective owners. Prefer the official NVIDIA documentation for canonical source material:
+
+- [NVIDIA pxr Python docs](https://docs.omniverse.nvidia.com/kit/docs/pxr-usd-api/latest/pxr.html)
+- [OpenUSD C++ API docs](https://openusd.org/release/api/index.html)
 
 ## Online docs
 

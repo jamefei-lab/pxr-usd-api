@@ -108,3 +108,40 @@ body.modal-open #pst-back-to-top {
 .modal-header {
     flex-direction: row-reverse;
 }
+
+
+/* unofficial site de-branding */
+.unofficial-site-banner {
+    background: #fff4d6;
+    border-bottom: 1px solid #e7d09a;
+    color: #3a2e08;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0.85rem 1.25rem;
+}
+
+.unofficial-site-banner a {
+    color: #6b4d00;
+    text-decoration: underline;
+}
+
+.docs-brand {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-decoration: none;
+}
+
+.docs-brand__eyebrow {
+    color: var(--pst-color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.docs-brand .logo__title {
+    font-size: 1.1rem;
+    margin: 0;
+}
