@@ -2709,6 +2709,21 @@
 </tbody>
 </table>
 </div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Mesh.SetNormalsInterpolation">
+<span class="sig-name descname"><span class="pre">SetNormalsInterpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">interpolation:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Mesh.SetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd><p>Sets the interpolation token used for this mesh's normals.</p><p><strong>Parameters:</strong> interpolation (str) - Common values include <code class="docutils literal notranslate"><span class="pre">UsdGeom.Tokens.vertex</span></code> and <code class="docutils literal notranslate"><span class="pre">UsdGeom.Tokens.faceVarying</span></code>.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Mesh.GetNormalsAttr">
+<span class="sig-name descname"><span class="pre">GetNormalsAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Usd.Attribute</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Mesh.GetNormalsAttr" title="Link to this definition">#</a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">normals</span></code> attribute on this mesh.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Usd.Attribute.</p></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Mesh.GetPointsAttr">
+<span class="sig-name descname"><span class="pre">GetPointsAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Usd.Attribute</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Mesh.GetPointsAttr" title="Link to this definition">#</a></dt>
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">points</span></code> attribute on this mesh.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Usd.Attribute.</p></dd></dl>
+
 <p><strong>Attributes:</strong></p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
@@ -2781,7 +2796,9 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdGeom.Mesh.Define">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">stage:</span> <span class="pre">Usd.Stage</span></em>, <em class="sig-param"><span class="pre">path:</span> <span class="pre">Sdf.Path | str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.Mesh</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Mesh.Define" title="Link to this definition">#</a></dt>
-<dd><p>Defines a Mesh prim at the given path on the stage.</p><p><strong>Parameters:</strong> stage (Usd.Stage); path (Sdf.Path | str).</p><p><strong>Returns:</strong> UsdGeom.Mesh - The defined schema object.</p></dd></dl>
+<dd><p>Defines a mesh prim at the given path on the stage.</p><p><strong>Parameters:</strong> stage (Usd.Stage); path (Sdf.Path | str).</p><p><strong>Returns:</strong> UsdGeom.Mesh.</p></dd></dl>
+
+
 
 
 

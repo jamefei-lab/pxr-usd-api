@@ -762,6 +762,11 @@
 </table>
 </div>
 <dl class="py method">
+<dt class="sig sig-object py" id="pxr.Usd.Attribute.IsValid">
+<span class="sig-name descname"><span class="pre">IsValid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Attribute.IsValid" title="Link to this definition">#</a></dt>
+<dd><p>Returns whether this attribute is valid.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Attribute.AddConnection">
 <span class="sig-name descname"><span class="pre">AddConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">source:</span> <span class="pre">Sdf.Path | str</span></em>, <em class="sig-param"><span class="pre">position:</span> <span class="pre">Usd.ListPosition = Usd.ListPositionBackOfPrependList</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Attribute.AddConnection" title="Link to this definition">#</a></dt>
 <dd><p>Adds a connection target to this attribute.</p><p><strong>Parameters:</strong> source (Sdf.Path | str); position (Usd.ListPosition), default Usd.ListPositionBackOfPrependList.</p><p><strong>Returns:</strong> bool - True if the operation succeeds or the condition is met; otherwise False.</p></dd></dl>
@@ -4244,6 +4249,26 @@
 </table>
 </div>
 <dl class="py method">
+<dt class="sig sig-object py" id="pxr.Usd.Prim.GetName">
+<span class="sig-name descname"><span class="pre">GetName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.GetName" title="Link to this definition">#</a></dt>
+<dd><p>Returns the name of this prim.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> str.</p></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Usd.Prim.GetStage">
+<span class="sig-name descname"><span class="pre">GetStage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Usd.Stage</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.GetStage" title="Link to this definition">#</a></dt>
+<dd><p>Returns the stage that owns this prim.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Usd.Stage.</p></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Usd.Prim.GetPath">
+<span class="sig-name descname"><span class="pre">GetPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sdf.Path</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.GetPath" title="Link to this definition">#</a></dt>
+<dd><p>Returns the path of this prim.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Sdf.Path.</p></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Usd.Prim.IsValid">
+<span class="sig-name descname"><span class="pre">IsValid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.IsValid" title="Link to this definition">#</a></dt>
+<dd><p>Returns whether this prim is valid.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.AddAppliedSchema">
 <span class="sig-name descname"><span class="pre">AddAppliedSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">appliedSchemaName:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.AddAppliedSchema" title="Link to this definition">#</a></dt>
 <dd><p>Adds an applied API schema to this prim.</p><p><strong>Parameters:</strong> appliedSchemaName (str).</p><p><strong>Returns:</strong> bool - True if the operation succeeds or the condition is met; otherwise False.</p></dd></dl>
@@ -4301,7 +4326,9 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.CreateRelationship">
 <span class="sig-name descname"><span class="pre">CreateRelationship</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name:</span> <span class="pre">str | list[str]</span></em>, <em class="sig-param"><span class="pre">custom:</span> <span class="pre">bool = True</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Usd.Relationship</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.CreateRelationship" title="Link to this definition">#</a></dt>
-<dd><p>Creates a relationship on this prim.</p><p><strong>Parameters:</strong> name (str | list[str]); custom (bool), default True.</p><p><strong>Returns:</strong> Usd.Relationship - The resulting value.</p></dd></dl>
+<dd><p>Creates a relationship on this prim.</p><p><strong>Parameters:</strong> name (str | list[str]); custom (bool), default <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p><p><strong>Returns:</strong> Usd.Relationship.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.FindAllAttributeConnectionPaths">
@@ -4431,7 +4458,9 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.GetParent">
 <span class="sig-name descname"><span class="pre">GetParent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Usd.Prim</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.GetParent" title="Link to this definition">#</a></dt>
-<dd><p>Returns the parent for this prim.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Usd.Prim - The resulting value.</p></dd></dl>
+<dd><p>Returns the parent prim of this prim.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Usd.Prim - The parent prim, or an invalid prim if this prim has no parent.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.GetPayloads">
@@ -4576,7 +4605,9 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.HasAttribute">
 <span class="sig-name descname"><span class="pre">HasAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">attrName:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.HasAttribute" title="Link to this definition">#</a></dt>
-<dd><p>Returns whether this prim has attribute.</p><p><strong>Parameters:</strong> attrName (str).</p><p><strong>Returns:</strong> bool - True if the operation succeeds or the condition is met; otherwise False.</p></dd></dl>
+<dd><p>Returns whether this prim has an attribute with the given name.</p><p><strong>Parameters:</strong> attrName (str).</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.HasAuthoredActive">
@@ -4651,7 +4682,9 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.IsActive">
 <span class="sig-name descname"><span class="pre">IsActive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.IsActive" title="Link to this definition">#</a></dt>
-<dd><p>Returns whether this prim is active.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> bool - True if the operation succeeds or the condition is met; otherwise False.</p></dd></dl>
+<dd><p>Returns whether this prim is active.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.IsComponent">

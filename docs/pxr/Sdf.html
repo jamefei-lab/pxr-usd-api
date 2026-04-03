@@ -6621,8 +6621,10 @@ the timeCode range of the layer.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Sdf.Path.AppendPath">
-<span class="sig-name descname"><span class="pre">AppendPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Sdf.Path.AppendPath" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">AppendPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">path:</span> <span class="pre">Sdf.Path | str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sdf.Path</span></span></span><a class="headerlink" href="#pxr.Sdf.Path.AppendPath" title="Link to this definition">#</a></dt>
+<dd><p>Returns a new path with the given path appended.</p><p><strong>Parameters:</strong> path (Sdf.Path | str).</p><p><strong>Returns:</strong> Sdf.Path.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Sdf.Path.AppendProperty">
@@ -6811,8 +6813,10 @@ the timeCode range of the layer.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Sdf.Path.IsValidIdentifier">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsValidIdentifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Sdf.Path.IsValidIdentifier" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsValidIdentifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Sdf.Path.IsValidIdentifier" title="Link to this definition">#</a></dt>
+<dd><p>Checks whether the given string is a valid USD identifier.</p><p><strong>Parameters:</strong> name (str).</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Sdf.Path.IsValidNamespacedIdentifier">
@@ -6821,8 +6825,10 @@ the timeCode range of the layer.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Sdf.Path.IsValidPathString">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsValidPathString</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Sdf.Path.IsValidPathString" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsValidPathString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">pathString:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sdf._IsValidPathStringResult</span></span></span><a class="headerlink" href="#pxr.Sdf.Path.IsValidPathString" title="Link to this definition">#</a></dt>
+<dd><p>Checks whether the given string is a valid Sdf path string.</p><p><strong>Parameters:</strong> pathString (str).</p><p><strong>Returns:</strong> Sdf._IsValidPathStringResult - A bool-like result that also carries the validation reason.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Sdf.Path.JoinIdentifier">

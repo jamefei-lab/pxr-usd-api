@@ -2654,8 +2654,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Output.ConnectToSource">
-<span class="sig-name descname"><span class="pre">ConnectToSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">source:</span> <span class="pre">UsdShade.Input | UsdShade.Output | Sdf.Path</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdShade.Output.ConnectToSource" title="Link to this definition">#</a></dt>
-<dd><p>Connects this output to a source input, output, or source path.</p><p><strong>Parameters:</strong> source (UsdShade.Input | UsdShade.Output | Sdf.Path).</p><p><strong>Returns:</strong> bool - True if the connection is authored successfully.</p></dd></dl>
+<span class="sig-name descname"><span class="pre">ConnectToSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">source:</span> <span class="pre">UsdShade.Output | UsdShade.Input | Sdf.Path | UsdShade.ConnectableAPI</span></em>, <em class="sig-param"><span class="pre">sourceName:</span> <span class="pre">str | None = None</span></em>, <em class="sig-param"><span class="pre">sourceType:</span> <span class="pre">UsdShade.AttributeType = UsdShade.AttributeType.Output</span></em>, <em class="sig-param"><span class="pre">typeName:</span> <span class="pre">Sdf.ValueTypeName = Sdf.ValueTypeName()</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdShade.Output.ConnectToSource" title="Link to this definition">#</a></dt>
+<dd><p>Connects this output to another shade source.</p><p><strong>Parameters:</strong> source (UsdShade.Output | UsdShade.Input | Sdf.Path | UsdShade.ConnectableAPI); sourceName (str | None), default None; sourceType (UsdShade.AttributeType), default <code class="docutils literal notranslate"><span class="pre">UsdShade.AttributeType.Output</span></code>; typeName (Sdf.ValueTypeName), default empty type name.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+
 
 
 
@@ -2939,8 +2941,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.ConnectableAPI">
-<span class="sig-name descname"><span class="pre">ConnectableAPI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdShade.Shader.ConnectableAPI" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">ConnectableAPI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdShade.ConnectableAPI</span></span></span><a class="headerlink" href="#pxr.UsdShade.Shader.ConnectableAPI" title="Link to this definition">#</a></dt>
+<dd><p>Returns a connectable API wrapper for this shader.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> UsdShade.ConnectableAPI.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.CreateIdAttr">
@@ -2961,8 +2965,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.CreateImplementationSourceAttr">
-<span class="sig-name descname"><span class="pre">CreateImplementationSourceAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdShade.Shader.CreateImplementationSourceAttr" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">CreateImplementationSourceAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">defaultValue:</span> <span class="pre">Any = None</span></em>, <em class="sig-param"><span class="pre">writeSparsely:</span> <span class="pre">bool = False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Usd.Attribute</span></span></span><a class="headerlink" href="#pxr.UsdShade.Shader.CreateImplementationSourceAttr" title="Link to this definition">#</a></dt>
+<dd><p>Creates the shader implementation source attribute.</p><p><strong>Parameters:</strong> defaultValue (Any), default None; writeSparsely (bool), default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p><p><strong>Returns:</strong> Usd.Attribute - The created <code class="docutils literal notranslate"><span class="pre">info:implementationSource</span></code> attribute.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.CreateInput">
@@ -3139,13 +3145,17 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.SetSourceAsset">
-<span class="sig-name descname"><span class="pre">SetSourceAsset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdShade.Shader.SetSourceAsset" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">SetSourceAsset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sourceAsset:</span> <span class="pre">Sdf.AssetPath | str</span></em>, <em class="sig-param"><span class="pre">sourceType:</span> <span class="pre">str = &quot;&quot;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdShade.Shader.SetSourceAsset" title="Link to this definition">#</a></dt>
+<dd><p>Authors the source asset for this shader.</p><p><strong>Parameters:</strong> sourceAsset (Sdf.AssetPath | str); sourceType (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.SetSourceAssetSubIdentifier">
-<span class="sig-name descname"><span class="pre">SetSourceAssetSubIdentifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdShade.Shader.SetSourceAssetSubIdentifier" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">SetSourceAssetSubIdentifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">subIdentifier:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">sourceType:</span> <span class="pre">str = &quot;&quot;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdShade.Shader.SetSourceAssetSubIdentifier" title="Link to this definition">#</a></dt>
+<dd><p>Authors the source asset sub-identifier for this shader.</p><p><strong>Parameters:</strong> subIdentifier (str); sourceType (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+
+
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.UsdShade.Shader.SetSourceCode">
