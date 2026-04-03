@@ -1,0 +1,1748 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UsdRender module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/UsdRender';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UsdRi module" href="UsdRi.html" />
+    <link rel="prev" title="UsdProc module" href="UsdProc.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">UsdRender module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usdrender-module">
+<h1>UsdRender module<a class="headerlink" href="#usdrender-module" title="Link to this heading">#</a></h1>
+<p>Summary: The UsdRender module provides schemas and behaviors for describing renders.</p>
+<hr class="docutils" />
+<p id="module-pxr.UsdRender"><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass" title="pxr.UsdRender.Pass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Product" title="pxr.UsdRender.Product"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Product</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings" title="pxr.UsdRender.Settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Settings</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase" title="pxr.UsdRender.SettingsBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SettingsBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens" title="pxr.UsdRender.Tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Var" title="pxr.UsdRender.Var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Var</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRender.</span></span><span class="sig-name descname"><span class="pre">Pass</span></span><a class="headerlink" href="#pxr.UsdRender.Pass" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.CreateCommandAttr" title="pxr.UsdRender.Pass.CreateCommandAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateCommandAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.CreateFileNameAttr" title="pxr.UsdRender.Pass.CreateFileNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFileNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.CreateInputPassesRel" title="pxr.UsdRender.Pass.CreateInputPassesRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateInputPassesRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.CreatePassTypeAttr" title="pxr.UsdRender.Pass.CreatePassTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePassTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.CreateRenderSourceRel" title="pxr.UsdRender.Pass.CreateRenderSourceRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateRenderSourceRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.Define" title="pxr.UsdRender.Pass.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.Get" title="pxr.UsdRender.Pass.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetCommandAttr" title="pxr.UsdRender.Pass.GetCommandAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCommandAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetFileNameAttr" title="pxr.UsdRender.Pass.GetFileNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFileNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetInputPassesRel" title="pxr.UsdRender.Pass.GetInputPassesRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetInputPassesRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetPassTypeAttr" title="pxr.UsdRender.Pass.GetPassTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPassTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetRenderSourceRel" title="pxr.UsdRender.Pass.GetRenderSourceRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRenderSourceRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetRenderVisibilityCollectionAPI" title="pxr.UsdRender.Pass.GetRenderVisibilityCollectionAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRenderVisibilityCollectionAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Pass.GetSchemaAttributeNames" title="pxr.UsdRender.Pass.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.CreateCommandAttr">
+<span class="sig-name descname"><span class="pre">CreateCommandAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.CreateCommandAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.CreateFileNameAttr">
+<span class="sig-name descname"><span class="pre">CreateFileNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.CreateFileNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.CreateInputPassesRel">
+<span class="sig-name descname"><span class="pre">CreateInputPassesRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.CreateInputPassesRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.CreatePassTypeAttr">
+<span class="sig-name descname"><span class="pre">CreatePassTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.CreatePassTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.CreateRenderSourceRel">
+<span class="sig-name descname"><span class="pre">CreateRenderSourceRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.CreateRenderSourceRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetCommandAttr">
+<span class="sig-name descname"><span class="pre">GetCommandAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetCommandAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetFileNameAttr">
+<span class="sig-name descname"><span class="pre">GetFileNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetFileNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetInputPassesRel">
+<span class="sig-name descname"><span class="pre">GetInputPassesRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetInputPassesRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetPassTypeAttr">
+<span class="sig-name descname"><span class="pre">GetPassTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetPassTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetRenderSourceRel">
+<span class="sig-name descname"><span class="pre">GetRenderSourceRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetRenderSourceRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetRenderVisibilityCollectionAPI">
+<span class="sig-name descname"><span class="pre">GetRenderVisibilityCollectionAPI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetRenderVisibilityCollectionAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Pass.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Pass.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRender.</span></span><span class="sig-name descname"><span class="pre">Product</span></span><a class="headerlink" href="#pxr.UsdRender.Product" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.CreateOrderedVarsRel" title="pxr.UsdRender.Product.CreateOrderedVarsRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateOrderedVarsRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.CreateProductNameAttr" title="pxr.UsdRender.Product.CreateProductNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateProductNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.CreateProductTypeAttr" title="pxr.UsdRender.Product.CreateProductTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateProductTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.Define" title="pxr.UsdRender.Product.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.Get" title="pxr.UsdRender.Product.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.GetOrderedVarsRel" title="pxr.UsdRender.Product.GetOrderedVarsRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetOrderedVarsRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.GetProductNameAttr" title="pxr.UsdRender.Product.GetProductNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetProductNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.GetProductTypeAttr" title="pxr.UsdRender.Product.GetProductTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetProductTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Product.GetSchemaAttributeNames" title="pxr.UsdRender.Product.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.CreateOrderedVarsRel">
+<span class="sig-name descname"><span class="pre">CreateOrderedVarsRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.CreateOrderedVarsRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.CreateProductNameAttr">
+<span class="sig-name descname"><span class="pre">CreateProductNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.CreateProductNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.CreateProductTypeAttr">
+<span class="sig-name descname"><span class="pre">CreateProductTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.CreateProductTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.GetOrderedVarsRel">
+<span class="sig-name descname"><span class="pre">GetOrderedVarsRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.GetOrderedVarsRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.GetProductNameAttr">
+<span class="sig-name descname"><span class="pre">GetProductNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.GetProductNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.GetProductTypeAttr">
+<span class="sig-name descname"><span class="pre">GetProductTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.GetProductTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Product.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Product.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRender.</span></span><span class="sig-name descname"><span class="pre">Settings</span></span><a class="headerlink" href="#pxr.UsdRender.Settings" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.CreateIncludedPurposesAttr" title="pxr.UsdRender.Settings.CreateIncludedPurposesAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateIncludedPurposesAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.CreateMaterialBindingPurposesAttr" title="pxr.UsdRender.Settings.CreateMaterialBindingPurposesAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateMaterialBindingPurposesAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.CreateProductsRel" title="pxr.UsdRender.Settings.CreateProductsRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateProductsRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.CreateRenderingColorSpaceAttr" title="pxr.UsdRender.Settings.CreateRenderingColorSpaceAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateRenderingColorSpaceAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.Define" title="pxr.UsdRender.Settings.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.Get" title="pxr.UsdRender.Settings.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.GetIncludedPurposesAttr" title="pxr.UsdRender.Settings.GetIncludedPurposesAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetIncludedPurposesAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.GetMaterialBindingPurposesAttr" title="pxr.UsdRender.Settings.GetMaterialBindingPurposesAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetMaterialBindingPurposesAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.GetProductsRel" title="pxr.UsdRender.Settings.GetProductsRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetProductsRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.GetRenderingColorSpaceAttr" title="pxr.UsdRender.Settings.GetRenderingColorSpaceAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRenderingColorSpaceAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.GetSchemaAttributeNames" title="pxr.UsdRender.Settings.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Settings.GetStageRenderSettings" title="pxr.UsdRender.Settings.GetStageRenderSettings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetStageRenderSettings</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.CreateIncludedPurposesAttr">
+<span class="sig-name descname"><span class="pre">CreateIncludedPurposesAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.CreateIncludedPurposesAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.CreateMaterialBindingPurposesAttr">
+<span class="sig-name descname"><span class="pre">CreateMaterialBindingPurposesAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.CreateMaterialBindingPurposesAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.CreateProductsRel">
+<span class="sig-name descname"><span class="pre">CreateProductsRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.CreateProductsRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.CreateRenderingColorSpaceAttr">
+<span class="sig-name descname"><span class="pre">CreateRenderingColorSpaceAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.CreateRenderingColorSpaceAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.GetIncludedPurposesAttr">
+<span class="sig-name descname"><span class="pre">GetIncludedPurposesAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.GetIncludedPurposesAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.GetMaterialBindingPurposesAttr">
+<span class="sig-name descname"><span class="pre">GetMaterialBindingPurposesAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.GetMaterialBindingPurposesAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.GetProductsRel">
+<span class="sig-name descname"><span class="pre">GetProductsRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.GetProductsRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.GetRenderingColorSpaceAttr">
+<span class="sig-name descname"><span class="pre">GetRenderingColorSpaceAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.GetRenderingColorSpaceAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Settings.GetStageRenderSettings">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetStageRenderSettings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Settings.GetStageRenderSettings" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRender.</span></span><span class="sig-name descname"><span class="pre">SettingsBase</span></span><a class="headerlink" href="#pxr.UsdRender.SettingsBase" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateAspectRatioConformPolicyAttr" title="pxr.UsdRender.SettingsBase.CreateAspectRatioConformPolicyAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateAspectRatioConformPolicyAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateCameraRel" title="pxr.UsdRender.SettingsBase.CreateCameraRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateCameraRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateDataWindowNDCAttr" title="pxr.UsdRender.SettingsBase.CreateDataWindowNDCAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDataWindowNDCAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateDisableDepthOfFieldAttr" title="pxr.UsdRender.SettingsBase.CreateDisableDepthOfFieldAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDisableDepthOfFieldAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateDisableMotionBlurAttr" title="pxr.UsdRender.SettingsBase.CreateDisableMotionBlurAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDisableMotionBlurAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateInstantaneousShutterAttr" title="pxr.UsdRender.SettingsBase.CreateInstantaneousShutterAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateInstantaneousShutterAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreatePixelAspectRatioAttr" title="pxr.UsdRender.SettingsBase.CreatePixelAspectRatioAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePixelAspectRatioAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.CreateResolutionAttr" title="pxr.UsdRender.SettingsBase.CreateResolutionAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateResolutionAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.Get" title="pxr.UsdRender.SettingsBase.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetAspectRatioConformPolicyAttr" title="pxr.UsdRender.SettingsBase.GetAspectRatioConformPolicyAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAspectRatioConformPolicyAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetCameraRel" title="pxr.UsdRender.SettingsBase.GetCameraRel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCameraRel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetDataWindowNDCAttr" title="pxr.UsdRender.SettingsBase.GetDataWindowNDCAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDataWindowNDCAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetDisableDepthOfFieldAttr" title="pxr.UsdRender.SettingsBase.GetDisableDepthOfFieldAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisableDepthOfFieldAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetDisableMotionBlurAttr" title="pxr.UsdRender.SettingsBase.GetDisableMotionBlurAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisableMotionBlurAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetInstantaneousShutterAttr" title="pxr.UsdRender.SettingsBase.GetInstantaneousShutterAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetInstantaneousShutterAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetPixelAspectRatioAttr" title="pxr.UsdRender.SettingsBase.GetPixelAspectRatioAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPixelAspectRatioAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetResolutionAttr" title="pxr.UsdRender.SettingsBase.GetResolutionAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetResolutionAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.SettingsBase.GetSchemaAttributeNames" title="pxr.UsdRender.SettingsBase.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateAspectRatioConformPolicyAttr">
+<span class="sig-name descname"><span class="pre">CreateAspectRatioConformPolicyAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateAspectRatioConformPolicyAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateCameraRel">
+<span class="sig-name descname"><span class="pre">CreateCameraRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateCameraRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateDataWindowNDCAttr">
+<span class="sig-name descname"><span class="pre">CreateDataWindowNDCAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateDataWindowNDCAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateDisableDepthOfFieldAttr">
+<span class="sig-name descname"><span class="pre">CreateDisableDepthOfFieldAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateDisableDepthOfFieldAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateDisableMotionBlurAttr">
+<span class="sig-name descname"><span class="pre">CreateDisableMotionBlurAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateDisableMotionBlurAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateInstantaneousShutterAttr">
+<span class="sig-name descname"><span class="pre">CreateInstantaneousShutterAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateInstantaneousShutterAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreatePixelAspectRatioAttr">
+<span class="sig-name descname"><span class="pre">CreatePixelAspectRatioAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreatePixelAspectRatioAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.CreateResolutionAttr">
+<span class="sig-name descname"><span class="pre">CreateResolutionAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.CreateResolutionAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetAspectRatioConformPolicyAttr">
+<span class="sig-name descname"><span class="pre">GetAspectRatioConformPolicyAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetAspectRatioConformPolicyAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetCameraRel">
+<span class="sig-name descname"><span class="pre">GetCameraRel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetCameraRel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetDataWindowNDCAttr">
+<span class="sig-name descname"><span class="pre">GetDataWindowNDCAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetDataWindowNDCAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetDisableDepthOfFieldAttr">
+<span class="sig-name descname"><span class="pre">GetDisableDepthOfFieldAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetDisableDepthOfFieldAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetDisableMotionBlurAttr">
+<span class="sig-name descname"><span class="pre">GetDisableMotionBlurAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetDisableMotionBlurAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetInstantaneousShutterAttr">
+<span class="sig-name descname"><span class="pre">GetInstantaneousShutterAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetInstantaneousShutterAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetPixelAspectRatioAttr">
+<span class="sig-name descname"><span class="pre">GetPixelAspectRatioAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetPixelAspectRatioAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetResolutionAttr">
+<span class="sig-name descname"><span class="pre">GetResolutionAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetResolutionAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.SettingsBase.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.SettingsBase.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRender.</span></span><span class="sig-name descname"><span class="pre">Tokens</span></span><a class="headerlink" href="#pxr.UsdRender.Tokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.RenderPass" title="pxr.UsdRender.Tokens.RenderPass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RenderPass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.RenderProduct" title="pxr.UsdRender.Tokens.RenderProduct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RenderProduct</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.RenderSettings" title="pxr.UsdRender.Tokens.RenderSettings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RenderSettings</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.RenderSettingsBase" title="pxr.UsdRender.Tokens.RenderSettingsBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RenderSettingsBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.RenderVar" title="pxr.UsdRender.Tokens.RenderVar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RenderVar</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.adjustApertureHeight" title="pxr.UsdRender.Tokens.adjustApertureHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjustApertureHeight</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.adjustApertureWidth" title="pxr.UsdRender.Tokens.adjustApertureWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjustApertureWidth</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.adjustPixelAspectRatio" title="pxr.UsdRender.Tokens.adjustPixelAspectRatio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjustPixelAspectRatio</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.aspectRatioConformPolicy" title="pxr.UsdRender.Tokens.aspectRatioConformPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aspectRatioConformPolicy</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.camera" title="pxr.UsdRender.Tokens.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.collectionCameraVisibilityIncludeRoot" title="pxr.UsdRender.Tokens.collectionCameraVisibilityIncludeRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collectionCameraVisibilityIncludeRoot</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.collectionRenderVisibilityIncludeRoot" title="pxr.UsdRender.Tokens.collectionRenderVisibilityIncludeRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collectionRenderVisibilityIncludeRoot</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.color3f" title="pxr.UsdRender.Tokens.color3f"><code class="xref py py-obj docutils literal notranslate"><span class="pre">color3f</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.command" title="pxr.UsdRender.Tokens.command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">command</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.cropAperture" title="pxr.UsdRender.Tokens.cropAperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cropAperture</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.dataType" title="pxr.UsdRender.Tokens.dataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.dataWindowNDC" title="pxr.UsdRender.Tokens.dataWindowNDC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataWindowNDC</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.deepRaster" title="pxr.UsdRender.Tokens.deepRaster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deepRaster</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.disableDepthOfField" title="pxr.UsdRender.Tokens.disableDepthOfField"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disableDepthOfField</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.disableMotionBlur" title="pxr.UsdRender.Tokens.disableMotionBlur"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disableMotionBlur</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.expandAperture" title="pxr.UsdRender.Tokens.expandAperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expandAperture</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.fileName" title="pxr.UsdRender.Tokens.fileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fileName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.full" title="pxr.UsdRender.Tokens.full"><code class="xref py py-obj docutils literal notranslate"><span class="pre">full</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.includedPurposes" title="pxr.UsdRender.Tokens.includedPurposes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">includedPurposes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.inputPasses" title="pxr.UsdRender.Tokens.inputPasses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputPasses</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.instantaneousShutter" title="pxr.UsdRender.Tokens.instantaneousShutter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instantaneousShutter</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.intrinsic" title="pxr.UsdRender.Tokens.intrinsic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intrinsic</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.lpe" title="pxr.UsdRender.Tokens.lpe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lpe</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.materialBindingPurposes" title="pxr.UsdRender.Tokens.materialBindingPurposes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">materialBindingPurposes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.orderedVars" title="pxr.UsdRender.Tokens.orderedVars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orderedVars</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.passType" title="pxr.UsdRender.Tokens.passType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">passType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.pixelAspectRatio" title="pxr.UsdRender.Tokens.pixelAspectRatio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pixelAspectRatio</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.preview" title="pxr.UsdRender.Tokens.preview"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preview</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.primvar" title="pxr.UsdRender.Tokens.primvar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">primvar</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.productName" title="pxr.UsdRender.Tokens.productName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">productName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.productType" title="pxr.UsdRender.Tokens.productType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">productType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.products" title="pxr.UsdRender.Tokens.products"><code class="xref py py-obj docutils literal notranslate"><span class="pre">products</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.raster" title="pxr.UsdRender.Tokens.raster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raster</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.raw" title="pxr.UsdRender.Tokens.raw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.renderSettingsPrimPath" title="pxr.UsdRender.Tokens.renderSettingsPrimPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderSettingsPrimPath</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.renderSource" title="pxr.UsdRender.Tokens.renderSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderSource</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.renderVisibility" title="pxr.UsdRender.Tokens.renderVisibility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderVisibility</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.renderingColorSpace" title="pxr.UsdRender.Tokens.renderingColorSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderingColorSpace</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.resolution" title="pxr.UsdRender.Tokens.resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolution</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.sourceName" title="pxr.UsdRender.Tokens.sourceName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sourceName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Tokens.sourceType" title="pxr.UsdRender.Tokens.sourceType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sourceType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.RenderPass">
+<span class="sig-name descname"><span class="pre">RenderPass</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RenderPass'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.RenderPass" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.RenderProduct">
+<span class="sig-name descname"><span class="pre">RenderProduct</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RenderProduct'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.RenderProduct" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.RenderSettings">
+<span class="sig-name descname"><span class="pre">RenderSettings</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RenderSettings'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.RenderSettings" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.RenderSettingsBase">
+<span class="sig-name descname"><span class="pre">RenderSettingsBase</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RenderSettingsBase'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.RenderSettingsBase" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.RenderVar">
+<span class="sig-name descname"><span class="pre">RenderVar</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RenderVar'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.RenderVar" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.adjustApertureHeight">
+<span class="sig-name descname"><span class="pre">adjustApertureHeight</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'adjustApertureHeight'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.adjustApertureHeight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.adjustApertureWidth">
+<span class="sig-name descname"><span class="pre">adjustApertureWidth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'adjustApertureWidth'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.adjustApertureWidth" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.adjustPixelAspectRatio">
+<span class="sig-name descname"><span class="pre">adjustPixelAspectRatio</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'adjustPixelAspectRatio'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.adjustPixelAspectRatio" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.aspectRatioConformPolicy">
+<span class="sig-name descname"><span class="pre">aspectRatioConformPolicy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'aspectRatioConformPolicy'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.aspectRatioConformPolicy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.camera">
+<span class="sig-name descname"><span class="pre">camera</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'camera'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.camera" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.collectionCameraVisibilityIncludeRoot">
+<span class="sig-name descname"><span class="pre">collectionCameraVisibilityIncludeRoot</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'collection:cameraVisibility:includeRoot'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.collectionCameraVisibilityIncludeRoot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.collectionRenderVisibilityIncludeRoot">
+<span class="sig-name descname"><span class="pre">collectionRenderVisibilityIncludeRoot</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'collection:renderVisibility:includeRoot'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.collectionRenderVisibilityIncludeRoot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.color3f">
+<span class="sig-name descname"><span class="pre">color3f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'color3f'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.color3f" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'command'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.command" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.cropAperture">
+<span class="sig-name descname"><span class="pre">cropAperture</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cropAperture'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.cropAperture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.dataType">
+<span class="sig-name descname"><span class="pre">dataType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'dataType'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.dataType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.dataWindowNDC">
+<span class="sig-name descname"><span class="pre">dataWindowNDC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'dataWindowNDC'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.dataWindowNDC" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.deepRaster">
+<span class="sig-name descname"><span class="pre">deepRaster</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'deepRaster'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.deepRaster" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.disableDepthOfField">
+<span class="sig-name descname"><span class="pre">disableDepthOfField</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'disableDepthOfField'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.disableDepthOfField" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.disableMotionBlur">
+<span class="sig-name descname"><span class="pre">disableMotionBlur</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'disableMotionBlur'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.disableMotionBlur" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.expandAperture">
+<span class="sig-name descname"><span class="pre">expandAperture</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'expandAperture'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.expandAperture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.fileName">
+<span class="sig-name descname"><span class="pre">fileName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fileName'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.fileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.full">
+<span class="sig-name descname"><span class="pre">full</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'full'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.full" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.includedPurposes">
+<span class="sig-name descname"><span class="pre">includedPurposes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'includedPurposes'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.includedPurposes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.inputPasses">
+<span class="sig-name descname"><span class="pre">inputPasses</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'inputPasses'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.inputPasses" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.instantaneousShutter">
+<span class="sig-name descname"><span class="pre">instantaneousShutter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'instantaneousShutter'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.instantaneousShutter" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.intrinsic">
+<span class="sig-name descname"><span class="pre">intrinsic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'intrinsic'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.intrinsic" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.lpe">
+<span class="sig-name descname"><span class="pre">lpe</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'lpe'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.lpe" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.materialBindingPurposes">
+<span class="sig-name descname"><span class="pre">materialBindingPurposes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'materialBindingPurposes'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.materialBindingPurposes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.orderedVars">
+<span class="sig-name descname"><span class="pre">orderedVars</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'orderedVars'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.orderedVars" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.passType">
+<span class="sig-name descname"><span class="pre">passType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'passType'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.passType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.pixelAspectRatio">
+<span class="sig-name descname"><span class="pre">pixelAspectRatio</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pixelAspectRatio'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.pixelAspectRatio" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.preview">
+<span class="sig-name descname"><span class="pre">preview</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'preview'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.preview" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.primvar">
+<span class="sig-name descname"><span class="pre">primvar</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'primvar'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.primvar" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.productName">
+<span class="sig-name descname"><span class="pre">productName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'productName'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.productName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.productType">
+<span class="sig-name descname"><span class="pre">productType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'productType'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.productType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.products">
+<span class="sig-name descname"><span class="pre">products</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'products'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.products" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.raster">
+<span class="sig-name descname"><span class="pre">raster</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'raster'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.raster" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.raw">
+<span class="sig-name descname"><span class="pre">raw</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'raw'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.raw" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.renderSettingsPrimPath">
+<span class="sig-name descname"><span class="pre">renderSettingsPrimPath</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'renderSettingsPrimPath'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.renderSettingsPrimPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.renderSource">
+<span class="sig-name descname"><span class="pre">renderSource</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'renderSource'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.renderSource" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.renderVisibility">
+<span class="sig-name descname"><span class="pre">renderVisibility</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'renderVisibility'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.renderVisibility" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.renderingColorSpace">
+<span class="sig-name descname"><span class="pre">renderingColorSpace</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'renderingColorSpace'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.renderingColorSpace" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.resolution">
+<span class="sig-name descname"><span class="pre">resolution</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'resolution'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.resolution" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.sourceName">
+<span class="sig-name descname"><span class="pre">sourceName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sourceName'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.sourceName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRender.Tokens.sourceType">
+<span class="sig-name descname"><span class="pre">sourceType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sourceType'</span></em><a class="headerlink" href="#pxr.UsdRender.Tokens.sourceType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRender.</span></span><span class="sig-name descname"><span class="pre">Var</span></span><a class="headerlink" href="#pxr.UsdRender.Var" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.CreateDataTypeAttr" title="pxr.UsdRender.Var.CreateDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.CreateSourceNameAttr" title="pxr.UsdRender.Var.CreateSourceNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateSourceNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.CreateSourceTypeAttr" title="pxr.UsdRender.Var.CreateSourceTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateSourceTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.Define" title="pxr.UsdRender.Var.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.Get" title="pxr.UsdRender.Var.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.GetDataTypeAttr" title="pxr.UsdRender.Var.GetDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.GetSchemaAttributeNames" title="pxr.UsdRender.Var.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.GetSourceNameAttr" title="pxr.UsdRender.Var.GetSourceNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSourceNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRender.Var.GetSourceTypeAttr" title="pxr.UsdRender.Var.GetSourceTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSourceTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.CreateDataTypeAttr">
+<span class="sig-name descname"><span class="pre">CreateDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.CreateDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.CreateSourceNameAttr">
+<span class="sig-name descname"><span class="pre">CreateSourceNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.CreateSourceNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.CreateSourceTypeAttr">
+<span class="sig-name descname"><span class="pre">CreateSourceTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.CreateSourceTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.GetDataTypeAttr">
+<span class="sig-name descname"><span class="pre">GetDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.GetDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.GetSourceNameAttr">
+<span class="sig-name descname"><span class="pre">GetSourceNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.GetSourceNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRender.Var.GetSourceTypeAttr">
+<span class="sig-name descname"><span class="pre">GetSourceTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRender.Var.GetSourceTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="UsdProc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UsdProc module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UsdRi.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UsdRi module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass"><code class="docutils literal notranslate"><span class="pre">Pass</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.CreateCommandAttr"><code class="docutils literal notranslate"><span class="pre">CreateCommandAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.CreateFileNameAttr"><code class="docutils literal notranslate"><span class="pre">CreateFileNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.CreateInputPassesRel"><code class="docutils literal notranslate"><span class="pre">CreateInputPassesRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.CreatePassTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreatePassTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.CreateRenderSourceRel"><code class="docutils literal notranslate"><span class="pre">CreateRenderSourceRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetCommandAttr"><code class="docutils literal notranslate"><span class="pre">GetCommandAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetFileNameAttr"><code class="docutils literal notranslate"><span class="pre">GetFileNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetInputPassesRel"><code class="docutils literal notranslate"><span class="pre">GetInputPassesRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetPassTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetPassTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetRenderSourceRel"><code class="docutils literal notranslate"><span class="pre">GetRenderSourceRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetRenderVisibilityCollectionAPI"><code class="docutils literal notranslate"><span class="pre">GetRenderVisibilityCollectionAPI()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Pass.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product"><code class="docutils literal notranslate"><span class="pre">Product</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.CreateOrderedVarsRel"><code class="docutils literal notranslate"><span class="pre">CreateOrderedVarsRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.CreateProductNameAttr"><code class="docutils literal notranslate"><span class="pre">CreateProductNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.CreateProductTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreateProductTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.GetOrderedVarsRel"><code class="docutils literal notranslate"><span class="pre">GetOrderedVarsRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.GetProductNameAttr"><code class="docutils literal notranslate"><span class="pre">GetProductNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.GetProductTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetProductTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Product.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings"><code class="docutils literal notranslate"><span class="pre">Settings</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.CreateIncludedPurposesAttr"><code class="docutils literal notranslate"><span class="pre">CreateIncludedPurposesAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.CreateMaterialBindingPurposesAttr"><code class="docutils literal notranslate"><span class="pre">CreateMaterialBindingPurposesAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.CreateProductsRel"><code class="docutils literal notranslate"><span class="pre">CreateProductsRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.CreateRenderingColorSpaceAttr"><code class="docutils literal notranslate"><span class="pre">CreateRenderingColorSpaceAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.GetIncludedPurposesAttr"><code class="docutils literal notranslate"><span class="pre">GetIncludedPurposesAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.GetMaterialBindingPurposesAttr"><code class="docutils literal notranslate"><span class="pre">GetMaterialBindingPurposesAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.GetProductsRel"><code class="docutils literal notranslate"><span class="pre">GetProductsRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.GetRenderingColorSpaceAttr"><code class="docutils literal notranslate"><span class="pre">GetRenderingColorSpaceAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Settings.GetStageRenderSettings"><code class="docutils literal notranslate"><span class="pre">GetStageRenderSettings()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase"><code class="docutils literal notranslate"><span class="pre">SettingsBase</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateAspectRatioConformPolicyAttr"><code class="docutils literal notranslate"><span class="pre">CreateAspectRatioConformPolicyAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateCameraRel"><code class="docutils literal notranslate"><span class="pre">CreateCameraRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateDataWindowNDCAttr"><code class="docutils literal notranslate"><span class="pre">CreateDataWindowNDCAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateDisableDepthOfFieldAttr"><code class="docutils literal notranslate"><span class="pre">CreateDisableDepthOfFieldAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateDisableMotionBlurAttr"><code class="docutils literal notranslate"><span class="pre">CreateDisableMotionBlurAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateInstantaneousShutterAttr"><code class="docutils literal notranslate"><span class="pre">CreateInstantaneousShutterAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreatePixelAspectRatioAttr"><code class="docutils literal notranslate"><span class="pre">CreatePixelAspectRatioAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.CreateResolutionAttr"><code class="docutils literal notranslate"><span class="pre">CreateResolutionAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetAspectRatioConformPolicyAttr"><code class="docutils literal notranslate"><span class="pre">GetAspectRatioConformPolicyAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetCameraRel"><code class="docutils literal notranslate"><span class="pre">GetCameraRel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetDataWindowNDCAttr"><code class="docutils literal notranslate"><span class="pre">GetDataWindowNDCAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetDisableDepthOfFieldAttr"><code class="docutils literal notranslate"><span class="pre">GetDisableDepthOfFieldAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetDisableMotionBlurAttr"><code class="docutils literal notranslate"><span class="pre">GetDisableMotionBlurAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetInstantaneousShutterAttr"><code class="docutils literal notranslate"><span class="pre">GetInstantaneousShutterAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetPixelAspectRatioAttr"><code class="docutils literal notranslate"><span class="pre">GetPixelAspectRatioAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetResolutionAttr"><code class="docutils literal notranslate"><span class="pre">GetResolutionAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.SettingsBase.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens"><code class="docutils literal notranslate"><span class="pre">Tokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.RenderPass"><code class="docutils literal notranslate"><span class="pre">RenderPass</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.RenderProduct"><code class="docutils literal notranslate"><span class="pre">RenderProduct</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.RenderSettings"><code class="docutils literal notranslate"><span class="pre">RenderSettings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.RenderSettingsBase"><code class="docutils literal notranslate"><span class="pre">RenderSettingsBase</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.RenderVar"><code class="docutils literal notranslate"><span class="pre">RenderVar</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.adjustApertureHeight"><code class="docutils literal notranslate"><span class="pre">adjustApertureHeight</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.adjustApertureWidth"><code class="docutils literal notranslate"><span class="pre">adjustApertureWidth</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.adjustPixelAspectRatio"><code class="docutils literal notranslate"><span class="pre">adjustPixelAspectRatio</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.aspectRatioConformPolicy"><code class="docutils literal notranslate"><span class="pre">aspectRatioConformPolicy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.camera"><code class="docutils literal notranslate"><span class="pre">camera</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.collectionCameraVisibilityIncludeRoot"><code class="docutils literal notranslate"><span class="pre">collectionCameraVisibilityIncludeRoot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.collectionRenderVisibilityIncludeRoot"><code class="docutils literal notranslate"><span class="pre">collectionRenderVisibilityIncludeRoot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.color3f"><code class="docutils literal notranslate"><span class="pre">color3f</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.command"><code class="docutils literal notranslate"><span class="pre">command</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.cropAperture"><code class="docutils literal notranslate"><span class="pre">cropAperture</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.dataType"><code class="docutils literal notranslate"><span class="pre">dataType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.dataWindowNDC"><code class="docutils literal notranslate"><span class="pre">dataWindowNDC</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.deepRaster"><code class="docutils literal notranslate"><span class="pre">deepRaster</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.disableDepthOfField"><code class="docutils literal notranslate"><span class="pre">disableDepthOfField</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.disableMotionBlur"><code class="docutils literal notranslate"><span class="pre">disableMotionBlur</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.expandAperture"><code class="docutils literal notranslate"><span class="pre">expandAperture</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.fileName"><code class="docutils literal notranslate"><span class="pre">fileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.full"><code class="docutils literal notranslate"><span class="pre">full</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.includedPurposes"><code class="docutils literal notranslate"><span class="pre">includedPurposes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.inputPasses"><code class="docutils literal notranslate"><span class="pre">inputPasses</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.instantaneousShutter"><code class="docutils literal notranslate"><span class="pre">instantaneousShutter</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.intrinsic"><code class="docutils literal notranslate"><span class="pre">intrinsic</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.lpe"><code class="docutils literal notranslate"><span class="pre">lpe</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.materialBindingPurposes"><code class="docutils literal notranslate"><span class="pre">materialBindingPurposes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.orderedVars"><code class="docutils literal notranslate"><span class="pre">orderedVars</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.passType"><code class="docutils literal notranslate"><span class="pre">passType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.pixelAspectRatio"><code class="docutils literal notranslate"><span class="pre">pixelAspectRatio</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.preview"><code class="docutils literal notranslate"><span class="pre">preview</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.primvar"><code class="docutils literal notranslate"><span class="pre">primvar</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.productName"><code class="docutils literal notranslate"><span class="pre">productName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.productType"><code class="docutils literal notranslate"><span class="pre">productType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.products"><code class="docutils literal notranslate"><span class="pre">products</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.raster"><code class="docutils literal notranslate"><span class="pre">raster</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.raw"><code class="docutils literal notranslate"><span class="pre">raw</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.renderSettingsPrimPath"><code class="docutils literal notranslate"><span class="pre">renderSettingsPrimPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.renderSource"><code class="docutils literal notranslate"><span class="pre">renderSource</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.renderVisibility"><code class="docutils literal notranslate"><span class="pre">renderVisibility</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.renderingColorSpace"><code class="docutils literal notranslate"><span class="pre">renderingColorSpace</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.resolution"><code class="docutils literal notranslate"><span class="pre">resolution</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.sourceName"><code class="docutils literal notranslate"><span class="pre">sourceName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Tokens.sourceType"><code class="docutils literal notranslate"><span class="pre">sourceType</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var"><code class="docutils literal notranslate"><span class="pre">Var</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.CreateDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreateDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.CreateSourceNameAttr"><code class="docutils literal notranslate"><span class="pre">CreateSourceNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.CreateSourceTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreateSourceTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.GetDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.GetSourceNameAttr"><code class="docutils literal notranslate"><span class="pre">GetSourceNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRender.Var.GetSourceTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetSourceTypeAttr()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1478 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UsdVol module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/UsdVol';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vt module" href="Vt.html" />
+    <link rel="prev" title="UsdUtils module" href="UsdUtils.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">UsdVol module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usdvol-module">
+<h1>UsdVol module<a class="headerlink" href="#usdvol-module" title="Link to this heading">#</a></h1>
+<p>Summary: The UsdVol module provides schemas for representing volumes (smoke, fire, etc).</p>
+<hr class="docutils" />
+<p id="module-pxr.UsdVol"><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset" title="pxr.UsdVol.Field3DAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Field3DAsset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset" title="pxr.UsdVol.FieldAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldAsset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldBase" title="pxr.UsdVol.FieldBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset" title="pxr.UsdVol.OpenVDBAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenVDBAsset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens" title="pxr.UsdVol.Tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume" title="pxr.UsdVol.Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdVol.</span></span><span class="sig-name descname"><span class="pre">Field3DAsset</span></span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.CreateFieldDataTypeAttr" title="pxr.UsdVol.Field3DAsset.CreateFieldDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.CreateFieldPurposeAttr" title="pxr.UsdVol.Field3DAsset.CreateFieldPurposeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldPurposeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.Define" title="pxr.UsdVol.Field3DAsset.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.Get" title="pxr.UsdVol.Field3DAsset.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.GetFieldDataTypeAttr" title="pxr.UsdVol.Field3DAsset.GetFieldDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.GetFieldPurposeAttr" title="pxr.UsdVol.Field3DAsset.GetFieldPurposeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldPurposeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Field3DAsset.GetSchemaAttributeNames" title="pxr.UsdVol.Field3DAsset.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.CreateFieldDataTypeAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.CreateFieldDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.CreateFieldPurposeAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldPurposeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.CreateFieldPurposeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.GetFieldDataTypeAttr">
+<span class="sig-name descname"><span class="pre">GetFieldDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.GetFieldDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.GetFieldPurposeAttr">
+<span class="sig-name descname"><span class="pre">GetFieldPurposeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.GetFieldPurposeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Field3DAsset.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Field3DAsset.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdVol.</span></span><span class="sig-name descname"><span class="pre">FieldAsset</span></span><a class="headerlink" href="#pxr.UsdVol.FieldAsset" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.CreateFieldDataTypeAttr" title="pxr.UsdVol.FieldAsset.CreateFieldDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.CreateFieldIndexAttr" title="pxr.UsdVol.FieldAsset.CreateFieldIndexAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldIndexAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.CreateFieldNameAttr" title="pxr.UsdVol.FieldAsset.CreateFieldNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.CreateFilePathAttr" title="pxr.UsdVol.FieldAsset.CreateFilePathAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFilePathAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.CreateVectorDataRoleHintAttr" title="pxr.UsdVol.FieldAsset.CreateVectorDataRoleHintAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateVectorDataRoleHintAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.Get" title="pxr.UsdVol.FieldAsset.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.GetFieldDataTypeAttr" title="pxr.UsdVol.FieldAsset.GetFieldDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.GetFieldIndexAttr" title="pxr.UsdVol.FieldAsset.GetFieldIndexAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldIndexAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.GetFieldNameAttr" title="pxr.UsdVol.FieldAsset.GetFieldNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.GetFilePathAttr" title="pxr.UsdVol.FieldAsset.GetFilePathAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFilePathAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.GetSchemaAttributeNames" title="pxr.UsdVol.FieldAsset.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldAsset.GetVectorDataRoleHintAttr" title="pxr.UsdVol.FieldAsset.GetVectorDataRoleHintAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetVectorDataRoleHintAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.CreateFieldDataTypeAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.CreateFieldDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.CreateFieldIndexAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldIndexAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.CreateFieldIndexAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.CreateFieldNameAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.CreateFieldNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.CreateFilePathAttr">
+<span class="sig-name descname"><span class="pre">CreateFilePathAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.CreateFilePathAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.CreateVectorDataRoleHintAttr">
+<span class="sig-name descname"><span class="pre">CreateVectorDataRoleHintAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.CreateVectorDataRoleHintAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.GetFieldDataTypeAttr">
+<span class="sig-name descname"><span class="pre">GetFieldDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.GetFieldDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.GetFieldIndexAttr">
+<span class="sig-name descname"><span class="pre">GetFieldIndexAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.GetFieldIndexAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.GetFieldNameAttr">
+<span class="sig-name descname"><span class="pre">GetFieldNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.GetFieldNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.GetFilePathAttr">
+<span class="sig-name descname"><span class="pre">GetFilePathAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.GetFilePathAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldAsset.GetVectorDataRoleHintAttr">
+<span class="sig-name descname"><span class="pre">GetVectorDataRoleHintAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldAsset.GetVectorDataRoleHintAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdVol.</span></span><span class="sig-name descname"><span class="pre">FieldBase</span></span><a class="headerlink" href="#pxr.UsdVol.FieldBase" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldBase.Get" title="pxr.UsdVol.FieldBase.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.FieldBase.GetSchemaAttributeNames" title="pxr.UsdVol.FieldBase.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldBase.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldBase.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.FieldBase.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.FieldBase.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdVol.</span></span><span class="sig-name descname"><span class="pre">OpenVDBAsset</span></span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.CreateFieldClassAttr" title="pxr.UsdVol.OpenVDBAsset.CreateFieldClassAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldClassAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.CreateFieldDataTypeAttr" title="pxr.UsdVol.OpenVDBAsset.CreateFieldDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.Define" title="pxr.UsdVol.OpenVDBAsset.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.Get" title="pxr.UsdVol.OpenVDBAsset.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.GetFieldClassAttr" title="pxr.UsdVol.OpenVDBAsset.GetFieldClassAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldClassAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.GetFieldDataTypeAttr" title="pxr.UsdVol.OpenVDBAsset.GetFieldDataTypeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldDataTypeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.OpenVDBAsset.GetSchemaAttributeNames" title="pxr.UsdVol.OpenVDBAsset.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.CreateFieldClassAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldClassAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.CreateFieldClassAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.CreateFieldDataTypeAttr">
+<span class="sig-name descname"><span class="pre">CreateFieldDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.CreateFieldDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.GetFieldClassAttr">
+<span class="sig-name descname"><span class="pre">GetFieldClassAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.GetFieldClassAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.GetFieldDataTypeAttr">
+<span class="sig-name descname"><span class="pre">GetFieldDataTypeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.GetFieldDataTypeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.OpenVDBAsset.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.OpenVDBAsset.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdVol.</span></span><span class="sig-name descname"><span class="pre">Tokens</span></span><a class="headerlink" href="#pxr.UsdVol.Tokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.Color" title="pxr.UsdVol.Tokens.Color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Color</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.Field3DAsset" title="pxr.UsdVol.Tokens.Field3DAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Field3DAsset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.FieldAsset" title="pxr.UsdVol.Tokens.FieldAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldAsset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.FieldBase" title="pxr.UsdVol.Tokens.FieldBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FieldBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.None_" title="pxr.UsdVol.Tokens.None_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.Normal" title="pxr.UsdVol.Tokens.Normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Normal</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.OpenVDBAsset" title="pxr.UsdVol.Tokens.OpenVDBAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OpenVDBAsset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.Point" title="pxr.UsdVol.Tokens.Point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Point</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.Vector" title="pxr.UsdVol.Tokens.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.Volume" title="pxr.UsdVol.Tokens.Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.bool_" title="pxr.UsdVol.Tokens.bool_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.double2" title="pxr.UsdVol.Tokens.double2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">double2</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.double3" title="pxr.UsdVol.Tokens.double3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">double3</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.double_" title="pxr.UsdVol.Tokens.double_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">double_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.field" title="pxr.UsdVol.Tokens.field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.fieldClass" title="pxr.UsdVol.Tokens.fieldClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fieldClass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.fieldDataType" title="pxr.UsdVol.Tokens.fieldDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fieldDataType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.fieldIndex" title="pxr.UsdVol.Tokens.fieldIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fieldIndex</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.fieldName" title="pxr.UsdVol.Tokens.fieldName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fieldName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.fieldPurpose" title="pxr.UsdVol.Tokens.fieldPurpose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fieldPurpose</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.filePath" title="pxr.UsdVol.Tokens.filePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filePath</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.float2" title="pxr.UsdVol.Tokens.float2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float2</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.float3" title="pxr.UsdVol.Tokens.float3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float3</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.float_" title="pxr.UsdVol.Tokens.float_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.fogVolume" title="pxr.UsdVol.Tokens.fogVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fogVolume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.half" title="pxr.UsdVol.Tokens.half"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.half2" title="pxr.UsdVol.Tokens.half2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half2</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.half3" title="pxr.UsdVol.Tokens.half3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half3</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.int2" title="pxr.UsdVol.Tokens.int2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int2</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.int3" title="pxr.UsdVol.Tokens.int3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int3</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.int64" title="pxr.UsdVol.Tokens.int64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int64</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.int_" title="pxr.UsdVol.Tokens.int_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.levelSet" title="pxr.UsdVol.Tokens.levelSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">levelSet</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.mask" title="pxr.UsdVol.Tokens.mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.matrix3d" title="pxr.UsdVol.Tokens.matrix3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix3d</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.matrix4d" title="pxr.UsdVol.Tokens.matrix4d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matrix4d</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.quatd" title="pxr.UsdVol.Tokens.quatd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quatd</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.staggered" title="pxr.UsdVol.Tokens.staggered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">staggered</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.string" title="pxr.UsdVol.Tokens.string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">string</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.uint" title="pxr.UsdVol.Tokens.uint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uint</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.unknown" title="pxr.UsdVol.Tokens.unknown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unknown</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Tokens.vectorDataRoleHint" title="pxr.UsdVol.Tokens.vectorDataRoleHint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectorDataRoleHint</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.Color">
+<span class="sig-name descname"><span class="pre">Color</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Color'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.Color" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.Field3DAsset">
+<span class="sig-name descname"><span class="pre">Field3DAsset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Field3DAsset'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.Field3DAsset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.FieldAsset">
+<span class="sig-name descname"><span class="pre">FieldAsset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FieldAsset'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.FieldAsset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.FieldBase">
+<span class="sig-name descname"><span class="pre">FieldBase</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FieldBase'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.FieldBase" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.None_">
+<span class="sig-name descname"><span class="pre">None_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'None'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.None_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.Normal">
+<span class="sig-name descname"><span class="pre">Normal</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Normal'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.Normal" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.OpenVDBAsset">
+<span class="sig-name descname"><span class="pre">OpenVDBAsset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OpenVDBAsset'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.OpenVDBAsset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.Point">
+<span class="sig-name descname"><span class="pre">Point</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Point'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.Point" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.Vector">
+<span class="sig-name descname"><span class="pre">Vector</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Vector'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.Vector" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.Volume">
+<span class="sig-name descname"><span class="pre">Volume</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Volume'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.Volume" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.bool_">
+<span class="sig-name descname"><span class="pre">bool_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bool'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.bool_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.double2">
+<span class="sig-name descname"><span class="pre">double2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'double2'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.double2" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.double3">
+<span class="sig-name descname"><span class="pre">double3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'double3'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.double3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.double_">
+<span class="sig-name descname"><span class="pre">double_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'double'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.double_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.field">
+<span class="sig-name descname"><span class="pre">field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'field'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.field" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.fieldClass">
+<span class="sig-name descname"><span class="pre">fieldClass</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fieldClass'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.fieldClass" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.fieldDataType">
+<span class="sig-name descname"><span class="pre">fieldDataType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fieldDataType'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.fieldDataType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.fieldIndex">
+<span class="sig-name descname"><span class="pre">fieldIndex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fieldIndex'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.fieldIndex" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.fieldName">
+<span class="sig-name descname"><span class="pre">fieldName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fieldName'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.fieldName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.fieldPurpose">
+<span class="sig-name descname"><span class="pre">fieldPurpose</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fieldPurpose'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.fieldPurpose" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.filePath">
+<span class="sig-name descname"><span class="pre">filePath</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'filePath'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.filePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.float2">
+<span class="sig-name descname"><span class="pre">float2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'float2'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.float2" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.float3">
+<span class="sig-name descname"><span class="pre">float3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'float3'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.float3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.float_">
+<span class="sig-name descname"><span class="pre">float_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'float'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.float_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.fogVolume">
+<span class="sig-name descname"><span class="pre">fogVolume</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fogVolume'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.fogVolume" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.half">
+<span class="sig-name descname"><span class="pre">half</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'half'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.half" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.half2">
+<span class="sig-name descname"><span class="pre">half2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'half2'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.half2" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.half3">
+<span class="sig-name descname"><span class="pre">half3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'half3'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.half3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.int2">
+<span class="sig-name descname"><span class="pre">int2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'int2'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.int2" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.int3">
+<span class="sig-name descname"><span class="pre">int3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'int3'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.int3" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.int64">
+<span class="sig-name descname"><span class="pre">int64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'int64'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.int64" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.int_">
+<span class="sig-name descname"><span class="pre">int_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'int'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.int_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.levelSet">
+<span class="sig-name descname"><span class="pre">levelSet</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'levelSet'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.levelSet" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.mask">
+<span class="sig-name descname"><span class="pre">mask</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'mask'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.mask" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.matrix3d">
+<span class="sig-name descname"><span class="pre">matrix3d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'matrix3d'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.matrix3d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.matrix4d">
+<span class="sig-name descname"><span class="pre">matrix4d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'matrix4d'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.matrix4d" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.quatd">
+<span class="sig-name descname"><span class="pre">quatd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'quatd'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.quatd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.staggered">
+<span class="sig-name descname"><span class="pre">staggered</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'staggered'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.staggered" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.string">
+<span class="sig-name descname"><span class="pre">string</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'string'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.string" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.uint">
+<span class="sig-name descname"><span class="pre">uint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uint'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.uint" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.unknown">
+<span class="sig-name descname"><span class="pre">unknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.unknown" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdVol.Tokens.vectorDataRoleHint">
+<span class="sig-name descname"><span class="pre">vectorDataRoleHint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vectorDataRoleHint'</span></em><a class="headerlink" href="#pxr.UsdVol.Tokens.vectorDataRoleHint" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdVol.</span></span><span class="sig-name descname"><span class="pre">Volume</span></span><a class="headerlink" href="#pxr.UsdVol.Volume" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.BlockFieldRelationship" title="pxr.UsdVol.Volume.BlockFieldRelationship"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BlockFieldRelationship</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.CreateFieldRelationship" title="pxr.UsdVol.Volume.CreateFieldRelationship"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFieldRelationship</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.Define" title="pxr.UsdVol.Volume.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.Get" title="pxr.UsdVol.Volume.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.GetFieldPath" title="pxr.UsdVol.Volume.GetFieldPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldPath</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.GetFieldPaths" title="pxr.UsdVol.Volume.GetFieldPaths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFieldPaths</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.GetSchemaAttributeNames" title="pxr.UsdVol.Volume.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdVol.Volume.HasFieldRelationship" title="pxr.UsdVol.Volume.HasFieldRelationship"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HasFieldRelationship</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.BlockFieldRelationship">
+<span class="sig-name descname"><span class="pre">BlockFieldRelationship</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.BlockFieldRelationship" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.CreateFieldRelationship">
+<span class="sig-name descname"><span class="pre">CreateFieldRelationship</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.CreateFieldRelationship" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.GetFieldPath">
+<span class="sig-name descname"><span class="pre">GetFieldPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.GetFieldPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.GetFieldPaths">
+<span class="sig-name descname"><span class="pre">GetFieldPaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.GetFieldPaths" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdVol.Volume.HasFieldRelationship">
+<span class="sig-name descname"><span class="pre">HasFieldRelationship</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdVol.Volume.HasFieldRelationship" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="UsdUtils.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UsdUtils module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Vt.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Vt module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset"><code class="docutils literal notranslate"><span class="pre">Field3DAsset</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.CreateFieldDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.CreateFieldPurposeAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldPurposeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.GetFieldDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.GetFieldPurposeAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldPurposeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Field3DAsset.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset"><code class="docutils literal notranslate"><span class="pre">FieldAsset</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.CreateFieldDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.CreateFieldIndexAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldIndexAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.CreateFieldNameAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.CreateFilePathAttr"><code class="docutils literal notranslate"><span class="pre">CreateFilePathAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.CreateVectorDataRoleHintAttr"><code class="docutils literal notranslate"><span class="pre">CreateVectorDataRoleHintAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.GetFieldDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.GetFieldIndexAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldIndexAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.GetFieldNameAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.GetFilePathAttr"><code class="docutils literal notranslate"><span class="pre">GetFilePathAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldAsset.GetVectorDataRoleHintAttr"><code class="docutils literal notranslate"><span class="pre">GetVectorDataRoleHintAttr()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldBase"><code class="docutils literal notranslate"><span class="pre">FieldBase</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldBase.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.FieldBase.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset"><code class="docutils literal notranslate"><span class="pre">OpenVDBAsset</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.CreateFieldClassAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldClassAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.CreateFieldDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">CreateFieldDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.GetFieldClassAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldClassAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.GetFieldDataTypeAttr"><code class="docutils literal notranslate"><span class="pre">GetFieldDataTypeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.OpenVDBAsset.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens"><code class="docutils literal notranslate"><span class="pre">Tokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.Color"><code class="docutils literal notranslate"><span class="pre">Color</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.Field3DAsset"><code class="docutils literal notranslate"><span class="pre">Field3DAsset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.FieldAsset"><code class="docutils literal notranslate"><span class="pre">FieldAsset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.FieldBase"><code class="docutils literal notranslate"><span class="pre">FieldBase</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.None_"><code class="docutils literal notranslate"><span class="pre">None_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.Normal"><code class="docutils literal notranslate"><span class="pre">Normal</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.OpenVDBAsset"><code class="docutils literal notranslate"><span class="pre">OpenVDBAsset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.Point"><code class="docutils literal notranslate"><span class="pre">Point</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.Vector"><code class="docutils literal notranslate"><span class="pre">Vector</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.Volume"><code class="docutils literal notranslate"><span class="pre">Volume</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.bool_"><code class="docutils literal notranslate"><span class="pre">bool_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.double2"><code class="docutils literal notranslate"><span class="pre">double2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.double3"><code class="docutils literal notranslate"><span class="pre">double3</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.double_"><code class="docutils literal notranslate"><span class="pre">double_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.field"><code class="docutils literal notranslate"><span class="pre">field</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.fieldClass"><code class="docutils literal notranslate"><span class="pre">fieldClass</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.fieldDataType"><code class="docutils literal notranslate"><span class="pre">fieldDataType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.fieldIndex"><code class="docutils literal notranslate"><span class="pre">fieldIndex</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.fieldName"><code class="docutils literal notranslate"><span class="pre">fieldName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.fieldPurpose"><code class="docutils literal notranslate"><span class="pre">fieldPurpose</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.filePath"><code class="docutils literal notranslate"><span class="pre">filePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.float2"><code class="docutils literal notranslate"><span class="pre">float2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.float3"><code class="docutils literal notranslate"><span class="pre">float3</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.float_"><code class="docutils literal notranslate"><span class="pre">float_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.fogVolume"><code class="docutils literal notranslate"><span class="pre">fogVolume</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.half"><code class="docutils literal notranslate"><span class="pre">half</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.half2"><code class="docutils literal notranslate"><span class="pre">half2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.half3"><code class="docutils literal notranslate"><span class="pre">half3</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.int2"><code class="docutils literal notranslate"><span class="pre">int2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.int3"><code class="docutils literal notranslate"><span class="pre">int3</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.int64"><code class="docutils literal notranslate"><span class="pre">int64</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.int_"><code class="docutils literal notranslate"><span class="pre">int_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.levelSet"><code class="docutils literal notranslate"><span class="pre">levelSet</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.mask"><code class="docutils literal notranslate"><span class="pre">mask</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.matrix3d"><code class="docutils literal notranslate"><span class="pre">matrix3d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.matrix4d"><code class="docutils literal notranslate"><span class="pre">matrix4d</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.quatd"><code class="docutils literal notranslate"><span class="pre">quatd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.staggered"><code class="docutils literal notranslate"><span class="pre">staggered</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.string"><code class="docutils literal notranslate"><span class="pre">string</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.uint"><code class="docutils literal notranslate"><span class="pre">uint</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.unknown"><code class="docutils literal notranslate"><span class="pre">unknown</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Tokens.vectorDataRoleHint"><code class="docutils literal notranslate"><span class="pre">vectorDataRoleHint</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume"><code class="docutils literal notranslate"><span class="pre">Volume</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.BlockFieldRelationship"><code class="docutils literal notranslate"><span class="pre">BlockFieldRelationship()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.CreateFieldRelationship"><code class="docutils literal notranslate"><span class="pre">CreateFieldRelationship()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.GetFieldPath"><code class="docutils literal notranslate"><span class="pre">GetFieldPath()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.GetFieldPaths"><code class="docutils literal notranslate"><span class="pre">GetFieldPaths()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdVol.Volume.HasFieldRelationship"><code class="docutils literal notranslate"><span class="pre">HasFieldRelationship()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

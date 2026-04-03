@@ -1,0 +1,1807 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UsdUI module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/UsdUI';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UsdUtils module" href="UsdUtils.html" />
+    <link rel="prev" title="UsdSkel module" href="UsdSkel.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">UsdUI module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usdui-module">
+<h1>UsdUI module<a class="headerlink" href="#usdui-module" title="Link to this heading">#</a></h1>
+<p>Summary: The UsdUI module provides schemas for encoding information on USD prims for client GUI tools to use in organizing/presenting prims in GUI layouts.</p>
+<hr class="docutils" />
+<p id="module-pxr.UsdUI"><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI" title="pxr.UsdUI.AccessibilityAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AccessibilityAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints" title="pxr.UsdUI.AttributeHints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeHints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Backdrop" title="pxr.UsdUI.Backdrop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backdrop</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys" title="pxr.UsdUI.HintKeys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HintKeys</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI" title="pxr.UsdUI.NodeGraphNodeAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeGraphNodeAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.ObjectHints" title="pxr.UsdUI.ObjectHints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectHints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints" title="pxr.UsdUI.PrimHints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PrimHints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PropertyHints" title="pxr.UsdUI.PropertyHints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyHints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI" title="pxr.UsdUI.SceneGraphPrimAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneGraphPrimAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens" title="pxr.UsdUI.Tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">AccessibilityAPI</span></span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.Apply" title="pxr.UsdUI.AccessibilityAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.ApplyDefaultAPI" title="pxr.UsdUI.AccessibilityAPI.ApplyDefaultAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyDefaultAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.CanApply" title="pxr.UsdUI.AccessibilityAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.CreateDefaultAPI" title="pxr.UsdUI.AccessibilityAPI.CreateDefaultAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDefaultAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.CreateDescriptionAttr" title="pxr.UsdUI.AccessibilityAPI.CreateDescriptionAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDescriptionAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.CreateLabelAttr" title="pxr.UsdUI.AccessibilityAPI.CreateLabelAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateLabelAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.CreatePriorityAttr" title="pxr.UsdUI.AccessibilityAPI.CreatePriorityAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePriorityAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.Get" title="pxr.UsdUI.AccessibilityAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.GetAll" title="pxr.UsdUI.AccessibilityAPI.GetAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAll</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.GetDescriptionAttr" title="pxr.UsdUI.AccessibilityAPI.GetDescriptionAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDescriptionAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.GetLabelAttr" title="pxr.UsdUI.AccessibilityAPI.GetLabelAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetLabelAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.GetPriorityAttr" title="pxr.UsdUI.AccessibilityAPI.GetPriorityAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPriorityAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.GetSchemaAttributeNames" title="pxr.UsdUI.AccessibilityAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AccessibilityAPI.IsAccessibilityAPIPath" title="pxr.UsdUI.AccessibilityAPI.IsAccessibilityAPIPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsAccessibilityAPIPath</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.ApplyDefaultAPI">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ApplyDefaultAPI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.ApplyDefaultAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.CreateDefaultAPI">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CreateDefaultAPI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.CreateDefaultAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.CreateDescriptionAttr">
+<span class="sig-name descname"><span class="pre">CreateDescriptionAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.CreateDescriptionAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.CreateLabelAttr">
+<span class="sig-name descname"><span class="pre">CreateLabelAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.CreateLabelAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.CreatePriorityAttr">
+<span class="sig-name descname"><span class="pre">CreatePriorityAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.CreatePriorityAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.GetAll">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.GetAll" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.GetDescriptionAttr">
+<span class="sig-name descname"><span class="pre">GetDescriptionAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.GetDescriptionAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.GetLabelAttr">
+<span class="sig-name descname"><span class="pre">GetLabelAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.GetLabelAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.GetPriorityAttr">
+<span class="sig-name descname"><span class="pre">GetPriorityAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.GetPriorityAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AccessibilityAPI.IsAccessibilityAPIPath">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsAccessibilityAPIPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AccessibilityAPI.IsAccessibilityAPIPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">AttributeHints</span></span><a class="headerlink" href="#pxr.UsdUI.AttributeHints" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints.ApplyValueLabel" title="pxr.UsdUI.AttributeHints.ApplyValueLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyValueLabel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints.GetAttribute" title="pxr.UsdUI.AttributeHints.GetAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAttribute</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints.GetValueLabels" title="pxr.UsdUI.AttributeHints.GetValueLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValueLabels</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints.GetValueLabelsOrder" title="pxr.UsdUI.AttributeHints.GetValueLabelsOrder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValueLabelsOrder</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints.SetValueLabels" title="pxr.UsdUI.AttributeHints.SetValueLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetValueLabels</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.AttributeHints.SetValueLabelsOrder" title="pxr.UsdUI.AttributeHints.SetValueLabelsOrder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetValueLabelsOrder</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints.ApplyValueLabel">
+<span class="sig-name descname"><span class="pre">ApplyValueLabel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AttributeHints.ApplyValueLabel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints.GetAttribute">
+<span class="sig-name descname"><span class="pre">GetAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AttributeHints.GetAttribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints.GetValueLabels">
+<span class="sig-name descname"><span class="pre">GetValueLabels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AttributeHints.GetValueLabels" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints.GetValueLabelsOrder">
+<span class="sig-name descname"><span class="pre">GetValueLabelsOrder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AttributeHints.GetValueLabelsOrder" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints.SetValueLabels">
+<span class="sig-name descname"><span class="pre">SetValueLabels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AttributeHints.SetValueLabels" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.AttributeHints.SetValueLabelsOrder">
+<span class="sig-name descname"><span class="pre">SetValueLabelsOrder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.AttributeHints.SetValueLabelsOrder" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.Backdrop">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">Backdrop</span></span><a class="headerlink" href="#pxr.UsdUI.Backdrop" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Backdrop.CreateDescriptionAttr" title="pxr.UsdUI.Backdrop.CreateDescriptionAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDescriptionAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Backdrop.Define" title="pxr.UsdUI.Backdrop.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Backdrop.Get" title="pxr.UsdUI.Backdrop.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Backdrop.GetDescriptionAttr" title="pxr.UsdUI.Backdrop.GetDescriptionAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDescriptionAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Backdrop.GetSchemaAttributeNames" title="pxr.UsdUI.Backdrop.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.Backdrop.CreateDescriptionAttr">
+<span class="sig-name descname"><span class="pre">CreateDescriptionAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.Backdrop.CreateDescriptionAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.Backdrop.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.Backdrop.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.Backdrop.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.Backdrop.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.Backdrop.GetDescriptionAttr">
+<span class="sig-name descname"><span class="pre">GetDescriptionAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.Backdrop.GetDescriptionAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.Backdrop.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.Backdrop.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">HintKeys</span></span><a class="headerlink" href="#pxr.UsdUI.HintKeys" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.DisplayGroup" title="pxr.UsdUI.HintKeys.DisplayGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplayGroup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.DisplayGroupsExpanded" title="pxr.UsdUI.HintKeys.DisplayGroupsExpanded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplayGroupsExpanded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.DisplayGroupsShownIf" title="pxr.UsdUI.HintKeys.DisplayGroupsShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplayGroupsShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.DisplayName" title="pxr.UsdUI.HintKeys.DisplayName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DisplayName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.Hidden" title="pxr.UsdUI.HintKeys.Hidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Hidden</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.ShownIf" title="pxr.UsdUI.HintKeys.ShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.UIHints" title="pxr.UsdUI.HintKeys.UIHints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UIHints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.ValueLabels" title="pxr.UsdUI.HintKeys.ValueLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueLabels</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.HintKeys.ValueLabelsOrder" title="pxr.UsdUI.HintKeys.ValueLabelsOrder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueLabelsOrder</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.DisplayGroup">
+<span class="sig-name descname"><span class="pre">DisplayGroup</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'displayGroup'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.DisplayGroup" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.DisplayGroupsExpanded">
+<span class="sig-name descname"><span class="pre">DisplayGroupsExpanded</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'displayGroupsExpanded'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.DisplayGroupsExpanded" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.DisplayGroupsShownIf">
+<span class="sig-name descname"><span class="pre">DisplayGroupsShownIf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'displayGroupsShownIf'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.DisplayGroupsShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.DisplayName">
+<span class="sig-name descname"><span class="pre">DisplayName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'displayName'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.DisplayName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.Hidden">
+<span class="sig-name descname"><span class="pre">Hidden</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hidden'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.Hidden" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.ShownIf">
+<span class="sig-name descname"><span class="pre">ShownIf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'shownIf'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.ShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.UIHints">
+<span class="sig-name descname"><span class="pre">UIHints</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uiHints'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.UIHints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.ValueLabels">
+<span class="sig-name descname"><span class="pre">ValueLabels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'valueLabels'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.ValueLabels" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.HintKeys.ValueLabelsOrder">
+<span class="sig-name descname"><span class="pre">ValueLabelsOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'valueLabelsOrder'</span></em><a class="headerlink" href="#pxr.UsdUI.HintKeys.ValueLabelsOrder" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">NodeGraphNodeAPI</span></span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.Apply" title="pxr.UsdUI.NodeGraphNodeAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CanApply" title="pxr.UsdUI.NodeGraphNodeAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateDisplayColorAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreateDisplayColorAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDisplayColorAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateDocURIAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreateDocURIAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDocURIAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateExpansionStateAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreateExpansionStateAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateExpansionStateAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateIconAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreateIconAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateIconAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreatePosAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreatePosAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePosAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateSizeAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreateSizeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateSizeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateStackingOrderAttr" title="pxr.UsdUI.NodeGraphNodeAPI.CreateStackingOrderAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateStackingOrderAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.Get" title="pxr.UsdUI.NodeGraphNodeAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetDisplayColorAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetDisplayColorAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayColorAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetDocURIAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetDocURIAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDocURIAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetExpansionStateAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetExpansionStateAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetExpansionStateAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetIconAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetIconAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetIconAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetPosAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetPosAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPosAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetSchemaAttributeNames" title="pxr.UsdUI.NodeGraphNodeAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetSizeAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetSizeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSizeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.NodeGraphNodeAPI.GetStackingOrderAttr" title="pxr.UsdUI.NodeGraphNodeAPI.GetStackingOrderAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetStackingOrderAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreateDisplayColorAttr">
+<span class="sig-name descname"><span class="pre">CreateDisplayColorAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateDisplayColorAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreateDocURIAttr">
+<span class="sig-name descname"><span class="pre">CreateDocURIAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateDocURIAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreateExpansionStateAttr">
+<span class="sig-name descname"><span class="pre">CreateExpansionStateAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateExpansionStateAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreateIconAttr">
+<span class="sig-name descname"><span class="pre">CreateIconAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateIconAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreatePosAttr">
+<span class="sig-name descname"><span class="pre">CreatePosAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreatePosAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreateSizeAttr">
+<span class="sig-name descname"><span class="pre">CreateSizeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateSizeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.CreateStackingOrderAttr">
+<span class="sig-name descname"><span class="pre">CreateStackingOrderAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateStackingOrderAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetDisplayColorAttr">
+<span class="sig-name descname"><span class="pre">GetDisplayColorAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetDisplayColorAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetDocURIAttr">
+<span class="sig-name descname"><span class="pre">GetDocURIAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetDocURIAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetExpansionStateAttr">
+<span class="sig-name descname"><span class="pre">GetExpansionStateAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetExpansionStateAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetIconAttr">
+<span class="sig-name descname"><span class="pre">GetIconAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetIconAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetPosAttr">
+<span class="sig-name descname"><span class="pre">GetPosAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetPosAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetSizeAttr">
+<span class="sig-name descname"><span class="pre">GetSizeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetSizeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.NodeGraphNodeAPI.GetStackingOrderAttr">
+<span class="sig-name descname"><span class="pre">GetStackingOrderAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.NodeGraphNodeAPI.GetStackingOrderAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.ObjectHints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">ObjectHints</span></span><a class="headerlink" href="#pxr.UsdUI.ObjectHints" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.ObjectHints.GetDisplayName" title="pxr.UsdUI.ObjectHints.GetDisplayName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.ObjectHints.GetHidden" title="pxr.UsdUI.ObjectHints.GetHidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetHidden</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.ObjectHints.GetObject" title="pxr.UsdUI.ObjectHints.GetObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetObject</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.ObjectHints.SetDisplayName" title="pxr.UsdUI.ObjectHints.SetDisplayName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplayName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.ObjectHints.SetHidden" title="pxr.UsdUI.ObjectHints.SetHidden"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetHidden</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.ObjectHints.GetDisplayName">
+<span class="sig-name descname"><span class="pre">GetDisplayName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.ObjectHints.GetDisplayName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.ObjectHints.GetHidden">
+<span class="sig-name descname"><span class="pre">GetHidden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.ObjectHints.GetHidden" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.ObjectHints.GetObject">
+<span class="sig-name descname"><span class="pre">GetObject</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.ObjectHints.GetObject" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.ObjectHints.SetDisplayName">
+<span class="sig-name descname"><span class="pre">SetDisplayName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.ObjectHints.SetDisplayName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.ObjectHints.SetHidden">
+<span class="sig-name descname"><span class="pre">SetHidden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.ObjectHints.SetHidden" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">PrimHints</span></span><a class="headerlink" href="#pxr.UsdUI.PrimHints" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.GetDisplayGroupExpanded" title="pxr.UsdUI.PrimHints.GetDisplayGroupExpanded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayGroupExpanded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.GetDisplayGroupShownIf" title="pxr.UsdUI.PrimHints.GetDisplayGroupShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayGroupShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.GetDisplayGroupsExpanded" title="pxr.UsdUI.PrimHints.GetDisplayGroupsExpanded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayGroupsExpanded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.GetDisplayGroupsShownIf" title="pxr.UsdUI.PrimHints.GetDisplayGroupsShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayGroupsShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.GetPrim" title="pxr.UsdUI.PrimHints.GetPrim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPrim</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.SetDisplayGroupExpanded" title="pxr.UsdUI.PrimHints.SetDisplayGroupExpanded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplayGroupExpanded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.SetDisplayGroupShownIf" title="pxr.UsdUI.PrimHints.SetDisplayGroupShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplayGroupShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.SetDisplayGroupsExpanded" title="pxr.UsdUI.PrimHints.SetDisplayGroupsExpanded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplayGroupsExpanded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PrimHints.SetDisplayGroupsShownIf" title="pxr.UsdUI.PrimHints.SetDisplayGroupsShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplayGroupsShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.GetDisplayGroupExpanded">
+<span class="sig-name descname"><span class="pre">GetDisplayGroupExpanded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.GetDisplayGroupExpanded" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.GetDisplayGroupShownIf">
+<span class="sig-name descname"><span class="pre">GetDisplayGroupShownIf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.GetDisplayGroupShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.GetDisplayGroupsExpanded">
+<span class="sig-name descname"><span class="pre">GetDisplayGroupsExpanded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.GetDisplayGroupsExpanded" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.GetDisplayGroupsShownIf">
+<span class="sig-name descname"><span class="pre">GetDisplayGroupsShownIf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.GetDisplayGroupsShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.GetPrim">
+<span class="sig-name descname"><span class="pre">GetPrim</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.GetPrim" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.SetDisplayGroupExpanded">
+<span class="sig-name descname"><span class="pre">SetDisplayGroupExpanded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.SetDisplayGroupExpanded" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.SetDisplayGroupShownIf">
+<span class="sig-name descname"><span class="pre">SetDisplayGroupShownIf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.SetDisplayGroupShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.SetDisplayGroupsExpanded">
+<span class="sig-name descname"><span class="pre">SetDisplayGroupsExpanded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.SetDisplayGroupsExpanded" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PrimHints.SetDisplayGroupsShownIf">
+<span class="sig-name descname"><span class="pre">SetDisplayGroupsShownIf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PrimHints.SetDisplayGroupsShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.PropertyHints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">PropertyHints</span></span><a class="headerlink" href="#pxr.UsdUI.PropertyHints" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PropertyHints.GetDisplayGroup" title="pxr.UsdUI.PropertyHints.GetDisplayGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayGroup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PropertyHints.GetProperty" title="pxr.UsdUI.PropertyHints.GetProperty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetProperty</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PropertyHints.GetShownIf" title="pxr.UsdUI.PropertyHints.GetShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.PropertyHints.SetDisplayGroup" title="pxr.UsdUI.PropertyHints.SetDisplayGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplayGroup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.PropertyHints.SetShownIf" title="pxr.UsdUI.PropertyHints.SetShownIf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetShownIf</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PropertyHints.GetDisplayGroup">
+<span class="sig-name descname"><span class="pre">GetDisplayGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PropertyHints.GetDisplayGroup" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PropertyHints.GetProperty">
+<span class="sig-name descname"><span class="pre">GetProperty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PropertyHints.GetProperty" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PropertyHints.GetShownIf">
+<span class="sig-name descname"><span class="pre">GetShownIf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PropertyHints.GetShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PropertyHints.SetDisplayGroup">
+<span class="sig-name descname"><span class="pre">SetDisplayGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PropertyHints.SetDisplayGroup" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.PropertyHints.SetShownIf">
+<span class="sig-name descname"><span class="pre">SetShownIf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.PropertyHints.SetShownIf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">SceneGraphPrimAPI</span></span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.Apply" title="pxr.UsdUI.SceneGraphPrimAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.CanApply" title="pxr.UsdUI.SceneGraphPrimAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayGroupAttr" title="pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayGroupAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDisplayGroupAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayNameAttr" title="pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDisplayNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.Get" title="pxr.UsdUI.SceneGraphPrimAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.GetDisplayGroupAttr" title="pxr.UsdUI.SceneGraphPrimAPI.GetDisplayGroupAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayGroupAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.GetDisplayNameAttr" title="pxr.UsdUI.SceneGraphPrimAPI.GetDisplayNameAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplayNameAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.SceneGraphPrimAPI.GetSchemaAttributeNames" title="pxr.UsdUI.SceneGraphPrimAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayGroupAttr">
+<span class="sig-name descname"><span class="pre">CreateDisplayGroupAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayGroupAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayNameAttr">
+<span class="sig-name descname"><span class="pre">CreateDisplayNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.GetDisplayGroupAttr">
+<span class="sig-name descname"><span class="pre">GetDisplayGroupAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.GetDisplayGroupAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.GetDisplayNameAttr">
+<span class="sig-name descname"><span class="pre">GetDisplayNameAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.GetDisplayNameAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUI.SceneGraphPrimAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUI.SceneGraphPrimAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUI.</span></span><span class="sig-name descname"><span class="pre">Tokens</span></span><a class="headerlink" href="#pxr.UsdUI.Tokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.AccessibilityAPI" title="pxr.UsdUI.Tokens.AccessibilityAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AccessibilityAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.Backdrop" title="pxr.UsdUI.Tokens.Backdrop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Backdrop</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.NodeGraphNodeAPI" title="pxr.UsdUI.Tokens.NodeGraphNodeAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeGraphNodeAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.SceneGraphPrimAPI" title="pxr.UsdUI.Tokens.SceneGraphPrimAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneGraphPrimAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.accessibility" title="pxr.UsdUI.Tokens.accessibility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accessibility</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Description" title="pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accessibility_MultipleApplyTemplate_Description</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Label" title="pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accessibility_MultipleApplyTemplate_Label</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Priority" title="pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Priority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">accessibility_MultipleApplyTemplate_Priority</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.closed" title="pxr.UsdUI.Tokens.closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closed</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.default_" title="pxr.UsdUI.Tokens.default_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.description" title="pxr.UsdUI.Tokens.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.high" title="pxr.UsdUI.Tokens.high"><code class="xref py py-obj docutils literal notranslate"><span class="pre">high</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.label" title="pxr.UsdUI.Tokens.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.low" title="pxr.UsdUI.Tokens.low"><code class="xref py py-obj docutils literal notranslate"><span class="pre">low</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.minimized" title="pxr.UsdUI.Tokens.minimized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimized</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.open" title="pxr.UsdUI.Tokens.open"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.priority" title="pxr.UsdUI.Tokens.priority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">priority</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.standard" title="pxr.UsdUI.Tokens.standard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">standard</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiDescription" title="pxr.UsdUI.Tokens.uiDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiDescription</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiDisplayGroup" title="pxr.UsdUI.Tokens.uiDisplayGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiDisplayGroup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiDisplayName" title="pxr.UsdUI.Tokens.uiDisplayName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiDisplayName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodeDisplayColor" title="pxr.UsdUI.Tokens.uiNodegraphNodeDisplayColor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodeDisplayColor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodeDocURI" title="pxr.UsdUI.Tokens.uiNodegraphNodeDocURI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodeDocURI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodeExpansionState" title="pxr.UsdUI.Tokens.uiNodegraphNodeExpansionState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodeExpansionState</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodeIcon" title="pxr.UsdUI.Tokens.uiNodegraphNodeIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodeIcon</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodePos" title="pxr.UsdUI.Tokens.uiNodegraphNodePos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodePos</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodeSize" title="pxr.UsdUI.Tokens.uiNodegraphNodeSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodeSize</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUI.Tokens.uiNodegraphNodeStackingOrder" title="pxr.UsdUI.Tokens.uiNodegraphNodeStackingOrder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uiNodegraphNodeStackingOrder</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.AccessibilityAPI">
+<span class="sig-name descname"><span class="pre">AccessibilityAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AccessibilityAPI'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.AccessibilityAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.Backdrop">
+<span class="sig-name descname"><span class="pre">Backdrop</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Backdrop'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.Backdrop" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.NodeGraphNodeAPI">
+<span class="sig-name descname"><span class="pre">NodeGraphNodeAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NodeGraphNodeAPI'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.NodeGraphNodeAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.SceneGraphPrimAPI">
+<span class="sig-name descname"><span class="pre">SceneGraphPrimAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SceneGraphPrimAPI'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.SceneGraphPrimAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.accessibility">
+<span class="sig-name descname"><span class="pre">accessibility</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessibility'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.accessibility" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Description">
+<span class="sig-name descname"><span class="pre">accessibility_MultipleApplyTemplate_Description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessibility:__INSTANCE_NAME__:description'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Description" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Label">
+<span class="sig-name descname"><span class="pre">accessibility_MultipleApplyTemplate_Label</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessibility:__INSTANCE_NAME__:label'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Label" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Priority">
+<span class="sig-name descname"><span class="pre">accessibility_MultipleApplyTemplate_Priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessibility:__INSTANCE_NAME__:priority'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Priority" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.closed">
+<span class="sig-name descname"><span class="pre">closed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'closed'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.closed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.default_">
+<span class="sig-name descname"><span class="pre">default_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'default'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.default_" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'description'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.description" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.high">
+<span class="sig-name descname"><span class="pre">high</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'high'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.high" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.label">
+<span class="sig-name descname"><span class="pre">label</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'label'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.label" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.low">
+<span class="sig-name descname"><span class="pre">low</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'low'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.low" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.minimized">
+<span class="sig-name descname"><span class="pre">minimized</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'minimized'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.minimized" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.open">
+<span class="sig-name descname"><span class="pre">open</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'open'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.open" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'priority'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.priority" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.standard">
+<span class="sig-name descname"><span class="pre">standard</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'standard'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.standard" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiDescription">
+<span class="sig-name descname"><span class="pre">uiDescription</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:description'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiDescription" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiDisplayGroup">
+<span class="sig-name descname"><span class="pre">uiDisplayGroup</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:displayGroup'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiDisplayGroup" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiDisplayName">
+<span class="sig-name descname"><span class="pre">uiDisplayName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:displayName'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiDisplayName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodeDisplayColor">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodeDisplayColor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:displayColor'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodeDisplayColor" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodeDocURI">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodeDocURI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:docURI'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodeDocURI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodeExpansionState">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodeExpansionState</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:expansionState'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodeExpansionState" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodeIcon">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodeIcon</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:icon'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodeIcon" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodePos">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodePos</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:pos'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodePos" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodeSize">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodeSize</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:size'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodeSize" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUI.Tokens.uiNodegraphNodeStackingOrder">
+<span class="sig-name descname"><span class="pre">uiNodegraphNodeStackingOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ui:nodegraph:node:stackingOrder'</span></em><a class="headerlink" href="#pxr.UsdUI.Tokens.uiNodegraphNodeStackingOrder" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="UsdSkel.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UsdSkel module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UsdUtils.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UsdUtils module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI"><code class="docutils literal notranslate"><span class="pre">AccessibilityAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.ApplyDefaultAPI"><code class="docutils literal notranslate"><span class="pre">ApplyDefaultAPI()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.CreateDefaultAPI"><code class="docutils literal notranslate"><span class="pre">CreateDefaultAPI()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.CreateDescriptionAttr"><code class="docutils literal notranslate"><span class="pre">CreateDescriptionAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.CreateLabelAttr"><code class="docutils literal notranslate"><span class="pre">CreateLabelAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.CreatePriorityAttr"><code class="docutils literal notranslate"><span class="pre">CreatePriorityAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.GetAll"><code class="docutils literal notranslate"><span class="pre">GetAll()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.GetDescriptionAttr"><code class="docutils literal notranslate"><span class="pre">GetDescriptionAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.GetLabelAttr"><code class="docutils literal notranslate"><span class="pre">GetLabelAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.GetPriorityAttr"><code class="docutils literal notranslate"><span class="pre">GetPriorityAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AccessibilityAPI.IsAccessibilityAPIPath"><code class="docutils literal notranslate"><span class="pre">IsAccessibilityAPIPath()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints"><code class="docutils literal notranslate"><span class="pre">AttributeHints</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints.ApplyValueLabel"><code class="docutils literal notranslate"><span class="pre">ApplyValueLabel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints.GetAttribute"><code class="docutils literal notranslate"><span class="pre">GetAttribute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints.GetValueLabels"><code class="docutils literal notranslate"><span class="pre">GetValueLabels()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints.GetValueLabelsOrder"><code class="docutils literal notranslate"><span class="pre">GetValueLabelsOrder()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints.SetValueLabels"><code class="docutils literal notranslate"><span class="pre">SetValueLabels()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.AttributeHints.SetValueLabelsOrder"><code class="docutils literal notranslate"><span class="pre">SetValueLabelsOrder()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Backdrop"><code class="docutils literal notranslate"><span class="pre">Backdrop</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Backdrop.CreateDescriptionAttr"><code class="docutils literal notranslate"><span class="pre">CreateDescriptionAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Backdrop.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Backdrop.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Backdrop.GetDescriptionAttr"><code class="docutils literal notranslate"><span class="pre">GetDescriptionAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Backdrop.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys"><code class="docutils literal notranslate"><span class="pre">HintKeys</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.DisplayGroup"><code class="docutils literal notranslate"><span class="pre">DisplayGroup</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.DisplayGroupsExpanded"><code class="docutils literal notranslate"><span class="pre">DisplayGroupsExpanded</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.DisplayGroupsShownIf"><code class="docutils literal notranslate"><span class="pre">DisplayGroupsShownIf</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.DisplayName"><code class="docutils literal notranslate"><span class="pre">DisplayName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.Hidden"><code class="docutils literal notranslate"><span class="pre">Hidden</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.ShownIf"><code class="docutils literal notranslate"><span class="pre">ShownIf</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.UIHints"><code class="docutils literal notranslate"><span class="pre">UIHints</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.ValueLabels"><code class="docutils literal notranslate"><span class="pre">ValueLabels</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.HintKeys.ValueLabelsOrder"><code class="docutils literal notranslate"><span class="pre">ValueLabelsOrder</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI"><code class="docutils literal notranslate"><span class="pre">NodeGraphNodeAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateDisplayColorAttr"><code class="docutils literal notranslate"><span class="pre">CreateDisplayColorAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateDocURIAttr"><code class="docutils literal notranslate"><span class="pre">CreateDocURIAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateExpansionStateAttr"><code class="docutils literal notranslate"><span class="pre">CreateExpansionStateAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateIconAttr"><code class="docutils literal notranslate"><span class="pre">CreateIconAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreatePosAttr"><code class="docutils literal notranslate"><span class="pre">CreatePosAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateSizeAttr"><code class="docutils literal notranslate"><span class="pre">CreateSizeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.CreateStackingOrderAttr"><code class="docutils literal notranslate"><span class="pre">CreateStackingOrderAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetDisplayColorAttr"><code class="docutils literal notranslate"><span class="pre">GetDisplayColorAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetDocURIAttr"><code class="docutils literal notranslate"><span class="pre">GetDocURIAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetExpansionStateAttr"><code class="docutils literal notranslate"><span class="pre">GetExpansionStateAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetIconAttr"><code class="docutils literal notranslate"><span class="pre">GetIconAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetPosAttr"><code class="docutils literal notranslate"><span class="pre">GetPosAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetSizeAttr"><code class="docutils literal notranslate"><span class="pre">GetSizeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.NodeGraphNodeAPI.GetStackingOrderAttr"><code class="docutils literal notranslate"><span class="pre">GetStackingOrderAttr()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.ObjectHints"><code class="docutils literal notranslate"><span class="pre">ObjectHints</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.ObjectHints.GetDisplayName"><code class="docutils literal notranslate"><span class="pre">GetDisplayName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.ObjectHints.GetHidden"><code class="docutils literal notranslate"><span class="pre">GetHidden()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.ObjectHints.GetObject"><code class="docutils literal notranslate"><span class="pre">GetObject()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.ObjectHints.SetDisplayName"><code class="docutils literal notranslate"><span class="pre">SetDisplayName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.ObjectHints.SetHidden"><code class="docutils literal notranslate"><span class="pre">SetHidden()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints"><code class="docutils literal notranslate"><span class="pre">PrimHints</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.GetDisplayGroupExpanded"><code class="docutils literal notranslate"><span class="pre">GetDisplayGroupExpanded()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.GetDisplayGroupShownIf"><code class="docutils literal notranslate"><span class="pre">GetDisplayGroupShownIf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.GetDisplayGroupsExpanded"><code class="docutils literal notranslate"><span class="pre">GetDisplayGroupsExpanded()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.GetDisplayGroupsShownIf"><code class="docutils literal notranslate"><span class="pre">GetDisplayGroupsShownIf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.GetPrim"><code class="docutils literal notranslate"><span class="pre">GetPrim()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.SetDisplayGroupExpanded"><code class="docutils literal notranslate"><span class="pre">SetDisplayGroupExpanded()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.SetDisplayGroupShownIf"><code class="docutils literal notranslate"><span class="pre">SetDisplayGroupShownIf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.SetDisplayGroupsExpanded"><code class="docutils literal notranslate"><span class="pre">SetDisplayGroupsExpanded()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PrimHints.SetDisplayGroupsShownIf"><code class="docutils literal notranslate"><span class="pre">SetDisplayGroupsShownIf()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PropertyHints"><code class="docutils literal notranslate"><span class="pre">PropertyHints</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PropertyHints.GetDisplayGroup"><code class="docutils literal notranslate"><span class="pre">GetDisplayGroup()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PropertyHints.GetProperty"><code class="docutils literal notranslate"><span class="pre">GetProperty()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PropertyHints.GetShownIf"><code class="docutils literal notranslate"><span class="pre">GetShownIf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PropertyHints.SetDisplayGroup"><code class="docutils literal notranslate"><span class="pre">SetDisplayGroup()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.PropertyHints.SetShownIf"><code class="docutils literal notranslate"><span class="pre">SetShownIf()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI"><code class="docutils literal notranslate"><span class="pre">SceneGraphPrimAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayGroupAttr"><code class="docutils literal notranslate"><span class="pre">CreateDisplayGroupAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.CreateDisplayNameAttr"><code class="docutils literal notranslate"><span class="pre">CreateDisplayNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.GetDisplayGroupAttr"><code class="docutils literal notranslate"><span class="pre">GetDisplayGroupAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.GetDisplayNameAttr"><code class="docutils literal notranslate"><span class="pre">GetDisplayNameAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.SceneGraphPrimAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens"><code class="docutils literal notranslate"><span class="pre">Tokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.AccessibilityAPI"><code class="docutils literal notranslate"><span class="pre">AccessibilityAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.Backdrop"><code class="docutils literal notranslate"><span class="pre">Backdrop</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.NodeGraphNodeAPI"><code class="docutils literal notranslate"><span class="pre">NodeGraphNodeAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.SceneGraphPrimAPI"><code class="docutils literal notranslate"><span class="pre">SceneGraphPrimAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.accessibility"><code class="docutils literal notranslate"><span class="pre">accessibility</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Description"><code class="docutils literal notranslate"><span class="pre">accessibility_MultipleApplyTemplate_Description</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Label"><code class="docutils literal notranslate"><span class="pre">accessibility_MultipleApplyTemplate_Label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.accessibility_MultipleApplyTemplate_Priority"><code class="docutils literal notranslate"><span class="pre">accessibility_MultipleApplyTemplate_Priority</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.closed"><code class="docutils literal notranslate"><span class="pre">closed</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.default_"><code class="docutils literal notranslate"><span class="pre">default_</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.description"><code class="docutils literal notranslate"><span class="pre">description</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.high"><code class="docutils literal notranslate"><span class="pre">high</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.label"><code class="docutils literal notranslate"><span class="pre">label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.low"><code class="docutils literal notranslate"><span class="pre">low</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.minimized"><code class="docutils literal notranslate"><span class="pre">minimized</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.open"><code class="docutils literal notranslate"><span class="pre">open</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.priority"><code class="docutils literal notranslate"><span class="pre">priority</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.standard"><code class="docutils literal notranslate"><span class="pre">standard</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiDescription"><code class="docutils literal notranslate"><span class="pre">uiDescription</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiDisplayGroup"><code class="docutils literal notranslate"><span class="pre">uiDisplayGroup</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiDisplayName"><code class="docutils literal notranslate"><span class="pre">uiDisplayName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodeDisplayColor"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodeDisplayColor</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodeDocURI"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodeDocURI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodeExpansionState"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodeExpansionState</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodeIcon"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodeIcon</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodePos"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodePos</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodeSize"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodeSize</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUI.Tokens.uiNodegraphNodeStackingOrder"><code class="docutils literal notranslate"><span class="pre">uiNodegraphNodeStackingOrder</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,2340 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tf module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/Tf';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Trace module" href="Trace.html" />
+    <link rel="prev" title="Sdr module" href="Sdr.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Tf module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tf-module">
+<h1>Tf module<a class="headerlink" href="#tf-module" title="Link to this heading">#</a></h1>
+<p>Summary: The Tf (Tools Foundations) module.</p>
+<hr class="docutils" />
+<p id="module-pxr.Tf">Tf – Tools Foundation</p>
+<p><strong>Exceptions:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.CppException" title="pxr.Tf.CppException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CppException</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.ErrorException" title="pxr.Tf.ErrorException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ErrorException</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.CallContext" title="pxr.Tf.CallContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CallContext</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.CatchAndRepostErrors" title="pxr.Tf.CatchAndRepostErrors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CatchAndRepostErrors</span></code></a>()</p></td>
+<td><p>This context manager &amp; decorator can be used to catch Tf.ErrorException and repost its held errors to the thread's Tf.Error list without raising a Python exception, halting unwinding.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Debug" title="pxr.Tf.Debug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Debug</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.DiagnosticType" title="pxr.Tf.DiagnosticType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DiagnosticType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Enum" title="pxr.Tf.Enum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Enum</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Error" title="pxr.Tf.Error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag" title="pxr.Tf.MallocTag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MallocTag</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.NamedTemporaryFile" title="pxr.Tf.NamedTemporaryFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NamedTemporaryFile</span></code></a>([suffix, prefix, dir, text])</p></td>
+<td><p>A named temporary file which keeps the internal file handle closed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Notice" title="pxr.Tf.Notice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Notice</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.PyModuleWasLoaded" title="pxr.Tf.PyModuleWasLoaded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyModuleWasLoaded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.RefPtrTracker" title="pxr.Tf.RefPtrTracker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RefPtrTracker</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.ScopeDescription" title="pxr.Tf.ScopeDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScopeDescription</span></code></a></p></td>
+<td><p>This class lets us expose TfScopeDescription to python for use as a &quot;context manager&quot; object, for use with the 'with'-statement.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.ScriptModuleLoader" title="pxr.Tf.ScriptModuleLoader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ScriptModuleLoader</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Singleton" title="pxr.Tf.Singleton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Singleton</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.StatusObject" title="pxr.Tf.StatusObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatusObject</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch" title="pxr.Tf.Stopwatch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stopwatch</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_PyEnumWrapper" title="pxr.Tf.Tf_PyEnumWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tf_PyEnumWrapper</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestAnnotatedBoolResult" title="pxr.Tf.Tf_TestAnnotatedBoolResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tf_TestAnnotatedBoolResult</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyContainerConversions" title="pxr.Tf.Tf_TestPyContainerConversions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tf_TestPyContainerConversions</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd" title="pxr.Tf.Tf_TestPyOptionalStd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tf_TestPyOptionalStd</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type" title="pxr.Tf.Type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Type</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Warning" title="pxr.Tf.Warning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Warning</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.WindowsImportWrapper" title="pxr.Tf.WindowsImportWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WindowsImportWrapper</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Functions:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Fatal" title="pxr.Tf.Fatal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fatal</span></code></a>(msg)</p></td>
+<td><p>Raise a fatal error to the Tf Diagnostic system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.GetCodeLocation" title="pxr.Tf.GetCodeLocation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCodeLocation</span></code></a>(framesUp)</p></td>
+<td><p>Returns a tuple (moduleName, functionName, fileName, lineNo).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.PrepareModule" title="pxr.Tf.PrepareModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PrepareModule</span></code></a>(module, result)</p></td>
+<td><p>PrepareModule(module, result) -- Prepare an extension module at import time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.PreparePythonModule" title="pxr.Tf.PreparePythonModule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PreparePythonModule</span></code></a>([moduleName])</p></td>
+<td><p>Prepare an extension module at import time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.RaiseCodingError" title="pxr.Tf.RaiseCodingError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaiseCodingError</span></code></a>(msg)</p></td>
+<td><p>Raise a coding error to the Tf Diagnostic system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.RaiseRuntimeError" title="pxr.Tf.RaiseRuntimeError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaiseRuntimeError</span></code></a>(msg)</p></td>
+<td><p>Raise a runtime error to the Tf Diagnostic system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Status" title="pxr.Tf.Status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Status</span></code></a>(msg[, verbose])</p></td>
+<td><p>Issues a status update to the Tf diagnostic system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Warn" title="pxr.Tf.Warn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Warn</span></code></a>(msg[, template])</p></td>
+<td><p>Issue a warning via the TfDiagnostic system.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pxr.Tf.CppException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">CppException</span></span><a class="headerlink" href="#pxr.Tf.CppException" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pxr.Tf.ErrorException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">ErrorException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.ErrorException" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.CallContext">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">CallContext</span></span><a class="headerlink" href="#pxr.Tf.CallContext" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.CallContext.file" title="pxr.Tf.CallContext.file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.CallContext.function" title="pxr.Tf.CallContext.function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">function</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.CallContext.line" title="pxr.Tf.CallContext.line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">line</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.CallContext.prettyFunction" title="pxr.Tf.CallContext.prettyFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prettyFunction</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.CallContext.file">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file</span></span><a class="headerlink" href="#pxr.Tf.CallContext.file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.CallContext.function">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">function</span></span><a class="headerlink" href="#pxr.Tf.CallContext.function" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.CallContext.line">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">line</span></span><a class="headerlink" href="#pxr.Tf.CallContext.line" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.CallContext.prettyFunction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prettyFunction</span></span><a class="headerlink" href="#pxr.Tf.CallContext.prettyFunction" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.CatchAndRepostErrors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">CatchAndRepostErrors</span></span><a class="headerlink" href="#pxr.Tf.CatchAndRepostErrors" title="Link to this definition">#</a></dt>
+<dd><p>This context manager &amp; decorator can be used to catch Tf.ErrorException
+and repost its held errors to the thread’s Tf.Error list without raising a
+Python exception, halting unwinding.  For example, the following will raise
+a Tf.ErrorException containing the “test” Coding Error.  This will be
+caught by the CatchAndRepostErrors object, and the “test” Error will be
+re-posted to the thread’s error list.  Then exception propagation will
+cease and ordinary control flow will continue.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>with Tf.CatchAndRepostErrors():</dt><dd><p>Tf.RaiseCodingError(‘test’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>This can be useful to sidestep SIP’s virtual function bindings from
+blocking exceptions, retaining Tf.Errors so they can propagate to callers.
+Here, the <cite>paintGL()</cite> virtual override can capture any Tf.ErrorExceptions
+raised during its execution, and by reposting the errors to the Tf.Error
+list, callers can observe them later.</p>
+<blockquote>
+<div><p>&#64;Tf.CatchAndRepostErrors():
+def paintGL(self):</p>
+<blockquote>
+<div><p>self._renderer.Render()</p>
+</div></blockquote>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Debug">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Debug</span></span><a class="headerlink" href="#pxr.Tf.Debug" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Debug.GetDebugSymbolDescription" title="pxr.Tf.Debug.GetDebugSymbolDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDebugSymbolDescription</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Debug.GetDebugSymbolDescriptions" title="pxr.Tf.Debug.GetDebugSymbolDescriptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDebugSymbolDescriptions</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Debug.GetDebugSymbolNames" title="pxr.Tf.Debug.GetDebugSymbolNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDebugSymbolNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Debug.IsDebugSymbolNameEnabled" title="pxr.Tf.Debug.IsDebugSymbolNameEnabled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsDebugSymbolNameEnabled</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Debug.SetDebugSymbolsByName" title="pxr.Tf.Debug.SetDebugSymbolsByName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDebugSymbolsByName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Debug.SetOutputFile" title="pxr.Tf.Debug.SetOutputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetOutputFile</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Debug.GetDebugSymbolDescription">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetDebugSymbolDescription</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Debug.GetDebugSymbolDescription" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Debug.GetDebugSymbolDescriptions">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetDebugSymbolDescriptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Debug.GetDebugSymbolDescriptions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Debug.GetDebugSymbolNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetDebugSymbolNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Debug.GetDebugSymbolNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Debug.IsDebugSymbolNameEnabled">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsDebugSymbolNameEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Debug.IsDebugSymbolNameEnabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Debug.SetDebugSymbolsByName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SetDebugSymbolsByName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Debug.SetDebugSymbolsByName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Debug.SetOutputFile">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SetOutputFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Debug.SetOutputFile" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.DiagnosticType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">DiagnosticType</span></span><a class="headerlink" href="#pxr.Tf.DiagnosticType" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.DiagnosticType.GetValueFromName" title="pxr.Tf.DiagnosticType.GetValueFromName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValueFromName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.DiagnosticType.allValues" title="pxr.Tf.DiagnosticType.allValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allValues</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.DiagnosticType.GetValueFromName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetValueFromName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.DiagnosticType.GetValueFromName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.Tf.DiagnosticType.allValues">
+<span class="sig-name descname"><span class="pre">allValues</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(Tf.TF_DIAGNOSTIC_CODING_ERROR_TYPE,</span> <span class="pre">Tf.TF_DIAGNOSTIC_FATAL_CODING_ERROR_TYPE,</span> <span class="pre">Tf.TF_DIAGNOSTIC_RUNTIME_ERROR_TYPE,</span> <span class="pre">Tf.TF_DIAGNOSTIC_FATAL_ERROR_TYPE,</span> <span class="pre">Tf.TF_DIAGNOSTIC_NONFATAL_ERROR_TYPE,</span> <span class="pre">Tf.TF_DIAGNOSTIC_WARNING_TYPE,</span> <span class="pre">Tf.TF_DIAGNOSTIC_STATUS_TYPE,</span> <span class="pre">Tf.TF_APPLICATION_EXIT_TYPE)</span></em><a class="headerlink" href="#pxr.Tf.DiagnosticType.allValues" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Enum">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Enum</span></span><a class="headerlink" href="#pxr.Tf.Enum" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Enum.GetValueFromFullName" title="pxr.Tf.Enum.GetValueFromFullName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValueFromFullName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Enum.GetValueFromFullName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetValueFromFullName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Enum.GetValueFromFullName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Error">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Error</span></span><a class="headerlink" href="#pxr.Tf.Error" title="Link to this definition">#</a></dt>
+<dd><p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Error.Mark" title="pxr.Tf.Error.Mark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mark</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Error.errorCode" title="pxr.Tf.Error.errorCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorCode</span></code></a></p></td>
+<td><p>The error code posted for this error.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Error.errorCodeString" title="pxr.Tf.Error.errorCodeString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorCodeString</span></code></a></p></td>
+<td><p>The error code posted for this error, as a string.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Error.Mark">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Mark</span></span><a class="headerlink" href="#pxr.Tf.Error.Mark" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Error.Mark.Clear" title="pxr.Tf.Error.Mark.Clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Clear</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Error.Mark.GetErrors" title="pxr.Tf.Error.Mark.GetErrors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetErrors</span></code></a></p></td>
+<td><p>A list of the errors held by this mark.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Error.Mark.IsClean" title="pxr.Tf.Error.Mark.IsClean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsClean</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Error.Mark.RaiseIfNotClean" title="pxr.Tf.Error.Mark.RaiseIfNotClean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RaiseIfNotClean</span></code></a></p></td>
+<td><p>If this mark is not clean, raise a Tf.ErrorException with the contained errors, otherwise do nothing.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Error.Mark.SetMark" title="pxr.Tf.Error.Mark.SetMark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetMark</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Error.Mark.Clear">
+<span class="sig-name descname"><span class="pre">Clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Error.Mark.Clear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Error.Mark.GetErrors">
+<span class="sig-name descname"><span class="pre">GetErrors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Error.Mark.GetErrors" title="Link to this definition">#</a></dt>
+<dd><p>A list of the errors held by this mark.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Error.Mark.IsClean">
+<span class="sig-name descname"><span class="pre">IsClean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Error.Mark.IsClean" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Error.Mark.RaiseIfNotClean">
+<span class="sig-name descname"><span class="pre">RaiseIfNotClean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Error.Mark.RaiseIfNotClean" title="Link to this definition">#</a></dt>
+<dd><p>If this mark is not clean, raise a Tf.ErrorException with the contained errors, otherwise do nothing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Error.Mark.SetMark">
+<span class="sig-name descname"><span class="pre">SetMark</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Error.Mark.SetMark" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Error.errorCode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">errorCode</span></span><a class="headerlink" href="#pxr.Tf.Error.errorCode" title="Link to this definition">#</a></dt>
+<dd><p>The error code posted for this error.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Error.errorCodeString">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">errorCodeString</span></span><a class="headerlink" href="#pxr.Tf.Error.errorCodeString" title="Link to this definition">#</a></dt>
+<dd><p>The error code posted for this error, as a string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">MallocTag</span></span><a class="headerlink" href="#pxr.Tf.MallocTag" title="Link to this definition">#</a></dt>
+<dd><p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree" title="pxr.Tf.MallocTag.CallTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CallTree</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.GetCallStacks" title="pxr.Tf.MallocTag.GetCallStacks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCallStacks</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.GetCallTree" title="pxr.Tf.MallocTag.GetCallTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCallTree</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.GetMaxTotalBytes" title="pxr.Tf.MallocTag.GetMaxTotalBytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetMaxTotalBytes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.GetTotalBytes" title="pxr.Tf.MallocTag.GetTotalBytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetTotalBytes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.Initialize" title="pxr.Tf.MallocTag.Initialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Initialize</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.IsInitialized" title="pxr.Tf.MallocTag.IsInitialized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsInitialized</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.SetCapturedMallocStacksMatchList" title="pxr.Tf.MallocTag.SetCapturedMallocStacksMatchList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetCapturedMallocStacksMatchList</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.SetDebugMatchList" title="pxr.Tf.MallocTag.SetDebugMatchList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDebugMatchList</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CallTree</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree" title="Link to this definition">#</a></dt>
+<dd><p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.CallSite" title="pxr.Tf.MallocTag.CallTree.CallSite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CallSite</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.PathNode" title="pxr.Tf.MallocTag.CallTree.PathNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PathNode</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.GetCallSites" title="pxr.Tf.MallocTag.CallTree.GetCallSites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCallSites</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.GetPrettyPrintString" title="pxr.Tf.MallocTag.CallTree.GetPrettyPrintString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPrettyPrintString</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.GetRoot" title="pxr.Tf.MallocTag.CallTree.GetRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRoot</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.LoadReport" title="pxr.Tf.MallocTag.CallTree.LoadReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadReport</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.LogReport" title="pxr.Tf.MallocTag.CallTree.LogReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogReport</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.Report" title="pxr.Tf.MallocTag.CallTree.Report"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Report</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.CallSite">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CallSite</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.CallSite" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.CallSite.nBytes" title="pxr.Tf.MallocTag.CallTree.CallSite.nBytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nBytes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.CallSite.name" title="pxr.Tf.MallocTag.CallTree.CallSite.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.CallSite.nBytes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nBytes</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.CallSite.nBytes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.CallSite.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.CallSite.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.PathNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PathNode</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.PathNode" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.PathNode.GetChildren" title="pxr.Tf.MallocTag.CallTree.PathNode.GetChildren"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetChildren</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.PathNode.nAllocations" title="pxr.Tf.MallocTag.CallTree.PathNode.nAllocations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nAllocations</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.PathNode.nBytes" title="pxr.Tf.MallocTag.CallTree.PathNode.nBytes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nBytes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.PathNode.nBytesDirect" title="pxr.Tf.MallocTag.CallTree.PathNode.nBytesDirect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nBytesDirect</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.MallocTag.CallTree.PathNode.siteName" title="pxr.Tf.MallocTag.CallTree.PathNode.siteName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">siteName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.PathNode.GetChildren">
+<span class="sig-name descname"><span class="pre">GetChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.PathNode.GetChildren" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.PathNode.nAllocations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nAllocations</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.PathNode.nAllocations" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.PathNode.nBytes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nBytes</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.PathNode.nBytes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.PathNode.nBytesDirect">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nBytesDirect</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.PathNode.nBytesDirect" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.PathNode.siteName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">siteName</span></span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.PathNode.siteName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.GetCallSites">
+<span class="sig-name descname"><span class="pre">GetCallSites</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.GetCallSites" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.GetPrettyPrintString">
+<span class="sig-name descname"><span class="pre">GetPrettyPrintString</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.GetPrettyPrintString" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.GetRoot">
+<span class="sig-name descname"><span class="pre">GetRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.GetRoot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.LoadReport">
+<span class="sig-name descname"><span class="pre">LoadReport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.LoadReport" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.LogReport">
+<span class="sig-name descname"><span class="pre">LogReport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.LogReport" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.CallTree.Report">
+<span class="sig-name descname"><span class="pre">Report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.CallTree.Report" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.GetCallStacks">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetCallStacks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.GetCallStacks" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.GetCallTree">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetCallTree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.GetCallTree" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.GetMaxTotalBytes">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetMaxTotalBytes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.GetMaxTotalBytes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.GetTotalBytes">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetTotalBytes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.GetTotalBytes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.Initialize">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.Initialize" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.IsInitialized">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsInitialized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.IsInitialized" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.SetCapturedMallocStacksMatchList">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SetCapturedMallocStacksMatchList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.SetCapturedMallocStacksMatchList" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.MallocTag.SetDebugMatchList">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SetDebugMatchList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.MallocTag.SetDebugMatchList" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.NamedTemporaryFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">NamedTemporaryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.NamedTemporaryFile" title="Link to this definition">#</a></dt>
+<dd><p>A named temporary file which keeps the internal file handle closed.
+A class which constructs a temporary file(that isn’t open) on __enter__,
+provides its name as an attribute, and deletes it on __exit__.</p>
+<p>Note: The constructor args for this object match those of
+python’s tempfile.mkstemp() function, and will have the same effect on
+the underlying file created.</p>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.NamedTemporaryFile.name" title="pxr.Tf.NamedTemporaryFile.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p>The path for the temporary file created.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.NamedTemporaryFile.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pxr.Tf.NamedTemporaryFile.name" title="Link to this definition">#</a></dt>
+<dd><p>The path for the temporary file created.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Notice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Notice</span></span><a class="headerlink" href="#pxr.Tf.Notice" title="Link to this definition">#</a></dt>
+<dd><p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Notice.Listener" title="pxr.Tf.Notice.Listener"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Listener</span></code></a></p></td>
+<td><p>Represents the Notice connection between senders and receivers of notices.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Notice.Register" title="pxr.Tf.Notice.Register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Register</span></code></a>(noticeType, callback, sender)</p></td>
+<td><p>noticeType : Tf.Notice callback : function sender : object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Notice.RegisterGlobally" title="pxr.Tf.Notice.RegisterGlobally"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegisterGlobally</span></code></a>(noticeType, callback)</p></td>
+<td><p>noticeType : Tf.Notice callback : function</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Notice.Send" title="pxr.Tf.Notice.Send"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Send</span></code></a></p></td>
+<td><p>Send(sender)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Notice.SendGlobally" title="pxr.Tf.Notice.SendGlobally"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SendGlobally</span></code></a></p></td>
+<td><p>SendGlobally()</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Notice.Listener">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Listener</span></span><a class="headerlink" href="#pxr.Tf.Notice.Listener" title="Link to this definition">#</a></dt>
+<dd><p>Represents the Notice connection between senders and receivers of notices.  When a Listener object expires the connection is broken. You can also use the Revoke() function to break the connection. A Listener object is returned from the Register() and  RegisterGlobally() functions.</p>
+<p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Notice.Listener.Revoke" title="pxr.Tf.Notice.Listener.Revoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Revoke</span></code></a></p></td>
+<td><p>Revoke()</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Notice.Listener.Revoke">
+<span class="sig-name descname"><span class="pre">Revoke</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Notice.Listener.Revoke" title="Link to this definition">#</a></dt>
+<dd><p>Revoke()</p>
+<p>Revoke interest by a notice listener.  This function revokes interest in the particular notice type and call-back method that its Listener object was registered for.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Notice.Register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">noticeType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sender</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pxr.Tf.Notice.Listener" title="pxr.Tf.Notice.Listener"><span class="pre">Listener</span></a></span></span><a class="headerlink" href="#pxr.Tf.Notice.Register" title="Link to this definition">#</a></dt>
+<dd><p>noticeType : Tf.Notice
+callback : function
+sender : object</p>
+<p>Register a listener as being interested in a TfNotice  type from a specific sender.  Notice listener will get sender  as an argument.     Registration of interest in a notice class N automatically  registers interest in all classes derived from N.  When a  notice of appropriate type is received, the listening object’s  member-function method is called with the notice.     To reverse the registration, call Revoke() on the Listener object returned by this call.</p>
+<p>Register( noticeType, callback, sender ) -&gt; Listener</p>
+<p>noticeType : Tf.Notice
+callback : function
+sender : object</p>
+<p>Register a listener as being interested in a TfNotice  type from a specific sender.  Notice listener will get sender  as an argument.     Registration of interest in a notice class N automatically  registers interest in all classes derived from N.  When a  notice of appropriate type is received, the listening object’s  member-function method is called with the notice.     To reverse the registration, call Revoke() on the Listener object returned by this call.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Notice.RegisterGlobally">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RegisterGlobally</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">noticeType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pxr.Tf.Notice.Listener" title="pxr.Tf.Notice.Listener"><span class="pre">Listener</span></a></span></span><a class="headerlink" href="#pxr.Tf.Notice.RegisterGlobally" title="Link to this definition">#</a></dt>
+<dd><p>noticeType : Tf.Notice
+callback : function</p>
+<p>Register a listener as being interested in a TfNotice type from any sender.  The notice listener does not get sender as an argument.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Notice.Send">
+<span class="sig-name descname"><span class="pre">Send</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Notice.Send" title="Link to this definition">#</a></dt>
+<dd><p>Send(sender)</p>
+<p>sender : object</p>
+<p>Deliver the notice to interested listeners, returning the number of interested listeners. This is the recommended form of Send.  It takes the sender as an argument. Listeners that registered for the given sender AND listeners that registered globally will get the notice.</p>
+<p>Send(sender)</p>
+<p>sender : object</p>
+<p>Deliver the notice to interested listeners, returning the number of interested listeners. This is the recommended form of Send.  It takes the sender as an argument. Listeners that registered for the given sender AND listeners that registered globally will get the notice.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Notice.SendGlobally">
+<span class="sig-name descname"><span class="pre">SendGlobally</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Notice.SendGlobally" title="Link to this definition">#</a></dt>
+<dd><p>SendGlobally()</p>
+<p>Deliver the notice to interested listeners.   For most clients it is recommended to use the Send(sender) version of Send() rather than this one.  Clients that use this form of Send will prevent listeners from being able to register to receive notices based on the sender of the notice. ONLY listeners that registered globally will get the notice.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.PyModuleWasLoaded">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">PyModuleWasLoaded</span></span><a class="headerlink" href="#pxr.Tf.PyModuleWasLoaded" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.PyModuleWasLoaded.name" title="pxr.Tf.PyModuleWasLoaded.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.PyModuleWasLoaded.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.PyModuleWasLoaded.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.RefPtrTracker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">RefPtrTracker</span></span><a class="headerlink" href="#pxr.Tf.RefPtrTracker" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.RefPtrTracker.GetAllTracesReport" title="pxr.Tf.RefPtrTracker.GetAllTracesReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAllTracesReport</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.RefPtrTracker.GetAllWatchedCountsReport" title="pxr.Tf.RefPtrTracker.GetAllWatchedCountsReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAllWatchedCountsReport</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.RefPtrTracker.GetTracesReportForWatched" title="pxr.Tf.RefPtrTracker.GetTracesReportForWatched"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetTracesReportForWatched</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.RefPtrTracker.expired" title="pxr.Tf.RefPtrTracker.expired"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expired</span></code></a></p></td>
+<td><p>True if this object has expired, False otherwise.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.RefPtrTracker.GetAllTracesReport">
+<span class="sig-name descname"><span class="pre">GetAllTracesReport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.RefPtrTracker.GetAllTracesReport" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.RefPtrTracker.GetAllWatchedCountsReport">
+<span class="sig-name descname"><span class="pre">GetAllWatchedCountsReport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.RefPtrTracker.GetAllWatchedCountsReport" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.RefPtrTracker.GetTracesReportForWatched">
+<span class="sig-name descname"><span class="pre">GetTracesReportForWatched</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.RefPtrTracker.GetTracesReportForWatched" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.RefPtrTracker.expired">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expired</span></span><a class="headerlink" href="#pxr.Tf.RefPtrTracker.expired" title="Link to this definition">#</a></dt>
+<dd><p>True if this object has expired, False otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.ScopeDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">ScopeDescription</span></span><a class="headerlink" href="#pxr.Tf.ScopeDescription" title="Link to this definition">#</a></dt>
+<dd><p>This class lets us expose TfScopeDescription to python for use as a
+“context manager” object, for use with the ‘with’-statement. For example:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>with Tf.ScopeDescription(“Solving the halting problem”):</dt><dd><p># Code that solves the halting problem.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>It can also be used as a decorator for an entire function or method, for
+convenience:</p>
+<blockquote>
+<div><p>&#64;Tf.ScopeDescription(“Solving the halting problem”);
+def SolveHaltingProblem():</p>
+<blockquote>
+<div><p># Code that solves the halting problem.</p>
+</div></blockquote>
+</div></blockquote>
+<p>Note that the description passed to the decorator is an expression that is
+evaluated only once at declaration time. If a dynamic description is
+needed, use the with-statement pattern instead.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.ScriptModuleLoader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">ScriptModuleLoader</span></span><a class="headerlink" href="#pxr.Tf.ScriptModuleLoader" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.ScriptModuleLoader.GetModulesDict" title="pxr.Tf.ScriptModuleLoader.GetModulesDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModulesDict</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.ScriptModuleLoader.WriteDotFile" title="pxr.Tf.ScriptModuleLoader.WriteDotFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WriteDotFile</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.ScriptModuleLoader.expired" title="pxr.Tf.ScriptModuleLoader.expired"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expired</span></code></a></p></td>
+<td><p>True if this object has expired, False otherwise.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.ScriptModuleLoader.GetModulesDict">
+<span class="sig-name descname"><span class="pre">GetModulesDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.ScriptModuleLoader.GetModulesDict" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.ScriptModuleLoader.WriteDotFile">
+<span class="sig-name descname"><span class="pre">WriteDotFile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.ScriptModuleLoader.WriteDotFile" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.ScriptModuleLoader.expired">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expired</span></span><a class="headerlink" href="#pxr.Tf.ScriptModuleLoader.expired" title="Link to this definition">#</a></dt>
+<dd><p>True if this object has expired, False otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Singleton">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Singleton</span></span><a class="headerlink" href="#pxr.Tf.Singleton" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.StatusObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">StatusObject</span></span><a class="headerlink" href="#pxr.Tf.StatusObject" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Stopwatch</span></span><a class="headerlink" href="#pxr.Tf.Stopwatch" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.AddFrom" title="pxr.Tf.Stopwatch.AddFrom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AddFrom</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.Reset" title="pxr.Tf.Stopwatch.Reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.Start" title="pxr.Tf.Stopwatch.Start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Start</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.Stop" title="pxr.Tf.Stopwatch.Stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stop</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.microseconds" title="pxr.Tf.Stopwatch.microseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">microseconds</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.milliseconds" title="pxr.Tf.Stopwatch.milliseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">milliseconds</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.nanoseconds" title="pxr.Tf.Stopwatch.nanoseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nanoseconds</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.sampleCount" title="pxr.Tf.Stopwatch.sampleCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sampleCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Stopwatch.seconds" title="pxr.Tf.Stopwatch.seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seconds</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.AddFrom">
+<span class="sig-name descname"><span class="pre">AddFrom</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Stopwatch.AddFrom" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.Reset">
+<span class="sig-name descname"><span class="pre">Reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Stopwatch.Reset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.Start">
+<span class="sig-name descname"><span class="pre">Start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Stopwatch.Start" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.Stop">
+<span class="sig-name descname"><span class="pre">Stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Stopwatch.Stop" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.microseconds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">microseconds</span></span><a class="headerlink" href="#pxr.Tf.Stopwatch.microseconds" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.milliseconds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">milliseconds</span></span><a class="headerlink" href="#pxr.Tf.Stopwatch.milliseconds" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.nanoseconds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nanoseconds</span></span><a class="headerlink" href="#pxr.Tf.Stopwatch.nanoseconds" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.sampleCount">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampleCount</span></span><a class="headerlink" href="#pxr.Tf.Stopwatch.sampleCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Stopwatch.seconds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seconds</span></span><a class="headerlink" href="#pxr.Tf.Stopwatch.seconds" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_PyEnumWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Tf_PyEnumWrapper</span></span><a class="headerlink" href="#pxr.Tf.Tf_PyEnumWrapper" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_PyEnumWrapper.displayName" title="pxr.Tf.Tf_PyEnumWrapper.displayName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">displayName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_PyEnumWrapper.fullName" title="pxr.Tf.Tf_PyEnumWrapper.fullName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fullName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_PyEnumWrapper.name" title="pxr.Tf.Tf_PyEnumWrapper.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_PyEnumWrapper.value" title="pxr.Tf.Tf_PyEnumWrapper.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_PyEnumWrapper.displayName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">displayName</span></span><a class="headerlink" href="#pxr.Tf.Tf_PyEnumWrapper.displayName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_PyEnumWrapper.fullName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fullName</span></span><a class="headerlink" href="#pxr.Tf.Tf_PyEnumWrapper.fullName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_PyEnumWrapper.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pxr.Tf.Tf_PyEnumWrapper.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_PyEnumWrapper.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pxr.Tf.Tf_PyEnumWrapper.value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestAnnotatedBoolResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Tf_TestAnnotatedBoolResult</span></span><a class="headerlink" href="#pxr.Tf.Tf_TestAnnotatedBoolResult" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestAnnotatedBoolResult.annotation" title="pxr.Tf.Tf_TestAnnotatedBoolResult.annotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">annotation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestAnnotatedBoolResult.annotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">annotation</span></span><a class="headerlink" href="#pxr.Tf.Tf_TestAnnotatedBoolResult.annotation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyContainerConversions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Tf_TestPyContainerConversions</span></span><a class="headerlink" href="#pxr.Tf.Tf_TestPyContainerConversions" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyContainerConversions.GetPairTimesTwo" title="pxr.Tf.Tf_TestPyContainerConversions.GetPairTimesTwo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPairTimesTwo</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyContainerConversions.GetTokens" title="pxr.Tf.Tf_TestPyContainerConversions.GetTokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetTokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyContainerConversions.GetTupleTimesTwo" title="pxr.Tf.Tf_TestPyContainerConversions.GetTupleTimesTwo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetTupleTimesTwo</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyContainerConversions.GetVectorTimesTwo" title="pxr.Tf.Tf_TestPyContainerConversions.GetVectorTimesTwo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetVectorTimesTwo</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyContainerConversions.Init" title="pxr.Tf.Tf_TestPyContainerConversions.Init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Init</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyContainerConversions.GetPairTimesTwo">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetPairTimesTwo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyContainerConversions.GetPairTimesTwo" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyContainerConversions.GetTokens">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetTokens</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyContainerConversions.GetTokens" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyContainerConversions.GetTupleTimesTwo">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetTupleTimesTwo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyContainerConversions.GetTupleTimesTwo" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyContainerConversions.GetVectorTimesTwo">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetVectorTimesTwo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyContainerConversions.GetVectorTimesTwo" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyContainerConversions.Init">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyContainerConversions.Init" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Tf_TestPyOptionalStd</span></span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TakesOptional" title="pxr.Tf.Tf_TestPyOptionalStd.TakesOptional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TakesOptional</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalChar" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalChar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalChar</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalDouble" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalDouble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalDouble</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalFloat" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalFloat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalFloat</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalInt" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalInt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalInt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalLong" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalLong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalLong</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalShort" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalShort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalShort</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalString" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalString</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalStringVector" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalStringVector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalStringVector</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUChar" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUChar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalUChar</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUInt" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUInt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalUInt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalULong" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalULong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalULong</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUShort" title="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUShort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestOptionalUShort</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TakesOptional">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TakesOptional</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TakesOptional" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalChar">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalChar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalChar" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalDouble">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalDouble</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalDouble" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalFloat">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalFloat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalFloat" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalInt">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalInt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalInt" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalLong">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalLong</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalLong" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalShort">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalShort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalShort" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalString">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalString</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalString" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalStringVector">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalStringVector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalStringVector" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUChar">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalUChar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUChar" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUInt">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalUInt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUInt" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalULong">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalULong</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalULong" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUShort">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TestOptionalUShort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUShort" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#pxr.Tf.Type" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.AddAlias" title="pxr.Tf.Type.AddAlias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AddAlias</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.Define" title="pxr.Tf.Type.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.Find" title="pxr.Tf.Type.Find"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Find</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.FindByName" title="pxr.Tf.Type.FindByName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FindByName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.FindDerivedByName" title="pxr.Tf.Type.FindDerivedByName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FindDerivedByName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.GetAliases" title="pxr.Tf.Type.GetAliases"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAliases</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.GetAllAncestorTypes" title="pxr.Tf.Type.GetAllAncestorTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAllAncestorTypes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.GetAllDerivedTypes" title="pxr.Tf.Type.GetAllDerivedTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAllDerivedTypes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.GetRoot" title="pxr.Tf.Type.GetRoot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRoot</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.IsA" title="pxr.Tf.Type.IsA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsA</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.Unknown" title="pxr.Tf.Type.Unknown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Unknown</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.baseTypes" title="pxr.Tf.Type.baseTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">baseTypes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.derivedTypes" title="pxr.Tf.Type.derivedTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivedTypes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.isEnumType" title="pxr.Tf.Type.isEnumType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isEnumType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.isPlainOldDataType" title="pxr.Tf.Type.isPlainOldDataType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isPlainOldDataType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.isUnknown" title="pxr.Tf.Type.isUnknown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isUnknown</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.pythonClass" title="pxr.Tf.Type.pythonClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pythonClass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.Tf.Type.sizeof" title="pxr.Tf.Type.sizeof"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sizeof</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.Tf.Type.typeName" title="pxr.Tf.Type.typeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typeName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.AddAlias">
+<span class="sig-name descname"><span class="pre">AddAlias</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.AddAlias" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.Find">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Find</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.Find" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.FindByName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FindByName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.FindByName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.FindDerivedByName">
+<span class="sig-name descname"><span class="pre">FindDerivedByName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.FindDerivedByName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.GetAliases">
+<span class="sig-name descname"><span class="pre">GetAliases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.GetAliases" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.GetAllAncestorTypes">
+<span class="sig-name descname"><span class="pre">GetAllAncestorTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.GetAllAncestorTypes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.GetAllDerivedTypes">
+<span class="sig-name descname"><span class="pre">GetAllDerivedTypes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.GetAllDerivedTypes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.GetRoot">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetRoot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.GetRoot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.Tf.Type.IsA">
+<span class="sig-name descname"><span class="pre">IsA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Type.IsA" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.Tf.Type.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Tf.Type.Unknown</span></em><a class="headerlink" href="#pxr.Tf.Type.Unknown" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.baseTypes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">baseTypes</span></span><a class="headerlink" href="#pxr.Tf.Type.baseTypes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.derivedTypes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">derivedTypes</span></span><a class="headerlink" href="#pxr.Tf.Type.derivedTypes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.isEnumType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isEnumType</span></span><a class="headerlink" href="#pxr.Tf.Type.isEnumType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.isPlainOldDataType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isPlainOldDataType</span></span><a class="headerlink" href="#pxr.Tf.Type.isPlainOldDataType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.isUnknown">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isUnknown</span></span><a class="headerlink" href="#pxr.Tf.Type.isUnknown" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.pythonClass">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pythonClass</span></span><a class="headerlink" href="#pxr.Tf.Type.pythonClass" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.sizeof">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sizeof</span></span><a class="headerlink" href="#pxr.Tf.Type.sizeof" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.Tf.Type.typeName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">typeName</span></span><a class="headerlink" href="#pxr.Tf.Type.typeName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.Warning">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Warning</span></span><a class="headerlink" href="#pxr.Tf.Warning" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.Tf.WindowsImportWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">WindowsImportWrapper</span></span><a class="headerlink" href="#pxr.Tf.WindowsImportWrapper" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.Fatal">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Fatal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Fatal" title="Link to this definition">#</a></dt>
+<dd><p>Raise a fatal error to the Tf Diagnostic system.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.GetCodeLocation">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">GetCodeLocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">framesUp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.GetCodeLocation" title="Link to this definition">#</a></dt>
+<dd><p>Returns a tuple (moduleName, functionName, fileName, lineNo).</p>
+<p>To trace the current location of python execution, use GetCodeLocation().
+By default, the information is returned at the current stack-frame; thus</p>
+<blockquote>
+<div><p>info = GetCodeLocation()</p>
+</div></blockquote>
+<p>will return information about the line that GetCodeLocation() was called
+from. One can write:</p>
+<blockquote>
+<div><dl>
+<dt>def genericDebugFacility():</dt><dd><p>info = GetCodeLocation(1)
+# print out data</p>
+</dd>
+<dt>def someCode():</dt><dd><p>…
+if bad:</p>
+<blockquote>
+<div><p>genericDebugFacility()</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p>and genericDebugFacility() will get information associated with its caller,
+i.e. the function someCode().</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.PrepareModule">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">PrepareModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.PrepareModule" title="Link to this definition">#</a></dt>
+<dd><p>PrepareModule(module, result) – Prepare an extension module at import
+time.  Generally, this should only be called by the __init__.py script for a
+module upon loading a boost python module (generally ‘_libName.so’).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.PreparePythonModule">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">PreparePythonModule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moduleName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.PreparePythonModule" title="Link to this definition">#</a></dt>
+<dd><p>Prepare an extension module at import time.  This will import the
+Python module associated with the caller’s module (e.g. ‘_tf’ for ‘pxr.Tf’)
+or the module with the specified moduleName and copy its contents into
+the caller’s local namespace.</p>
+<p>Generally, this should only be called by the __init__.py script for a module
+upon loading a boost python module (generally ‘_libName.so’).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.RaiseCodingError">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">RaiseCodingError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.RaiseCodingError" title="Link to this definition">#</a></dt>
+<dd><p>Raise a coding error to the Tf Diagnostic system.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.RaiseRuntimeError">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">RaiseRuntimeError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.RaiseRuntimeError" title="Link to this definition">#</a></dt>
+<dd><p>Raise a runtime error to the Tf Diagnostic system.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.Status">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Status" title="Link to this definition">#</a></dt>
+<dd><p>Issues a status update to the Tf diagnostic system.</p>
+<p>If verbose is True (the default) then information about where in the code
+the status update was issued from is included.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pxr.Tf.Warn">
+<span class="sig-prename descclassname"><span class="pre">pxr.Tf.</span></span><span class="sig-name descname"><span class="pre">Warn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pxr.Tf.Warn" title="Link to this definition">#</a></dt>
+<dd><p>Issue a warning via the TfDiagnostic system.</p>
+<p>At this time, template is ignored.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Sdr.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sdr module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Trace.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Trace module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CppException"><code class="docutils literal notranslate"><span class="pre">CppException</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.ErrorException"><code class="docutils literal notranslate"><span class="pre">ErrorException</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CallContext"><code class="docutils literal notranslate"><span class="pre">CallContext</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CallContext.file"><code class="docutils literal notranslate"><span class="pre">file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CallContext.function"><code class="docutils literal notranslate"><span class="pre">function</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CallContext.line"><code class="docutils literal notranslate"><span class="pre">line</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CallContext.prettyFunction"><code class="docutils literal notranslate"><span class="pre">prettyFunction</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.CatchAndRepostErrors"><code class="docutils literal notranslate"><span class="pre">CatchAndRepostErrors</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug"><code class="docutils literal notranslate"><span class="pre">Debug</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug.GetDebugSymbolDescription"><code class="docutils literal notranslate"><span class="pre">GetDebugSymbolDescription()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug.GetDebugSymbolDescriptions"><code class="docutils literal notranslate"><span class="pre">GetDebugSymbolDescriptions()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug.GetDebugSymbolNames"><code class="docutils literal notranslate"><span class="pre">GetDebugSymbolNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug.IsDebugSymbolNameEnabled"><code class="docutils literal notranslate"><span class="pre">IsDebugSymbolNameEnabled()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug.SetDebugSymbolsByName"><code class="docutils literal notranslate"><span class="pre">SetDebugSymbolsByName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Debug.SetOutputFile"><code class="docutils literal notranslate"><span class="pre">SetOutputFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.DiagnosticType"><code class="docutils literal notranslate"><span class="pre">DiagnosticType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.DiagnosticType.GetValueFromName"><code class="docutils literal notranslate"><span class="pre">GetValueFromName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.DiagnosticType.allValues"><code class="docutils literal notranslate"><span class="pre">allValues</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Enum"><code class="docutils literal notranslate"><span class="pre">Enum</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Enum.GetValueFromFullName"><code class="docutils literal notranslate"><span class="pre">GetValueFromFullName()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.Mark"><code class="docutils literal notranslate"><span class="pre">Mark</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.Mark.Clear"><code class="docutils literal notranslate"><span class="pre">Clear()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.Mark.GetErrors"><code class="docutils literal notranslate"><span class="pre">GetErrors()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.Mark.IsClean"><code class="docutils literal notranslate"><span class="pre">IsClean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.Mark.RaiseIfNotClean"><code class="docutils literal notranslate"><span class="pre">RaiseIfNotClean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.Mark.SetMark"><code class="docutils literal notranslate"><span class="pre">SetMark()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.errorCode"><code class="docutils literal notranslate"><span class="pre">errorCode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Error.errorCodeString"><code class="docutils literal notranslate"><span class="pre">errorCodeString</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag"><code class="docutils literal notranslate"><span class="pre">MallocTag</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree"><code class="docutils literal notranslate"><span class="pre">CallTree</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.CallSite"><code class="docutils literal notranslate"><span class="pre">CallSite</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.CallSite.nBytes"><code class="docutils literal notranslate"><span class="pre">nBytes</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.CallSite.name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.PathNode"><code class="docutils literal notranslate"><span class="pre">PathNode</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.PathNode.GetChildren"><code class="docutils literal notranslate"><span class="pre">GetChildren()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.PathNode.nAllocations"><code class="docutils literal notranslate"><span class="pre">nAllocations</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.PathNode.nBytes"><code class="docutils literal notranslate"><span class="pre">nBytes</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.PathNode.nBytesDirect"><code class="docutils literal notranslate"><span class="pre">nBytesDirect</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.PathNode.siteName"><code class="docutils literal notranslate"><span class="pre">siteName</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.GetCallSites"><code class="docutils literal notranslate"><span class="pre">GetCallSites()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.GetPrettyPrintString"><code class="docutils literal notranslate"><span class="pre">GetPrettyPrintString()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.GetRoot"><code class="docutils literal notranslate"><span class="pre">GetRoot()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.LoadReport"><code class="docutils literal notranslate"><span class="pre">LoadReport()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.LogReport"><code class="docutils literal notranslate"><span class="pre">LogReport()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.CallTree.Report"><code class="docutils literal notranslate"><span class="pre">Report()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.GetCallStacks"><code class="docutils literal notranslate"><span class="pre">GetCallStacks()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.GetCallTree"><code class="docutils literal notranslate"><span class="pre">GetCallTree()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.GetMaxTotalBytes"><code class="docutils literal notranslate"><span class="pre">GetMaxTotalBytes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.GetTotalBytes"><code class="docutils literal notranslate"><span class="pre">GetTotalBytes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.Initialize"><code class="docutils literal notranslate"><span class="pre">Initialize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.IsInitialized"><code class="docutils literal notranslate"><span class="pre">IsInitialized()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.SetCapturedMallocStacksMatchList"><code class="docutils literal notranslate"><span class="pre">SetCapturedMallocStacksMatchList()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.MallocTag.SetDebugMatchList"><code class="docutils literal notranslate"><span class="pre">SetDebugMatchList()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.NamedTemporaryFile"><code class="docutils literal notranslate"><span class="pre">NamedTemporaryFile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.NamedTemporaryFile.name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice"><code class="docutils literal notranslate"><span class="pre">Notice</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice.Listener"><code class="docutils literal notranslate"><span class="pre">Listener</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice.Listener.Revoke"><code class="docutils literal notranslate"><span class="pre">Revoke()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice.Register"><code class="docutils literal notranslate"><span class="pre">Register()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice.RegisterGlobally"><code class="docutils literal notranslate"><span class="pre">RegisterGlobally()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice.Send"><code class="docutils literal notranslate"><span class="pre">Send()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Notice.SendGlobally"><code class="docutils literal notranslate"><span class="pre">SendGlobally()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.PyModuleWasLoaded"><code class="docutils literal notranslate"><span class="pre">PyModuleWasLoaded</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.PyModuleWasLoaded.name"><code class="docutils literal notranslate"><span class="pre">name()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RefPtrTracker"><code class="docutils literal notranslate"><span class="pre">RefPtrTracker</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RefPtrTracker.GetAllTracesReport"><code class="docutils literal notranslate"><span class="pre">GetAllTracesReport()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RefPtrTracker.GetAllWatchedCountsReport"><code class="docutils literal notranslate"><span class="pre">GetAllWatchedCountsReport()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RefPtrTracker.GetTracesReportForWatched"><code class="docutils literal notranslate"><span class="pre">GetTracesReportForWatched()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RefPtrTracker.expired"><code class="docutils literal notranslate"><span class="pre">expired</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.ScopeDescription"><code class="docutils literal notranslate"><span class="pre">ScopeDescription</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.ScriptModuleLoader"><code class="docutils literal notranslate"><span class="pre">ScriptModuleLoader</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.ScriptModuleLoader.GetModulesDict"><code class="docutils literal notranslate"><span class="pre">GetModulesDict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.ScriptModuleLoader.WriteDotFile"><code class="docutils literal notranslate"><span class="pre">WriteDotFile()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.ScriptModuleLoader.expired"><code class="docutils literal notranslate"><span class="pre">expired</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Singleton"><code class="docutils literal notranslate"><span class="pre">Singleton</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.StatusObject"><code class="docutils literal notranslate"><span class="pre">StatusObject</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch"><code class="docutils literal notranslate"><span class="pre">Stopwatch</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.AddFrom"><code class="docutils literal notranslate"><span class="pre">AddFrom()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.Reset"><code class="docutils literal notranslate"><span class="pre">Reset()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.Start"><code class="docutils literal notranslate"><span class="pre">Start()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.Stop"><code class="docutils literal notranslate"><span class="pre">Stop()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.microseconds"><code class="docutils literal notranslate"><span class="pre">microseconds</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.milliseconds"><code class="docutils literal notranslate"><span class="pre">milliseconds</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.nanoseconds"><code class="docutils literal notranslate"><span class="pre">nanoseconds</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.sampleCount"><code class="docutils literal notranslate"><span class="pre">sampleCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Stopwatch.seconds"><code class="docutils literal notranslate"><span class="pre">seconds</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_PyEnumWrapper"><code class="docutils literal notranslate"><span class="pre">Tf_PyEnumWrapper</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_PyEnumWrapper.displayName"><code class="docutils literal notranslate"><span class="pre">displayName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_PyEnumWrapper.fullName"><code class="docutils literal notranslate"><span class="pre">fullName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_PyEnumWrapper.name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_PyEnumWrapper.value"><code class="docutils literal notranslate"><span class="pre">value</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestAnnotatedBoolResult"><code class="docutils literal notranslate"><span class="pre">Tf_TestAnnotatedBoolResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestAnnotatedBoolResult.annotation"><code class="docutils literal notranslate"><span class="pre">annotation</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyContainerConversions"><code class="docutils literal notranslate"><span class="pre">Tf_TestPyContainerConversions</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyContainerConversions.GetPairTimesTwo"><code class="docutils literal notranslate"><span class="pre">GetPairTimesTwo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyContainerConversions.GetTokens"><code class="docutils literal notranslate"><span class="pre">GetTokens()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyContainerConversions.GetTupleTimesTwo"><code class="docutils literal notranslate"><span class="pre">GetTupleTimesTwo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyContainerConversions.GetVectorTimesTwo"><code class="docutils literal notranslate"><span class="pre">GetVectorTimesTwo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyContainerConversions.Init"><code class="docutils literal notranslate"><span class="pre">Init()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd"><code class="docutils literal notranslate"><span class="pre">Tf_TestPyOptionalStd</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TakesOptional"><code class="docutils literal notranslate"><span class="pre">TakesOptional()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalChar"><code class="docutils literal notranslate"><span class="pre">TestOptionalChar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalDouble"><code class="docutils literal notranslate"><span class="pre">TestOptionalDouble()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalFloat"><code class="docutils literal notranslate"><span class="pre">TestOptionalFloat()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalInt"><code class="docutils literal notranslate"><span class="pre">TestOptionalInt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalLong"><code class="docutils literal notranslate"><span class="pre">TestOptionalLong()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalShort"><code class="docutils literal notranslate"><span class="pre">TestOptionalShort()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalString"><code class="docutils literal notranslate"><span class="pre">TestOptionalString()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalStringVector"><code class="docutils literal notranslate"><span class="pre">TestOptionalStringVector()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUChar"><code class="docutils literal notranslate"><span class="pre">TestOptionalUChar()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUInt"><code class="docutils literal notranslate"><span class="pre">TestOptionalUInt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalULong"><code class="docutils literal notranslate"><span class="pre">TestOptionalULong()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Tf_TestPyOptionalStd.TestOptionalUShort"><code class="docutils literal notranslate"><span class="pre">TestOptionalUShort()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type"><code class="docutils literal notranslate"><span class="pre">Type</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.AddAlias"><code class="docutils literal notranslate"><span class="pre">AddAlias()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.Find"><code class="docutils literal notranslate"><span class="pre">Find()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.FindByName"><code class="docutils literal notranslate"><span class="pre">FindByName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.FindDerivedByName"><code class="docutils literal notranslate"><span class="pre">FindDerivedByName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.GetAliases"><code class="docutils literal notranslate"><span class="pre">GetAliases()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.GetAllAncestorTypes"><code class="docutils literal notranslate"><span class="pre">GetAllAncestorTypes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.GetAllDerivedTypes"><code class="docutils literal notranslate"><span class="pre">GetAllDerivedTypes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.GetRoot"><code class="docutils literal notranslate"><span class="pre">GetRoot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.IsA"><code class="docutils literal notranslate"><span class="pre">IsA()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.Unknown"><code class="docutils literal notranslate"><span class="pre">Unknown</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.baseTypes"><code class="docutils literal notranslate"><span class="pre">baseTypes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.derivedTypes"><code class="docutils literal notranslate"><span class="pre">derivedTypes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.isEnumType"><code class="docutils literal notranslate"><span class="pre">isEnumType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.isPlainOldDataType"><code class="docutils literal notranslate"><span class="pre">isPlainOldDataType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.isUnknown"><code class="docutils literal notranslate"><span class="pre">isUnknown</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.pythonClass"><code class="docutils literal notranslate"><span class="pre">pythonClass</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.sizeof"><code class="docutils literal notranslate"><span class="pre">sizeof</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Type.typeName"><code class="docutils literal notranslate"><span class="pre">typeName</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Warning"><code class="docutils literal notranslate"><span class="pre">Warning</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.WindowsImportWrapper"><code class="docutils literal notranslate"><span class="pre">WindowsImportWrapper</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Fatal"><code class="docutils literal notranslate"><span class="pre">Fatal()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.GetCodeLocation"><code class="docutils literal notranslate"><span class="pre">GetCodeLocation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.PrepareModule"><code class="docutils literal notranslate"><span class="pre">PrepareModule()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.PreparePythonModule"><code class="docutils literal notranslate"><span class="pre">PreparePythonModule()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RaiseCodingError"><code class="docutils literal notranslate"><span class="pre">RaiseCodingError()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.RaiseRuntimeError"><code class="docutils literal notranslate"><span class="pre">RaiseRuntimeError()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Status"><code class="docutils literal notranslate"><span class="pre">Status()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.Tf.Warn"><code class="docutils literal notranslate"><span class="pre">Warn()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

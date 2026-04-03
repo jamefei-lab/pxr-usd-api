@@ -1,0 +1,751 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modules &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="_static/modal-table.js"></script>
+    <script src="_static/documentation_options.js?v=48e306b8"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ar module" href="pxr/Ar.html" />
+    <link rel="prev" title="pxr-usd-api: pxr USD API" href="index.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pxr/Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Modules</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h1>
+<div class="pst-scrollable-table-container"><table class="table table-left">
+<colgroup>
+<col style="width: 18.0%" />
+<col style="width: 82.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Ar.html"><span class="doc">Ar</span></a></p></td>
+<td><p>The Ar (Asset Resolution) library is responsible for querying, reading, and writing asset data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/CameraUtil.html"><span class="doc">CameraUtil</span></a></p></td>
+<td><p>Camera Utilities</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Garch.html"><span class="doc">Garch</span></a></p></td>
+<td><p>GL Architecture</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/GeomUtil.html"><span class="doc">GeomUtil</span></a></p></td>
+<td><p>The GeomUtil module contains utilities to help image common geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Gf.html"><span class="doc">Gf</span></a></p></td>
+<td><p>The Gf (Graphics Foundations) library contains classes and functions for working with basic mathematical aspects of graphics.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/Glf.html"><span class="doc">Glf</span></a></p></td>
+<td><p>The Glf module contains Utility classes for OpenGL output.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Kind.html"><span class="doc">Kind</span></a></p></td>
+<td><p>The Kind library provides a runtime-extensible taxonomy known as “kinds”. Useful for classifying scenegraph objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/Ndr.html"><span class="doc">Ndr</span></a></p></td>
+<td><p>The Ndr (Node Definition Registry) provides a node-domain-agmostic framework for registering and querying information about nodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Pcp.html"><span class="doc">Pcp</span></a></p></td>
+<td><p>The PrimCache Population module implements core scenegraph composition semantics - behaviors informally referred to as Layering &amp; Referencing.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="xref std std-doc">PhysicsSchemaTools</span></p></td>
+<td><p>Omniverse-specific: The Physics Schema Tools provides tools for the representation of physics properties and behaviors in a 3D scene, such as gravity, collisions, and rigid body dynamics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Plug.html"><span class="doc">Plug</span></a></p></td>
+<td><p>Provides a plug-in framework implementation. Define interfaces, discover, register, and apply plug-in modules to nodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/Sdf.html"><span class="doc">Sdf</span></a></p></td>
+<td><p>The Sdf (Scene Description Foundation) provides foundations for serializing scene description and primitive abstractions for interacting.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Sdr.html"><span class="doc">Sdr</span></a></p></td>
+<td><p>The Sdr (Shader Definition Registry) is a specialized version of Ndr for Shaders.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/Tf.html"><span class="doc">Tf</span></a></p></td>
+<td><p>The Tf (Tools Foundations) module.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Trace.html"><span class="doc">Trace</span></a></p></td>
+<td><p>The Trace module provides performance tracking utility classes for counting, timing, measuring, recording, and reporting events.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/Usd.html"><span class="doc">Usd</span></a></p></td>
+<td><p>The core client-facing module for authoring, compositing, and reading Universal Scene Description.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdAppUtils.html"><span class="doc">UsdAppUtils</span></a></p></td>
+<td><p>The UsdAppUtils module contains a number of utilities and common functionality for applications that view and/or record images of USD stages.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdGeom.html"><span class="doc">UsdGeom</span></a></p></td>
+<td><p>The UsdGeom module defines 3D graphics-related prim and property schemas that form a basis for geometry interchange.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdHydra.html"><span class="doc">UsdHydra</span></a></p></td>
+<td><p>The UsdHydra module.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdLux.html"><span class="doc">UsdLux</span></a></p></td>
+<td><p>The UsdLux module provides a representation for lights and related components that are common to many graphics environments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdMedia.html"><span class="doc">UsdMedia</span></a></p></td>
+<td><p>The UsdMedia module provides a representation for including other media, such as audio, in the context of a stage. UsdMedia currently contains one media type, UsdMediaSpatialAudio, which allows the playback of audio files both spatially and non-spatially.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdPhysics.html"><span class="doc">UsdPhysics</span></a></p></td>
+<td><p>The UsdPhysics module defines the physics-related prim and property schemas that together form a physics simulation representation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdProc.html"><span class="doc">UsdProc</span></a></p></td>
+<td><p>The UsdProc module defines schemas for the scene description of procedural data meaningful to downstream systems.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdRender.html"><span class="doc">UsdRender</span></a></p></td>
+<td><p>The UsdRender module provides schemas and behaviors for describing renders.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdRi.html"><span class="doc">UsdRi</span></a></p></td>
+<td><p>The UsdRi module provides schemas and utilities for authoring USD that encodes Renderman-specific information, and USD/RI data conversions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdShade.html"><span class="doc">UsdShade</span></a></p></td>
+<td><p>The UsdShade module provides schemas and behaviors for creating and binding materials, which encapsulate shading networks.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdSkel.html"><span class="doc">UsdSkel</span></a></p></td>
+<td><p>The UsdSkel module defines schemas and API that form a basis for interchanging skeletally-skinned meshes and joint animations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdUI.html"><span class="doc">UsdUI</span></a></p></td>
+<td><p>The UsdUI module provides schemas for encoding information on USD prims for client GUI tools to use in organizing/presenting prims in GUI layouts.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/UsdUtils.html"><span class="doc">UsdUtils</span></a></p></td>
+<td><p>The UsdUtils module contains utility classes and functions for managing, inspecting, editing, and creating USD Assets.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/UsdVol.html"><span class="doc">UsdVol</span></a></p></td>
+<td><p>The UsdVol module provides schemas for representing volumes (smoke, fire, etc).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pxr/Vt.html"><span class="doc">Vt</span></a></p></td>
+<td><p>The Vt (Value Types) module defines classes that provide for type abstraction, enhanced array types, and value type manipulation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pxr/Work.html"><span class="doc">Work</span></a></p></td>
+<td><p>The Work library is intended to simplify the use of multithreading in the context of our software ecosystem.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">pxr-usd-api: pxr USD API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pxr/Ar.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ar module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+<div class="bd-sidebar-secondary"></div>
+
+
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

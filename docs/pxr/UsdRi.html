@@ -1,0 +1,1354 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UsdRi module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/UsdRi';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UsdShade module" href="UsdShade.html" />
+    <link rel="prev" title="UsdRender module" href="UsdRender.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">UsdRi module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usdri-module">
+<h1>UsdRi module<a class="headerlink" href="#usdri-module" title="Link to this heading">#</a></h1>
+<p>Summary: The UsdRi module provides schemas and utilities for authoring USD that encodes Renderman-specific information, and USD/RI data conversions.</p>
+<hr class="docutils" />
+<p id="module-pxr.UsdRi"><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI" title="pxr.UsdRi.MaterialAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI" title="pxr.UsdRi.SplineAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SplineAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI" title="pxr.UsdRi.StatementsAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatementsAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens" title="pxr.UsdRi.Tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRi.</span></span><span class="sig-name descname"><span class="pre">MaterialAPI</span></span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.Apply" title="pxr.UsdRi.MaterialAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.CanApply" title="pxr.UsdRi.MaterialAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.ComputeInterfaceInputConsumersMap" title="pxr.UsdRi.MaterialAPI.ComputeInterfaceInputConsumersMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeInterfaceInputConsumersMap</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.CreateDisplacementAttr" title="pxr.UsdRi.MaterialAPI.CreateDisplacementAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateDisplacementAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.CreateSurfaceAttr" title="pxr.UsdRi.MaterialAPI.CreateSurfaceAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateSurfaceAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.CreateVolumeAttr" title="pxr.UsdRi.MaterialAPI.CreateVolumeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateVolumeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.Get" title="pxr.UsdRi.MaterialAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetDisplacement" title="pxr.UsdRi.MaterialAPI.GetDisplacement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplacement</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetDisplacementAttr" title="pxr.UsdRi.MaterialAPI.GetDisplacementAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplacementAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetDisplacementOutput" title="pxr.UsdRi.MaterialAPI.GetDisplacementOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDisplacementOutput</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetSchemaAttributeNames" title="pxr.UsdRi.MaterialAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetSurface" title="pxr.UsdRi.MaterialAPI.GetSurface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSurface</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetSurfaceAttr" title="pxr.UsdRi.MaterialAPI.GetSurfaceAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSurfaceAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetSurfaceOutput" title="pxr.UsdRi.MaterialAPI.GetSurfaceOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSurfaceOutput</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetVolume" title="pxr.UsdRi.MaterialAPI.GetVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetVolume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetVolumeAttr" title="pxr.UsdRi.MaterialAPI.GetVolumeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetVolumeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.GetVolumeOutput" title="pxr.UsdRi.MaterialAPI.GetVolumeOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetVolumeOutput</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.SetDisplacementSource" title="pxr.UsdRi.MaterialAPI.SetDisplacementSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDisplacementSource</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.SetSurfaceSource" title="pxr.UsdRi.MaterialAPI.SetSurfaceSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetSurfaceSource</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.MaterialAPI.SetVolumeSource" title="pxr.UsdRi.MaterialAPI.SetVolumeSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetVolumeSource</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.ComputeInterfaceInputConsumersMap">
+<span class="sig-name descname"><span class="pre">ComputeInterfaceInputConsumersMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.ComputeInterfaceInputConsumersMap" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.CreateDisplacementAttr">
+<span class="sig-name descname"><span class="pre">CreateDisplacementAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.CreateDisplacementAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.CreateSurfaceAttr">
+<span class="sig-name descname"><span class="pre">CreateSurfaceAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.CreateSurfaceAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.CreateVolumeAttr">
+<span class="sig-name descname"><span class="pre">CreateVolumeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.CreateVolumeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetDisplacement">
+<span class="sig-name descname"><span class="pre">GetDisplacement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetDisplacement" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetDisplacementAttr">
+<span class="sig-name descname"><span class="pre">GetDisplacementAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetDisplacementAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetDisplacementOutput">
+<span class="sig-name descname"><span class="pre">GetDisplacementOutput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetDisplacementOutput" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetSurface">
+<span class="sig-name descname"><span class="pre">GetSurface</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetSurface" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetSurfaceAttr">
+<span class="sig-name descname"><span class="pre">GetSurfaceAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetSurfaceAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetSurfaceOutput">
+<span class="sig-name descname"><span class="pre">GetSurfaceOutput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetSurfaceOutput" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetVolume">
+<span class="sig-name descname"><span class="pre">GetVolume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetVolume" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetVolumeAttr">
+<span class="sig-name descname"><span class="pre">GetVolumeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetVolumeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.GetVolumeOutput">
+<span class="sig-name descname"><span class="pre">GetVolumeOutput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.GetVolumeOutput" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.SetDisplacementSource">
+<span class="sig-name descname"><span class="pre">SetDisplacementSource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.SetDisplacementSource" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.SetSurfaceSource">
+<span class="sig-name descname"><span class="pre">SetSurfaceSource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.SetSurfaceSource" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.MaterialAPI.SetVolumeSource">
+<span class="sig-name descname"><span class="pre">SetVolumeSource</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.MaterialAPI.SetVolumeSource" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRi.</span></span><span class="sig-name descname"><span class="pre">SplineAPI</span></span><a class="headerlink" href="#pxr.UsdRi.SplineAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.Apply" title="pxr.UsdRi.SplineAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.CanApply" title="pxr.UsdRi.SplineAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.CreateInterpolationAttr" title="pxr.UsdRi.SplineAPI.CreateInterpolationAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateInterpolationAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.CreatePositionsAttr" title="pxr.UsdRi.SplineAPI.CreatePositionsAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePositionsAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.CreateValuesAttr" title="pxr.UsdRi.SplineAPI.CreateValuesAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateValuesAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.Get" title="pxr.UsdRi.SplineAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.GetInterpolationAttr" title="pxr.UsdRi.SplineAPI.GetInterpolationAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetInterpolationAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.GetPositionsAttr" title="pxr.UsdRi.SplineAPI.GetPositionsAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPositionsAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.GetSchemaAttributeNames" title="pxr.UsdRi.SplineAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.GetValuesAttr" title="pxr.UsdRi.SplineAPI.GetValuesAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValuesAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.GetValuesTypeName" title="pxr.UsdRi.SplineAPI.GetValuesTypeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetValuesTypeName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.SplineAPI.Validate" title="pxr.UsdRi.SplineAPI.Validate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Validate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.CreateInterpolationAttr">
+<span class="sig-name descname"><span class="pre">CreateInterpolationAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.CreateInterpolationAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.CreatePositionsAttr">
+<span class="sig-name descname"><span class="pre">CreatePositionsAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.CreatePositionsAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.CreateValuesAttr">
+<span class="sig-name descname"><span class="pre">CreateValuesAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.CreateValuesAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.GetInterpolationAttr">
+<span class="sig-name descname"><span class="pre">GetInterpolationAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.GetInterpolationAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.GetPositionsAttr">
+<span class="sig-name descname"><span class="pre">GetPositionsAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.GetPositionsAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.GetValuesAttr">
+<span class="sig-name descname"><span class="pre">GetValuesAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.GetValuesAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.GetValuesTypeName">
+<span class="sig-name descname"><span class="pre">GetValuesTypeName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.GetValuesTypeName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.SplineAPI.Validate">
+<span class="sig-name descname"><span class="pre">Validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.SplineAPI.Validate" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRi.</span></span><span class="sig-name descname"><span class="pre">StatementsAPI</span></span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.Apply" title="pxr.UsdRi.StatementsAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.CanApply" title="pxr.UsdRi.StatementsAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.CreateRiAttribute" title="pxr.UsdRi.StatementsAPI.CreateRiAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateRiAttribute</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.Get" title="pxr.UsdRi.StatementsAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetCoordinateSystem" title="pxr.UsdRi.StatementsAPI.GetCoordinateSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCoordinateSystem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetModelCoordinateSystems" title="pxr.UsdRi.StatementsAPI.GetModelCoordinateSystems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelCoordinateSystems</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetModelScopedCoordinateSystems" title="pxr.UsdRi.StatementsAPI.GetModelScopedCoordinateSystems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetModelScopedCoordinateSystems</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetRiAttribute" title="pxr.UsdRi.StatementsAPI.GetRiAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRiAttribute</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetRiAttributeName" title="pxr.UsdRi.StatementsAPI.GetRiAttributeName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRiAttributeName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetRiAttributeNameSpace" title="pxr.UsdRi.StatementsAPI.GetRiAttributeNameSpace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRiAttributeNameSpace</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetRiAttributes" title="pxr.UsdRi.StatementsAPI.GetRiAttributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetRiAttributes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetSchemaAttributeNames" title="pxr.UsdRi.StatementsAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.GetScopedCoordinateSystem" title="pxr.UsdRi.StatementsAPI.GetScopedCoordinateSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetScopedCoordinateSystem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.HasCoordinateSystem" title="pxr.UsdRi.StatementsAPI.HasCoordinateSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HasCoordinateSystem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.HasScopedCoordinateSystem" title="pxr.UsdRi.StatementsAPI.HasScopedCoordinateSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HasScopedCoordinateSystem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.IsRiAttribute" title="pxr.UsdRi.StatementsAPI.IsRiAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsRiAttribute</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.MakeRiAttributePropertyName" title="pxr.UsdRi.StatementsAPI.MakeRiAttributePropertyName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MakeRiAttributePropertyName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.SetCoordinateSystem" title="pxr.UsdRi.StatementsAPI.SetCoordinateSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetCoordinateSystem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.StatementsAPI.SetScopedCoordinateSystem" title="pxr.UsdRi.StatementsAPI.SetScopedCoordinateSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetScopedCoordinateSystem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.CreateRiAttribute">
+<span class="sig-name descname"><span class="pre">CreateRiAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.CreateRiAttribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetCoordinateSystem">
+<span class="sig-name descname"><span class="pre">GetCoordinateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetCoordinateSystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetModelCoordinateSystems">
+<span class="sig-name descname"><span class="pre">GetModelCoordinateSystems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetModelCoordinateSystems" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetModelScopedCoordinateSystems">
+<span class="sig-name descname"><span class="pre">GetModelScopedCoordinateSystems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetModelScopedCoordinateSystems" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetRiAttribute">
+<span class="sig-name descname"><span class="pre">GetRiAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetRiAttribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetRiAttributeName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetRiAttributeName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetRiAttributeName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetRiAttributeNameSpace">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetRiAttributeNameSpace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetRiAttributeNameSpace" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetRiAttributes">
+<span class="sig-name descname"><span class="pre">GetRiAttributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetRiAttributes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.GetScopedCoordinateSystem">
+<span class="sig-name descname"><span class="pre">GetScopedCoordinateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.GetScopedCoordinateSystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.HasCoordinateSystem">
+<span class="sig-name descname"><span class="pre">HasCoordinateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.HasCoordinateSystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.HasScopedCoordinateSystem">
+<span class="sig-name descname"><span class="pre">HasScopedCoordinateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.HasScopedCoordinateSystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.IsRiAttribute">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IsRiAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.IsRiAttribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.MakeRiAttributePropertyName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeRiAttributePropertyName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.MakeRiAttributePropertyName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.SetCoordinateSystem">
+<span class="sig-name descname"><span class="pre">SetCoordinateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.SetCoordinateSystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdRi.StatementsAPI.SetScopedCoordinateSystem">
+<span class="sig-name descname"><span class="pre">SetScopedCoordinateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdRi.StatementsAPI.SetScopedCoordinateSystem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdRi.</span></span><span class="sig-name descname"><span class="pre">Tokens</span></span><a class="headerlink" href="#pxr.UsdRi.Tokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.RiMaterialAPI" title="pxr.UsdRi.Tokens.RiMaterialAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiMaterialAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.RiSplineAPI" title="pxr.UsdRi.Tokens.RiSplineAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RiSplineAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.StatementsAPI" title="pxr.UsdRi.Tokens.StatementsAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StatementsAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.bspline" title="pxr.UsdRi.Tokens.bspline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bspline</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.cameraVisibility" title="pxr.UsdRi.Tokens.cameraVisibility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cameraVisibility</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.catmullRom" title="pxr.UsdRi.Tokens.catmullRom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catmullRom</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.constant" title="pxr.UsdRi.Tokens.constant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">constant</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.interpolation" title="pxr.UsdRi.Tokens.interpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.linear" title="pxr.UsdRi.Tokens.linear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.matte" title="pxr.UsdRi.Tokens.matte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matte</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.outputsRiDisplacement" title="pxr.UsdRi.Tokens.outputsRiDisplacement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputsRiDisplacement</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.outputsRiSurface" title="pxr.UsdRi.Tokens.outputsRiSurface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputsRiSurface</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.outputsRiVolume" title="pxr.UsdRi.Tokens.outputsRiVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputsRiVolume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.positions" title="pxr.UsdRi.Tokens.positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">positions</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.renderContext" title="pxr.UsdRi.Tokens.renderContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderContext</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.spline" title="pxr.UsdRi.Tokens.spline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spline</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdRi.Tokens.values" title="pxr.UsdRi.Tokens.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.RiMaterialAPI">
+<span class="sig-name descname"><span class="pre">RiMaterialAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RiMaterialAPI'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.RiMaterialAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.RiSplineAPI">
+<span class="sig-name descname"><span class="pre">RiSplineAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RiSplineAPI'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.RiSplineAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.StatementsAPI">
+<span class="sig-name descname"><span class="pre">StatementsAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'StatementsAPI'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.StatementsAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.bspline">
+<span class="sig-name descname"><span class="pre">bspline</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bspline'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.bspline" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.cameraVisibility">
+<span class="sig-name descname"><span class="pre">cameraVisibility</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cameraVisibility'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.cameraVisibility" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.catmullRom">
+<span class="sig-name descname"><span class="pre">catmullRom</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'catmull-rom'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.catmullRom" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.constant">
+<span class="sig-name descname"><span class="pre">constant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'constant'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.constant" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.interpolation">
+<span class="sig-name descname"><span class="pre">interpolation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'interpolation'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.interpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.linear">
+<span class="sig-name descname"><span class="pre">linear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'linear'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.linear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.matte">
+<span class="sig-name descname"><span class="pre">matte</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'matte'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.matte" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.outputsRiDisplacement">
+<span class="sig-name descname"><span class="pre">outputsRiDisplacement</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'outputs:ri:displacement'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.outputsRiDisplacement" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.outputsRiSurface">
+<span class="sig-name descname"><span class="pre">outputsRiSurface</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'outputs:ri:surface'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.outputsRiSurface" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.outputsRiVolume">
+<span class="sig-name descname"><span class="pre">outputsRiVolume</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'outputs:ri:volume'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.outputsRiVolume" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.positions">
+<span class="sig-name descname"><span class="pre">positions</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'positions'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.positions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.renderContext">
+<span class="sig-name descname"><span class="pre">renderContext</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ri'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.renderContext" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.spline">
+<span class="sig-name descname"><span class="pre">spline</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'spline'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.spline" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdRi.Tokens.values">
+<span class="sig-name descname"><span class="pre">values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'values'</span></em><a class="headerlink" href="#pxr.UsdRi.Tokens.values" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="UsdRender.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UsdRender module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UsdShade.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UsdShade module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI"><code class="docutils literal notranslate"><span class="pre">MaterialAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.ComputeInterfaceInputConsumersMap"><code class="docutils literal notranslate"><span class="pre">ComputeInterfaceInputConsumersMap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.CreateDisplacementAttr"><code class="docutils literal notranslate"><span class="pre">CreateDisplacementAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.CreateSurfaceAttr"><code class="docutils literal notranslate"><span class="pre">CreateSurfaceAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.CreateVolumeAttr"><code class="docutils literal notranslate"><span class="pre">CreateVolumeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetDisplacement"><code class="docutils literal notranslate"><span class="pre">GetDisplacement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetDisplacementAttr"><code class="docutils literal notranslate"><span class="pre">GetDisplacementAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetDisplacementOutput"><code class="docutils literal notranslate"><span class="pre">GetDisplacementOutput()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetSurface"><code class="docutils literal notranslate"><span class="pre">GetSurface()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetSurfaceAttr"><code class="docutils literal notranslate"><span class="pre">GetSurfaceAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetSurfaceOutput"><code class="docutils literal notranslate"><span class="pre">GetSurfaceOutput()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetVolume"><code class="docutils literal notranslate"><span class="pre">GetVolume()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetVolumeAttr"><code class="docutils literal notranslate"><span class="pre">GetVolumeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.GetVolumeOutput"><code class="docutils literal notranslate"><span class="pre">GetVolumeOutput()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.SetDisplacementSource"><code class="docutils literal notranslate"><span class="pre">SetDisplacementSource()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.SetSurfaceSource"><code class="docutils literal notranslate"><span class="pre">SetSurfaceSource()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.MaterialAPI.SetVolumeSource"><code class="docutils literal notranslate"><span class="pre">SetVolumeSource()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI"><code class="docutils literal notranslate"><span class="pre">SplineAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.CreateInterpolationAttr"><code class="docutils literal notranslate"><span class="pre">CreateInterpolationAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.CreatePositionsAttr"><code class="docutils literal notranslate"><span class="pre">CreatePositionsAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.CreateValuesAttr"><code class="docutils literal notranslate"><span class="pre">CreateValuesAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.GetInterpolationAttr"><code class="docutils literal notranslate"><span class="pre">GetInterpolationAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.GetPositionsAttr"><code class="docutils literal notranslate"><span class="pre">GetPositionsAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.GetValuesAttr"><code class="docutils literal notranslate"><span class="pre">GetValuesAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.GetValuesTypeName"><code class="docutils literal notranslate"><span class="pre">GetValuesTypeName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.SplineAPI.Validate"><code class="docutils literal notranslate"><span class="pre">Validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI"><code class="docutils literal notranslate"><span class="pre">StatementsAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.CreateRiAttribute"><code class="docutils literal notranslate"><span class="pre">CreateRiAttribute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">GetCoordinateSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetModelCoordinateSystems"><code class="docutils literal notranslate"><span class="pre">GetModelCoordinateSystems()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetModelScopedCoordinateSystems"><code class="docutils literal notranslate"><span class="pre">GetModelScopedCoordinateSystems()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetRiAttribute"><code class="docutils literal notranslate"><span class="pre">GetRiAttribute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetRiAttributeName"><code class="docutils literal notranslate"><span class="pre">GetRiAttributeName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetRiAttributeNameSpace"><code class="docutils literal notranslate"><span class="pre">GetRiAttributeNameSpace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetRiAttributes"><code class="docutils literal notranslate"><span class="pre">GetRiAttributes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.GetScopedCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">GetScopedCoordinateSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.HasCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">HasCoordinateSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.HasScopedCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">HasScopedCoordinateSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.IsRiAttribute"><code class="docutils literal notranslate"><span class="pre">IsRiAttribute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.MakeRiAttributePropertyName"><code class="docutils literal notranslate"><span class="pre">MakeRiAttributePropertyName()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.SetCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">SetCoordinateSystem()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.StatementsAPI.SetScopedCoordinateSystem"><code class="docutils literal notranslate"><span class="pre">SetScopedCoordinateSystem()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens"><code class="docutils literal notranslate"><span class="pre">Tokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.RiMaterialAPI"><code class="docutils literal notranslate"><span class="pre">RiMaterialAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.RiSplineAPI"><code class="docutils literal notranslate"><span class="pre">RiSplineAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.StatementsAPI"><code class="docutils literal notranslate"><span class="pre">StatementsAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.bspline"><code class="docutils literal notranslate"><span class="pre">bspline</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.cameraVisibility"><code class="docutils literal notranslate"><span class="pre">cameraVisibility</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.catmullRom"><code class="docutils literal notranslate"><span class="pre">catmullRom</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.constant"><code class="docutils literal notranslate"><span class="pre">constant</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.interpolation"><code class="docutils literal notranslate"><span class="pre">interpolation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.linear"><code class="docutils literal notranslate"><span class="pre">linear</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.matte"><code class="docutils literal notranslate"><span class="pre">matte</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.outputsRiDisplacement"><code class="docutils literal notranslate"><span class="pre">outputsRiDisplacement</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.outputsRiSurface"><code class="docutils literal notranslate"><span class="pre">outputsRiSurface</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.outputsRiVolume"><code class="docutils literal notranslate"><span class="pre">outputsRiVolume</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.positions"><code class="docutils literal notranslate"><span class="pre">positions</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.renderContext"><code class="docutils literal notranslate"><span class="pre">renderContext</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.spline"><code class="docutils literal notranslate"><span class="pre">spline</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdRi.Tokens.values"><code class="docutils literal notranslate"><span class="pre">values</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

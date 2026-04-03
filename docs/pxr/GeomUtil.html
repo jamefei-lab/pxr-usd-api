@@ -1,0 +1,1309 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GeomUtil module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/GeomUtil';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Gf module" href="Gf.html" />
+    <link rel="prev" title="Garch module" href="Garch.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">GeomUtil module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="geomutil-module">
+<h1>GeomUtil module<a class="headerlink" href="#geomutil-module" title="Link to this heading">#</a></h1>
+<p>Summary: The GeomUtil module contains utilities to help image common geometry.</p>
+<hr class="docutils" />
+<p id="module-pxr.GeomUtil">Utilities to help image common geometry.</p>
+<p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator" title="pxr.GeomUtil.CapsuleMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CapsuleMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator" title="pxr.GeomUtil.ConeMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConeMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator" title="pxr.GeomUtil.CuboidMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CuboidMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator" title="pxr.GeomUtil.CylinderMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CylinderMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator" title="pxr.GeomUtil.DiskMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DiskMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.InterpolationTokens" title="pxr.GeomUtil.InterpolationTokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InterpolationTokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator" title="pxr.GeomUtil.PlaneMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PlaneMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator" title="pxr.GeomUtil.SphereMeshGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SphereMeshGenerator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">CapsuleMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.GenerateNormals" title="pxr.GeomUtil.CapsuleMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.GeneratePoints" title="pxr.GeomUtil.CapsuleMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.GenerateTopology" title="pxr.GeomUtil.CapsuleMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.CapsuleMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.minNumCapAxial" title="pxr.GeomUtil.CapsuleMeshGenerator.minNumCapAxial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumCapAxial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CapsuleMeshGenerator.minNumRadial" title="pxr.GeomUtil.CapsuleMeshGenerator.minNumRadial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.minNumCapAxial">
+<span class="sig-name descname"><span class="pre">minNumCapAxial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.minNumCapAxial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CapsuleMeshGenerator.minNumRadial">
+<span class="sig-name descname"><span class="pre">minNumRadial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pxr.GeomUtil.CapsuleMeshGenerator.minNumRadial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">ConeMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.ConeMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.ConeMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.GenerateNormals" title="pxr.GeomUtil.ConeMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.GeneratePoints" title="pxr.GeomUtil.ConeMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.GenerateTopology" title="pxr.GeomUtil.ConeMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.ConeMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.ConeMeshGenerator.minNumRadial" title="pxr.GeomUtil.ConeMeshGenerator.minNumRadial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.ConeMeshGenerator.minNumRadial">
+<span class="sig-name descname"><span class="pre">minNumRadial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pxr.GeomUtil.ConeMeshGenerator.minNumRadial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">CuboidMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.CuboidMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.CuboidMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator.GenerateNormals" title="pxr.GeomUtil.CuboidMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator.GeneratePoints" title="pxr.GeomUtil.CuboidMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator.GenerateTopology" title="pxr.GeomUtil.CuboidMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CuboidMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.CuboidMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CuboidMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CuboidMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">CylinderMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.CylinderMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.CylinderMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.GenerateNormals" title="pxr.GeomUtil.CylinderMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.GeneratePoints" title="pxr.GeomUtil.CylinderMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.GenerateTopology" title="pxr.GeomUtil.CylinderMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.CylinderMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.CylinderMeshGenerator.minNumRadial" title="pxr.GeomUtil.CylinderMeshGenerator.minNumRadial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.CylinderMeshGenerator.minNumRadial">
+<span class="sig-name descname"><span class="pre">minNumRadial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pxr.GeomUtil.CylinderMeshGenerator.minNumRadial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">DiskMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.DiskMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.DiskMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.GenerateNormals" title="pxr.GeomUtil.DiskMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.GeneratePoints" title="pxr.GeomUtil.DiskMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.GenerateTopology" title="pxr.GeomUtil.DiskMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.DiskMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.DiskMeshGenerator.minNumRadial" title="pxr.GeomUtil.DiskMeshGenerator.minNumRadial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.DiskMeshGenerator.minNumRadial">
+<span class="sig-name descname"><span class="pre">minNumRadial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pxr.GeomUtil.DiskMeshGenerator.minNumRadial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.InterpolationTokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">InterpolationTokens</span></span><a class="headerlink" href="#pxr.GeomUtil.InterpolationTokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.InterpolationTokens.constant" title="pxr.GeomUtil.InterpolationTokens.constant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">constant</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.InterpolationTokens.uniform" title="pxr.GeomUtil.InterpolationTokens.uniform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uniform</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.InterpolationTokens.vertex" title="pxr.GeomUtil.InterpolationTokens.vertex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.InterpolationTokens.constant">
+<span class="sig-name descname"><span class="pre">constant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'constant'</span></em><a class="headerlink" href="#pxr.GeomUtil.InterpolationTokens.constant" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.InterpolationTokens.uniform">
+<span class="sig-name descname"><span class="pre">uniform</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uniform'</span></em><a class="headerlink" href="#pxr.GeomUtil.InterpolationTokens.uniform" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.InterpolationTokens.vertex">
+<span class="sig-name descname"><span class="pre">vertex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vertex'</span></em><a class="headerlink" href="#pxr.GeomUtil.InterpolationTokens.vertex" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">PlaneMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.PlaneMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.PlaneMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator.GenerateNormals" title="pxr.GeomUtil.PlaneMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator.GeneratePoints" title="pxr.GeomUtil.PlaneMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator.GenerateTopology" title="pxr.GeomUtil.PlaneMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.PlaneMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.PlaneMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.PlaneMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.PlaneMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.GeomUtil.</span></span><span class="sig-name descname"><span class="pre">SphereMeshGenerator</span></span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.ComputeNumNormals" title="pxr.GeomUtil.SphereMeshGenerator.ComputeNumNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.ComputeNumPoints" title="pxr.GeomUtil.SphereMeshGenerator.ComputeNumPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComputeNumPoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.GenerateNormals" title="pxr.GeomUtil.SphereMeshGenerator.GenerateNormals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateNormals</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.GeneratePoints" title="pxr.GeomUtil.SphereMeshGenerator.GeneratePoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeneratePoints</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.GenerateTopology" title="pxr.GeomUtil.SphereMeshGenerator.GenerateTopology"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenerateTopology</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.GetNormalsInterpolation" title="pxr.GeomUtil.SphereMeshGenerator.GetNormalsInterpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetNormalsInterpolation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.minNumAxial" title="pxr.GeomUtil.SphereMeshGenerator.minNumAxial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumAxial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.GeomUtil.SphereMeshGenerator.minNumRadial" title="pxr.GeomUtil.SphereMeshGenerator.minNumRadial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.ComputeNumNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.ComputeNumNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.ComputeNumPoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ComputeNumPoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.ComputeNumPoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.GenerateNormals">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateNormals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.GenerateNormals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.GeneratePoints">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GeneratePoints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.GeneratePoints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.GenerateTopology">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GenerateTopology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.GenerateTopology" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.GetNormalsInterpolation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetNormalsInterpolation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.GetNormalsInterpolation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.minNumAxial">
+<span class="sig-name descname"><span class="pre">minNumAxial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.minNumAxial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.GeomUtil.SphereMeshGenerator.minNumRadial">
+<span class="sig-name descname"><span class="pre">minNumRadial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pxr.GeomUtil.SphereMeshGenerator.minNumRadial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Garch.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Garch module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Gf.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Gf module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator"><code class="docutils literal notranslate"><span class="pre">CapsuleMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.minNumCapAxial"><code class="docutils literal notranslate"><span class="pre">minNumCapAxial</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CapsuleMeshGenerator.minNumRadial"><code class="docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator"><code class="docutils literal notranslate"><span class="pre">ConeMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.ConeMeshGenerator.minNumRadial"><code class="docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator"><code class="docutils literal notranslate"><span class="pre">CuboidMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CuboidMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator"><code class="docutils literal notranslate"><span class="pre">CylinderMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.CylinderMeshGenerator.minNumRadial"><code class="docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator"><code class="docutils literal notranslate"><span class="pre">DiskMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.DiskMeshGenerator.minNumRadial"><code class="docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.InterpolationTokens"><code class="docutils literal notranslate"><span class="pre">InterpolationTokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.InterpolationTokens.constant"><code class="docutils literal notranslate"><span class="pre">constant</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.InterpolationTokens.uniform"><code class="docutils literal notranslate"><span class="pre">uniform</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.InterpolationTokens.vertex"><code class="docutils literal notranslate"><span class="pre">vertex</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator"><code class="docutils literal notranslate"><span class="pre">PlaneMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.PlaneMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator"><code class="docutils literal notranslate"><span class="pre">SphereMeshGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.ComputeNumNormals"><code class="docutils literal notranslate"><span class="pre">ComputeNumNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.ComputeNumPoints"><code class="docutils literal notranslate"><span class="pre">ComputeNumPoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.GenerateNormals"><code class="docutils literal notranslate"><span class="pre">GenerateNormals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.GeneratePoints"><code class="docutils literal notranslate"><span class="pre">GeneratePoints()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.GenerateTopology"><code class="docutils literal notranslate"><span class="pre">GenerateTopology()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.GetNormalsInterpolation"><code class="docutils literal notranslate"><span class="pre">GetNormalsInterpolation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.minNumAxial"><code class="docutils literal notranslate"><span class="pre">minNumAxial</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.GeomUtil.SphereMeshGenerator.minNumRadial"><code class="docutils literal notranslate"><span class="pre">minNumRadial</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

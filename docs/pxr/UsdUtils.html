@@ -1,0 +1,1488 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UsdUtils module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/UsdUtils';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UsdVol module" href="UsdVol.html" />
+    <link rel="prev" title="UsdUI module" href="UsdUI.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdMedia.html">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">UsdUtils module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usdutils-module">
+<h1>UsdUtils module<a class="headerlink" href="#usdutils-module" title="Link to this heading">#</a></h1>
+<p>Summary: The UsdUtils module contains utility classes and functions for managing, inspecting, editing, and creating USD Assets.</p>
+<hr class="docutils" />
+<p id="module-pxr.UsdUtils"><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate" title="pxr.UsdUtils.CoalescingDiagnosticDelegate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem" title="pxr.UsdUtils.CoalescingDiagnosticDelegateItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegateItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem" title="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegateSharedItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem" title="pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegateUnsharedItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegate" title="pxr.UsdUtils.ConditionalAbortDiagnosticDelegate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConditionalAbortDiagnosticDelegate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters" title="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConditionalAbortDiagnosticDelegateErrorFilters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.DependencyInfo" title="pxr.UsdUtils.DependencyInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DependencyInfo</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.ExtractExternalReferencesParams" title="pxr.UsdUtils.ExtractExternalReferencesParams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExtractExternalReferencesParams</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet" title="pxr.UsdUtils.RegisteredVariantSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegisteredVariantSet</span></code></a></p></td>
+<td><p>Info for registered variant set</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.SparseAttrValueWriter" title="pxr.UsdUtils.SparseAttrValueWriter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SparseAttrValueWriter</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.SparseValueWriter" title="pxr.UsdUtils.SparseValueWriter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SparseValueWriter</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.StageCache" title="pxr.UsdUtils.StageCache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StageCache</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange" title="pxr.UsdUtils.TimeCodeRange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeCodeRange</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys" title="pxr.UsdUtils.UsdStageStatsKeys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UsdStageStatsKeys</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">CoalescingDiagnosticDelegate</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStderr" title="pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DumpCoalescedDiagnosticsToStderr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStdout" title="pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DumpCoalescedDiagnosticsToStdout</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpUncoalescedDiagnostics" title="pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpUncoalescedDiagnostics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DumpUncoalescedDiagnostics</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeCoalescedDiagnostics" title="pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeCoalescedDiagnostics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TakeCoalescedDiagnostics</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeUncoalescedDiagnostics" title="pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeUncoalescedDiagnostics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TakeUncoalescedDiagnostics</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStderr">
+<span class="sig-name descname"><span class="pre">DumpCoalescedDiagnosticsToStderr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStderr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStdout">
+<span class="sig-name descname"><span class="pre">DumpCoalescedDiagnosticsToStdout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStdout" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpUncoalescedDiagnostics">
+<span class="sig-name descname"><span class="pre">DumpUncoalescedDiagnostics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpUncoalescedDiagnostics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeCoalescedDiagnostics">
+<span class="sig-name descname"><span class="pre">TakeCoalescedDiagnostics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeCoalescedDiagnostics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeUncoalescedDiagnostics">
+<span class="sig-name descname"><span class="pre">TakeUncoalescedDiagnostics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeUncoalescedDiagnostics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">CoalescingDiagnosticDelegateItem</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem.sharedItem" title="pxr.UsdUtils.CoalescingDiagnosticDelegateItem.sharedItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sharedItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem.unsharedItems" title="pxr.UsdUtils.CoalescingDiagnosticDelegateItem.unsharedItems"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unsharedItems</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateItem.sharedItem">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sharedItem</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem.sharedItem" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateItem.unsharedItems">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unsharedItems</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem.unsharedItems" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">CoalescingDiagnosticDelegateSharedItem</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFileName" title="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sourceFileName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFunction" title="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sourceFunction</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceLineNumber" title="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceLineNumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sourceLineNumber</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFileName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sourceFileName</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFileName" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFunction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sourceFunction</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFunction" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceLineNumber">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sourceLineNumber</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceLineNumber" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">CoalescingDiagnosticDelegateUnsharedItem</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.commentary" title="pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.commentary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commentary</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.context" title="pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">context</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.commentary">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">commentary</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.commentary" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.context">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">context</span></span><a class="headerlink" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.context" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ConditionalAbortDiagnosticDelegate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">ConditionalAbortDiagnosticDelegate</span></span><a class="headerlink" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegate" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">ConditionalAbortDiagnosticDelegateErrorFilters</span></span><a class="headerlink" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetCodePathFilters" title="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetCodePathFilters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetCodePathFilters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetStringFilters" title="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetStringFilters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetStringFilters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetCodePathFilters" title="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetCodePathFilters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetCodePathFilters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetStringFilters" title="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetStringFilters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetStringFilters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetCodePathFilters">
+<span class="sig-name descname"><span class="pre">GetCodePathFilters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetCodePathFilters" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetStringFilters">
+<span class="sig-name descname"><span class="pre">GetStringFilters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetStringFilters" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetCodePathFilters">
+<span class="sig-name descname"><span class="pre">SetCodePathFilters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetCodePathFilters" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetStringFilters">
+<span class="sig-name descname"><span class="pre">SetStringFilters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetStringFilters" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.DependencyInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">DependencyInfo</span></span><a class="headerlink" href="#pxr.UsdUtils.DependencyInfo" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.DependencyInfo.assetPath" title="pxr.UsdUtils.DependencyInfo.assetPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assetPath</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.DependencyInfo.dependencies" title="pxr.UsdUtils.DependencyInfo.dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependencies</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.DependencyInfo.assetPath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">assetPath</span></span><a class="headerlink" href="#pxr.UsdUtils.DependencyInfo.assetPath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.DependencyInfo.dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dependencies</span></span><a class="headerlink" href="#pxr.UsdUtils.DependencyInfo.dependencies" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ExtractExternalReferencesParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">ExtractExternalReferencesParams</span></span><a class="headerlink" href="#pxr.UsdUtils.ExtractExternalReferencesParams" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.ExtractExternalReferencesParams.GetResolveUdimPaths" title="pxr.UsdUtils.ExtractExternalReferencesParams.GetResolveUdimPaths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetResolveUdimPaths</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.ExtractExternalReferencesParams.SetResolveUdimPaths" title="pxr.UsdUtils.ExtractExternalReferencesParams.SetResolveUdimPaths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetResolveUdimPaths</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ExtractExternalReferencesParams.GetResolveUdimPaths">
+<span class="sig-name descname"><span class="pre">GetResolveUdimPaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.ExtractExternalReferencesParams.GetResolveUdimPaths" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.ExtractExternalReferencesParams.SetResolveUdimPaths">
+<span class="sig-name descname"><span class="pre">SetResolveUdimPaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.ExtractExternalReferencesParams.SetResolveUdimPaths" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">RegisteredVariantSet</span></span><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet" title="Link to this definition">#</a></dt>
+<dd><p>Info for registered variant set</p>
+<p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy" title="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelectionExportPolicy</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.name" title="pxr.UsdUtils.RegisteredVariantSet.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.selectionExportPolicy" title="pxr.UsdUtils.RegisteredVariantSet.selectionExportPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selectionExportPolicy</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SelectionExportPolicy</span></span><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Always" title="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Always"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Always</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.IfAuthored" title="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.IfAuthored"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IfAuthored</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Never" title="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Never"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Never</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.names" title="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">names</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.values" title="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Always">
+<span class="sig-name descname"><span class="pre">Always</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">pxr.UsdUtils.SelectionExportPolicy.Always</span></em><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Always" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.IfAuthored">
+<span class="sig-name descname"><span class="pre">IfAuthored</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">pxr.UsdUtils.SelectionExportPolicy.IfAuthored</span></em><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.IfAuthored" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Never">
+<span class="sig-name descname"><span class="pre">Never</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">pxr.UsdUtils.SelectionExportPolicy.Never</span></em><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Never" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.names">
+<span class="sig-name descname"><span class="pre">names</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'Always':</span> <span class="pre">pxr.UsdUtils.SelectionExportPolicy.Always,</span> <span class="pre">'IfAuthored':</span> <span class="pre">pxr.UsdUtils.SelectionExportPolicy.IfAuthored,</span> <span class="pre">'Never':</span> <span class="pre">pxr.UsdUtils.SelectionExportPolicy.Never}</span></em><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.names" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.values">
+<span class="sig-name descname"><span class="pre">values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{0:</span> <span class="pre">pxr.UsdUtils.SelectionExportPolicy.Never,</span> <span class="pre">1:</span> <span class="pre">pxr.UsdUtils.SelectionExportPolicy.IfAuthored,</span> <span class="pre">2:</span> <span class="pre">pxr.UsdUtils.SelectionExportPolicy.Always}</span></em><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.values" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.RegisteredVariantSet.selectionExportPolicy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selectionExportPolicy</span></span><a class="headerlink" href="#pxr.UsdUtils.RegisteredVariantSet.selectionExportPolicy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.SparseAttrValueWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">SparseAttrValueWriter</span></span><a class="headerlink" href="#pxr.UsdUtils.SparseAttrValueWriter" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.SparseAttrValueWriter.SetTimeSample" title="pxr.UsdUtils.SparseAttrValueWriter.SetTimeSample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetTimeSample</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.SparseAttrValueWriter.SetTimeSample">
+<span class="sig-name descname"><span class="pre">SetTimeSample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.SparseAttrValueWriter.SetTimeSample" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.SparseValueWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">SparseValueWriter</span></span><a class="headerlink" href="#pxr.UsdUtils.SparseValueWriter" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.SparseValueWriter.GetSparseAttrValueWriters" title="pxr.UsdUtils.SparseValueWriter.GetSparseAttrValueWriters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSparseAttrValueWriters</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.SparseValueWriter.SetAttribute" title="pxr.UsdUtils.SparseValueWriter.SetAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetAttribute</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.SparseValueWriter.GetSparseAttrValueWriters">
+<span class="sig-name descname"><span class="pre">GetSparseAttrValueWriters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.SparseValueWriter.GetSparseAttrValueWriters" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.SparseValueWriter.SetAttribute">
+<span class="sig-name descname"><span class="pre">SetAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.SparseValueWriter.SetAttribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.StageCache">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">StageCache</span></span><a class="headerlink" href="#pxr.UsdUtils.StageCache" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.StageCache.Get" title="pxr.UsdUtils.StageCache.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.StageCache.GetSessionLayerForVariantSelections" title="pxr.UsdUtils.StageCache.GetSessionLayerForVariantSelections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSessionLayerForVariantSelections</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.StageCache.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.StageCache.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.StageCache.GetSessionLayerForVariantSelections">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSessionLayerForVariantSelections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.StageCache.GetSessionLayerForVariantSelections" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">TimeCodeRange</span></span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange" title="Link to this definition">#</a></dt>
+<dd><p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.Tokens" title="pxr.UsdUtils.TimeCodeRange.Tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.CreateFromFrameSpec" title="pxr.UsdUtils.TimeCodeRange.CreateFromFrameSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFromFrameSpec</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.IsValid" title="pxr.UsdUtils.TimeCodeRange.IsValid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsValid</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.empty" title="pxr.UsdUtils.TimeCodeRange.empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">empty</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.endTimeCode" title="pxr.UsdUtils.TimeCodeRange.endTimeCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTimeCode</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.frameSpec" title="pxr.UsdUtils.TimeCodeRange.frameSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frameSpec</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.startTimeCode" title="pxr.UsdUtils.TimeCodeRange.startTimeCode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startTimeCode</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.stride" title="pxr.UsdUtils.TimeCodeRange.stride"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stride</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.Tokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Tokens</span></span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.Tokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.Tokens.EmptyTimeCodeRange" title="pxr.UsdUtils.TimeCodeRange.Tokens.EmptyTimeCodeRange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmptyTimeCodeRange</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.Tokens.RangeSeparator" title="pxr.UsdUtils.TimeCodeRange.Tokens.RangeSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RangeSeparator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.TimeCodeRange.Tokens.StrideSeparator" title="pxr.UsdUtils.TimeCodeRange.Tokens.StrideSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StrideSeparator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.Tokens.EmptyTimeCodeRange">
+<span class="sig-name descname"><span class="pre">EmptyTimeCodeRange</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NONE'</span></em><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.Tokens.EmptyTimeCodeRange" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.Tokens.RangeSeparator">
+<span class="sig-name descname"><span class="pre">RangeSeparator</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">':'</span></em><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.Tokens.RangeSeparator" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.Tokens.StrideSeparator">
+<span class="sig-name descname"><span class="pre">StrideSeparator</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'x'</span></em><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.Tokens.StrideSeparator" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.CreateFromFrameSpec">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CreateFromFrameSpec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.CreateFromFrameSpec" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.IsValid">
+<span class="sig-name descname"><span class="pre">IsValid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.IsValid" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.empty">
+<span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.empty" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.endTimeCode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">endTimeCode</span></span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.endTimeCode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.frameSpec">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frameSpec</span></span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.frameSpec" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.startTimeCode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">startTimeCode</span></span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.startTimeCode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdUtils.TimeCodeRange.stride">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stride</span></span><a class="headerlink" href="#pxr.UsdUtils.TimeCodeRange.stride" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdUtils.</span></span><span class="sig-name descname"><span class="pre">UsdStageStatsKeys</span></span><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.activePrimCount" title="pxr.UsdUtils.UsdStageStatsKeys.activePrimCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">activePrimCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.approxMemoryInMb" title="pxr.UsdUtils.UsdStageStatsKeys.approxMemoryInMb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">approxMemoryInMb</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.assetCount" title="pxr.UsdUtils.UsdStageStatsKeys.assetCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assetCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.inactivePrimCount" title="pxr.UsdUtils.UsdStageStatsKeys.inactivePrimCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inactivePrimCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.instanceCount" title="pxr.UsdUtils.UsdStageStatsKeys.instanceCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instanceCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.instancedModelCount" title="pxr.UsdUtils.UsdStageStatsKeys.instancedModelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instancedModelCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.modelCount" title="pxr.UsdUtils.UsdStageStatsKeys.modelCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">modelCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.primCounts" title="pxr.UsdUtils.UsdStageStatsKeys.primCounts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">primCounts</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.primCountsByType" title="pxr.UsdUtils.UsdStageStatsKeys.primCountsByType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">primCountsByType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.primary" title="pxr.UsdUtils.UsdStageStatsKeys.primary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">primary</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.prototypeCount" title="pxr.UsdUtils.UsdStageStatsKeys.prototypeCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prototypeCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.prototypes" title="pxr.UsdUtils.UsdStageStatsKeys.prototypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prototypes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.pureOverCount" title="pxr.UsdUtils.UsdStageStatsKeys.pureOverCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pureOverCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.totalInstanceCount" title="pxr.UsdUtils.UsdStageStatsKeys.totalInstanceCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">totalInstanceCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.totalPrimCount" title="pxr.UsdUtils.UsdStageStatsKeys.totalPrimCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">totalPrimCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.untyped" title="pxr.UsdUtils.UsdStageStatsKeys.untyped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">untyped</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdUtils.UsdStageStatsKeys.usedLayerCount" title="pxr.UsdUtils.UsdStageStatsKeys.usedLayerCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">usedLayerCount</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.activePrimCount">
+<span class="sig-name descname"><span class="pre">activePrimCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'activePrimCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.activePrimCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.approxMemoryInMb">
+<span class="sig-name descname"><span class="pre">approxMemoryInMb</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'approxMemoryInMb'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.approxMemoryInMb" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.assetCount">
+<span class="sig-name descname"><span class="pre">assetCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'assetCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.assetCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.inactivePrimCount">
+<span class="sig-name descname"><span class="pre">inactivePrimCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'inactivePrimCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.inactivePrimCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.instanceCount">
+<span class="sig-name descname"><span class="pre">instanceCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'instanceCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.instanceCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.instancedModelCount">
+<span class="sig-name descname"><span class="pre">instancedModelCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'instancedModelCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.instancedModelCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.modelCount">
+<span class="sig-name descname"><span class="pre">modelCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'modelCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.modelCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.primCounts">
+<span class="sig-name descname"><span class="pre">primCounts</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'primCounts'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.primCounts" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.primCountsByType">
+<span class="sig-name descname"><span class="pre">primCountsByType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'primCountsByType'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.primCountsByType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.primary">
+<span class="sig-name descname"><span class="pre">primary</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'primary'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.primary" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.prototypeCount">
+<span class="sig-name descname"><span class="pre">prototypeCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'prototypeCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.prototypeCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.prototypes">
+<span class="sig-name descname"><span class="pre">prototypes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'prototypes'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.prototypes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.pureOverCount">
+<span class="sig-name descname"><span class="pre">pureOverCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pureOverCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.pureOverCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.totalInstanceCount">
+<span class="sig-name descname"><span class="pre">totalInstanceCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'totalInstanceCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.totalInstanceCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.totalPrimCount">
+<span class="sig-name descname"><span class="pre">totalPrimCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'totalPrimCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.totalPrimCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.untyped">
+<span class="sig-name descname"><span class="pre">untyped</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'untyped'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.untyped" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdUtils.UsdStageStatsKeys.usedLayerCount">
+<span class="sig-name descname"><span class="pre">usedLayerCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'usedLayerCount'</span></em><a class="headerlink" href="#pxr.UsdUtils.UsdStageStatsKeys.usedLayerCount" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="UsdUI.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UsdUI module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UsdVol.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UsdVol module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate"><code class="docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegate</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStderr"><code class="docutils literal notranslate"><span class="pre">DumpCoalescedDiagnosticsToStderr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpCoalescedDiagnosticsToStdout"><code class="docutils literal notranslate"><span class="pre">DumpCoalescedDiagnosticsToStdout()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.DumpUncoalescedDiagnostics"><code class="docutils literal notranslate"><span class="pre">DumpUncoalescedDiagnostics()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeCoalescedDiagnostics"><code class="docutils literal notranslate"><span class="pre">TakeCoalescedDiagnostics()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegate.TakeUncoalescedDiagnostics"><code class="docutils literal notranslate"><span class="pre">TakeUncoalescedDiagnostics()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem"><code class="docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegateItem</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem.sharedItem"><code class="docutils literal notranslate"><span class="pre">sharedItem</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateItem.unsharedItems"><code class="docutils literal notranslate"><span class="pre">unsharedItems</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem"><code class="docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegateSharedItem</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFileName"><code class="docutils literal notranslate"><span class="pre">sourceFileName</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceFunction"><code class="docutils literal notranslate"><span class="pre">sourceFunction</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateSharedItem.sourceLineNumber"><code class="docutils literal notranslate"><span class="pre">sourceLineNumber</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem"><code class="docutils literal notranslate"><span class="pre">CoalescingDiagnosticDelegateUnsharedItem</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.commentary"><code class="docutils literal notranslate"><span class="pre">commentary</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.CoalescingDiagnosticDelegateUnsharedItem.context"><code class="docutils literal notranslate"><span class="pre">context</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegate"><code class="docutils literal notranslate"><span class="pre">ConditionalAbortDiagnosticDelegate</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters"><code class="docutils literal notranslate"><span class="pre">ConditionalAbortDiagnosticDelegateErrorFilters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetCodePathFilters"><code class="docutils literal notranslate"><span class="pre">GetCodePathFilters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.GetStringFilters"><code class="docutils literal notranslate"><span class="pre">GetStringFilters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetCodePathFilters"><code class="docutils literal notranslate"><span class="pre">SetCodePathFilters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ConditionalAbortDiagnosticDelegateErrorFilters.SetStringFilters"><code class="docutils literal notranslate"><span class="pre">SetStringFilters()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.DependencyInfo"><code class="docutils literal notranslate"><span class="pre">DependencyInfo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.DependencyInfo.assetPath"><code class="docutils literal notranslate"><span class="pre">assetPath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.DependencyInfo.dependencies"><code class="docutils literal notranslate"><span class="pre">dependencies</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ExtractExternalReferencesParams"><code class="docutils literal notranslate"><span class="pre">ExtractExternalReferencesParams</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ExtractExternalReferencesParams.GetResolveUdimPaths"><code class="docutils literal notranslate"><span class="pre">GetResolveUdimPaths()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.ExtractExternalReferencesParams.SetResolveUdimPaths"><code class="docutils literal notranslate"><span class="pre">SetResolveUdimPaths()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet"><code class="docutils literal notranslate"><span class="pre">RegisteredVariantSet</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy"><code class="docutils literal notranslate"><span class="pre">SelectionExportPolicy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Always"><code class="docutils literal notranslate"><span class="pre">Always</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.IfAuthored"><code class="docutils literal notranslate"><span class="pre">IfAuthored</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.Never"><code class="docutils literal notranslate"><span class="pre">Never</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.names"><code class="docutils literal notranslate"><span class="pre">names</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.SelectionExportPolicy.values"><code class="docutils literal notranslate"><span class="pre">values</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.RegisteredVariantSet.selectionExportPolicy"><code class="docutils literal notranslate"><span class="pre">selectionExportPolicy</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.SparseAttrValueWriter"><code class="docutils literal notranslate"><span class="pre">SparseAttrValueWriter</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.SparseAttrValueWriter.SetTimeSample"><code class="docutils literal notranslate"><span class="pre">SetTimeSample()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.SparseValueWriter"><code class="docutils literal notranslate"><span class="pre">SparseValueWriter</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.SparseValueWriter.GetSparseAttrValueWriters"><code class="docutils literal notranslate"><span class="pre">GetSparseAttrValueWriters()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.SparseValueWriter.SetAttribute"><code class="docutils literal notranslate"><span class="pre">SetAttribute()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.StageCache"><code class="docutils literal notranslate"><span class="pre">StageCache</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.StageCache.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.StageCache.GetSessionLayerForVariantSelections"><code class="docutils literal notranslate"><span class="pre">GetSessionLayerForVariantSelections()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange"><code class="docutils literal notranslate"><span class="pre">TimeCodeRange</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.Tokens"><code class="docutils literal notranslate"><span class="pre">Tokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.Tokens.EmptyTimeCodeRange"><code class="docutils literal notranslate"><span class="pre">EmptyTimeCodeRange</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.Tokens.RangeSeparator"><code class="docutils literal notranslate"><span class="pre">RangeSeparator</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.Tokens.StrideSeparator"><code class="docutils literal notranslate"><span class="pre">StrideSeparator</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.CreateFromFrameSpec"><code class="docutils literal notranslate"><span class="pre">CreateFromFrameSpec()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.IsValid"><code class="docutils literal notranslate"><span class="pre">IsValid()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.empty"><code class="docutils literal notranslate"><span class="pre">empty()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.endTimeCode"><code class="docutils literal notranslate"><span class="pre">endTimeCode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.frameSpec"><code class="docutils literal notranslate"><span class="pre">frameSpec</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.startTimeCode"><code class="docutils literal notranslate"><span class="pre">startTimeCode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.TimeCodeRange.stride"><code class="docutils literal notranslate"><span class="pre">stride</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys"><code class="docutils literal notranslate"><span class="pre">UsdStageStatsKeys</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.activePrimCount"><code class="docutils literal notranslate"><span class="pre">activePrimCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.approxMemoryInMb"><code class="docutils literal notranslate"><span class="pre">approxMemoryInMb</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.assetCount"><code class="docutils literal notranslate"><span class="pre">assetCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.inactivePrimCount"><code class="docutils literal notranslate"><span class="pre">inactivePrimCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.instanceCount"><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.instancedModelCount"><code class="docutils literal notranslate"><span class="pre">instancedModelCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.modelCount"><code class="docutils literal notranslate"><span class="pre">modelCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.primCounts"><code class="docutils literal notranslate"><span class="pre">primCounts</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.primCountsByType"><code class="docutils literal notranslate"><span class="pre">primCountsByType</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.primary"><code class="docutils literal notranslate"><span class="pre">primary</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.prototypeCount"><code class="docutils literal notranslate"><span class="pre">prototypeCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.prototypes"><code class="docutils literal notranslate"><span class="pre">prototypes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.pureOverCount"><code class="docutils literal notranslate"><span class="pre">pureOverCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.totalInstanceCount"><code class="docutils literal notranslate"><span class="pre">totalInstanceCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.totalPrimCount"><code class="docutils literal notranslate"><span class="pre">totalPrimCount</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.untyped"><code class="docutils literal notranslate"><span class="pre">untyped</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdUtils.UsdStageStatsKeys.usedLayerCount"><code class="docutils literal notranslate"><span class="pre">usedLayerCount</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

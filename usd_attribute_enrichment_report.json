@@ -1,0 +1,805 @@
+[
+  {
+    "name": "AddConnection",
+    "signature": "Usd.Attribute.AddConnection(source: Sdf.Path | str, position: Usd.ListPosition = Usd.ListPositionBackOfPrependList) -> bool",
+    "description": "Adds a connection target to this attribute.",
+    "parameters": "source (Sdf.Path | str); position (Usd.ListPosition), default Usd.ListPositionBackOfPrependList.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "AddConnection(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath source, enum pxrInternal_v0_25_11__pxrReserved__::UsdListPosition position=Usd.ListPositionBackOfPrependList)"
+      ],
+      "symbols": [
+        "?AddConnection@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVSdfPath@2@W4UsdListPosition@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "Block",
+    "signature": "Usd.Attribute.Block()",
+    "description": "Blocks the value of this attribute.",
+    "parameters": "None.",
+    "returns": "None.",
+    "evidence": {
+      "runtime_return": "None",
+      "runtime_repr": "None",
+      "error_sigs": [
+        "Block(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?Block@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBAXXZ"
+      ]
+    }
+  },
+  {
+    "name": "BlockAnimation",
+    "signature": "Usd.Attribute.BlockAnimation()",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "None.",
+    "evidence": {
+      "runtime_return": "None",
+      "runtime_repr": "None",
+      "error_sigs": [
+        "BlockAnimation(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?BlockAnimation@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBAXXZ"
+      ]
+    }
+  },
+  {
+    "name": "Clear",
+    "signature": "Usd.Attribute.Clear() -> bool",
+    "description": "Clears the authored value on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "Clear(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?Clear@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "ClearArraySizeConstraint",
+    "signature": "Usd.Attribute.ClearArraySizeConstraint() -> bool",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "ClearArraySizeConstraint(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?ClearArraySizeConstraint@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "ClearAtTime",
+    "signature": "Usd.Attribute.ClearAtTime(time: float) -> bool",
+    "description": "Clears the authored value on this attribute at the given time.",
+    "parameters": "time (float).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "ClearAtTime(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::UsdTimeCode time)"
+      ],
+      "symbols": [
+        "?ClearAtTime@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NVUsdTimeCode@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "ClearColorSpace",
+    "signature": "Usd.Attribute.ClearColorSpace() -> bool",
+    "description": "Clears the authored color space on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "ClearColorSpace(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?ClearColorSpace@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "ClearConnections",
+    "signature": "Usd.Attribute.ClearConnections() -> bool",
+    "description": "Clears the authored connections on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "ClearConnections(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?ClearConnections@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "ClearDefault",
+    "signature": "Usd.Attribute.ClearDefault() -> bool",
+    "description": "Clears the default value on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "ClearDefault(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?ClearDefault@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "ClearLimits",
+    "signature": "Usd.Attribute.ClearLimits() -> bool",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "ClearLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?ClearLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "Get",
+    "signature": "Usd.Attribute.Get(time: float | Usd.TimeCode = Usd.TimeCode.Default()) -> Any",
+    "description": "Returns the value of this attribute.",
+    "parameters": "time (float | Usd.TimeCode), default Usd.TimeCode.Default().",
+    "returns": "Any - The returned Python value depends on this attribute's USD value type.",
+    "evidence": {
+      "runtime_return": "str",
+      "runtime_repr": "'hello'",
+      "error_sigs": [
+        "Get(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute, class pxrInternal_v0_25_11__pxrReserved__::UsdTimeCode time=Usd.TimeCode.Default())"
+      ],
+      "symbols": [
+        "?Get@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NPEAVVtValue@2@VUsdTimeCode@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetArraySizeConstraint",
+    "signature": "Usd.Attribute.GetArraySizeConstraint() -> int",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "int - The resulting value.",
+    "evidence": {
+      "runtime_return": "int",
+      "runtime_repr": "0",
+      "error_sigs": [
+        "GetArraySizeConstraint(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetArraySizeConstraint@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_JXZ"
+      ]
+    }
+  },
+  {
+    "name": "GetBracketingTimeSamples",
+    "signature": "Usd.Attribute.GetBracketingTimeSamples(desiredTime: float) -> tuple",
+    "description": "Returns the bracketing time samples around the requested time.",
+    "parameters": "desiredTime (float).",
+    "returns": "tuple - The resulting tuple value.",
+    "evidence": {
+      "runtime_return": "tuple",
+      "runtime_repr": "()",
+      "error_sigs": [
+        "GetBracketingTimeSamples(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute, double desiredTime)"
+      ],
+      "symbols": [
+        "?GetBracketingTimeSamples@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NNPEAN0PEA_N@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetColorSpace",
+    "signature": "Usd.Attribute.GetColorSpace() -> str",
+    "description": "Returns the authored color space for this attribute.",
+    "parameters": "None.",
+    "returns": "str - The resulting value.",
+    "evidence": {
+      "runtime_return": "str",
+      "runtime_repr": "''",
+      "error_sigs": [
+        "GetColorSpace(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetColorSpace@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVTfToken@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetConnections",
+    "signature": "Usd.Attribute.GetConnections() -> list[Sdf.Path]",
+    "description": "Returns the connection targets for this attribute.",
+    "parameters": "None.",
+    "returns": "list[Sdf.Path] - A list of resulting values.",
+    "evidence": {
+      "runtime_return": "list[Sdf.Path]",
+      "runtime_repr": "[Sdf.Path('/World.rel')]",
+      "error_sigs": [
+        "GetConnections(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute)"
+      ],
+      "symbols": [
+        "?GetConnections@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NPEAV?$vector@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetHardLimits",
+    "signature": "Usd.Attribute.GetHardLimits() -> Usd.AttributeLimits",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "Usd.AttributeLimits - The resulting value.",
+    "evidence": {
+      "runtime_return": "Usd.AttributeLimits",
+      "runtime_repr": "<pxr.Usd.AttributeLimits object at 0x0000024B0B449900>",
+      "error_sigs": [
+        "GetHardLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetHardLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttributeLimits@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetLimits",
+    "signature": "Usd.Attribute.GetLimits() -> dict",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "dict - The resulting value.",
+    "evidence": {
+      "runtime_return": "dict",
+      "runtime_repr": "{}",
+      "error_sigs": [
+        "GetLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken)",
+        "GetLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVVtDictionary@2@XZ",
+        "?GetLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttributeLimits@2@AEBVTfToken@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetNumTimeSamples",
+    "signature": "Usd.Attribute.GetNumTimeSamples() -> int",
+    "description": "Returns the number of authored time samples on this attribute.",
+    "parameters": "None.",
+    "returns": "int - The resulting value.",
+    "evidence": {
+      "runtime_return": "int",
+      "runtime_repr": "0",
+      "error_sigs": [
+        "GetNumTimeSamples(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetNumTimeSamples@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_KXZ"
+      ]
+    }
+  },
+  {
+    "name": "GetResolveInfo",
+    "signature": "Usd.Attribute.GetResolveInfo(time: float | Usd.TimeCode = Usd.TimeCode.Default()) -> Usd.ResolveInfo",
+    "description": "Returns resolve information for this attribute.",
+    "parameters": "time (float | Usd.TimeCode), default Usd.TimeCode.Default().",
+    "returns": "Usd.ResolveInfo - The resulting value.",
+    "evidence": {
+      "runtime_return": "Usd.ResolveInfo",
+      "runtime_repr": "<pxr.Usd.ResolveInfo object at 0x0000024B0B405220>",
+      "error_sigs": [
+        "GetResolveInfo(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})",
+        "GetResolveInfo(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::UsdTimeCode time)"
+      ],
+      "symbols": [
+        "?GetResolveInfo@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdResolveInfo@2@VUsdTimeCode@2@@Z",
+        "?GetResolveInfo@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdResolveInfo@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetRoleName",
+    "signature": "Usd.Attribute.GetRoleName() -> str",
+    "description": "Returns the role name for this attribute's type.",
+    "parameters": "None.",
+    "returns": "str - The resulting value.",
+    "evidence": {
+      "runtime_return": "str",
+      "runtime_repr": "''",
+      "error_sigs": [
+        "GetRoleName(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetRoleName@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVTfToken@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetSoftLimits",
+    "signature": "Usd.Attribute.GetSoftLimits() -> Usd.AttributeLimits",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "Usd.AttributeLimits - The resulting value.",
+    "evidence": {
+      "runtime_return": "Usd.AttributeLimits",
+      "runtime_repr": "<pxr.Usd.AttributeLimits object at 0x0000024B0B449900>",
+      "error_sigs": [
+        "GetSoftLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetSoftLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttributeLimits@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetSpline",
+    "signature": "Usd.Attribute.GetSpline() -> Ts.Spline",
+    "description": "Returns the authored spline for this attribute.",
+    "parameters": "None.",
+    "returns": "Ts.Spline - The resulting value.",
+    "evidence": {
+      "runtime_return": "Ts.Spline",
+      "runtime_repr": "<pxr.Ts.Spline object at 0x0000024B0B46CF20>",
+      "error_sigs": [
+        "GetSpline(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetSpline@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVTsSpline@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetTimeSamples",
+    "signature": "Usd.Attribute.GetTimeSamples() -> list[float]",
+    "description": "Returns the authored time sample times for this attribute.",
+    "parameters": "None.",
+    "returns": "list[float] - A list of resulting values.",
+    "evidence": {
+      "runtime_return": "list",
+      "runtime_repr": "[]",
+      "error_sigs": [
+        "GetTimeSamples(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute)"
+      ],
+      "symbols": [
+        "?GetTimeSamples@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NPEAV?$vector@NV?$allocator@N@std@@@std@@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetTimeSamplesInInterval",
+    "signature": "Usd.Attribute.GetTimeSamplesInInterval(interval: object) -> bool",
+    "description": "Returns the authored time sample times in the given interval.",
+    "parameters": "interval (object).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": null,
+      "runtime_repr": "Python argument types in\n    Attribute.GetTimeSamplesInInterval(Attribute)\ndid not match C++ signature:\n    GetTimeSamplesInInterval(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute, class pxrInternal_v0_25_11__pxrReserved__::GfInterval interval)",
+      "error_sigs": [
+        "GetTimeSamplesInInterval(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute, class pxrInternal_v0_25_11__pxrReserved__::GfInterval interval)"
+      ],
+      "symbols": [
+        "?GetTimeSamplesInInterval@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVGfInterval@2@PEAV?$vector@NV?$allocator@N@std@@@std@@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetTypeName",
+    "signature": "Usd.Attribute.GetTypeName() -> Sdf.ValueTypeName",
+    "description": "Returns this attribute's value type name.",
+    "parameters": "None.",
+    "returns": "Sdf.ValueTypeName - The resulting value.",
+    "evidence": {
+      "runtime_return": "Sdf.ValueTypeName",
+      "runtime_repr": "<pxr.Sdf.ValueTypeName object at 0x0000024B0B46D310>",
+      "error_sigs": [
+        "GetTypeName(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetTypeName@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVSdfValueTypeName@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "GetUnionedTimeSamples",
+    "signature": "Usd.Attribute.GetUnionedTimeSamples(attrs: list[Usd.Attribute]) -> list[float]",
+    "description": "Returns the union of time sample times across the given attributes.",
+    "parameters": "attrs (list[Usd.Attribute]).",
+    "returns": "list[float] - A list of resulting values.",
+    "evidence": {
+      "runtime_return": null,
+      "runtime_repr": "Python argument types in\n    Attribute.GetUnionedTimeSamples()\ndid not match C++ signature:\n    GetUnionedTimeSamples(class std::vector<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute> > attrs)",
+      "error_sigs": [
+        "GetUnionedTimeSamples(class std::vector<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute> > attrs)"
+      ],
+      "symbols": [
+        "?GetUnionedTimeSamples@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@SA_NAEBV?$vector@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@PEAV?$vector@NV?$allocator@N@std@@@4@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetUnionedTimeSamplesInInterval",
+    "signature": "Usd.Attribute.GetUnionedTimeSamplesInInterval(attrs: list[Usd.Attribute], interval: object) -> object",
+    "description": "Returns the union of time sample times in the given interval across the given attributes.",
+    "parameters": "attrs (list[Usd.Attribute]); interval (object).",
+    "returns": "object - The resulting value.",
+    "evidence": {
+      "runtime_return": null,
+      "runtime_repr": "Python argument types in\n    Attribute.GetUnionedTimeSamplesInInterval()\ndid not match C++ signature:\n    GetUnionedTimeSamplesInInterval(class std::vector<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute> > attrs, class pxrInternal_v0_25_11__pxrReserved__::GfInterval interval)",
+      "error_sigs": [
+        "GetUnionedTimeSamplesInInterval(class std::vector<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute> > attrs, class pxrInternal_v0_25_11__pxrReserved__::GfInterval interval)"
+      ],
+      "symbols": [
+        "?GetUnionedTimeSamplesInInterval@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@SA_NAEBV?$vector@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBVGfInterval@2@PEAV?$vector@NV?$allocator@N@std@@@4@@Z"
+      ]
+    }
+  },
+  {
+    "name": "GetVariability",
+    "signature": "Usd.Attribute.GetVariability() -> Sdf.Variability",
+    "description": "Returns this attribute's variability.",
+    "parameters": "None.",
+    "returns": "Sdf.Variability - The resulting value.",
+    "evidence": {
+      "runtime_return": "Sdf.Variability",
+      "runtime_repr": "Sdf.VariabilityVarying",
+      "error_sigs": [
+        "GetVariability(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?GetVariability@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AW4SdfVariability@2@XZ"
+      ]
+    }
+  },
+  {
+    "name": "HasAuthoredArraySizeConstraint",
+    "signature": "Usd.Attribute.HasAuthoredArraySizeConstraint() -> bool",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "False",
+      "error_sigs": [
+        "HasAuthoredArraySizeConstraint(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredArraySizeConstraint@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasAuthoredConnections",
+    "signature": "Usd.Attribute.HasAuthoredConnections() -> bool",
+    "description": "Returns whether this attribute has authored connections.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "HasAuthoredConnections(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredConnections@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasAuthoredLimits",
+    "signature": "Usd.Attribute.HasAuthoredLimits() -> bool",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "False",
+      "error_sigs": [
+        "HasAuthoredLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasAuthoredValue",
+    "signature": "Usd.Attribute.HasAuthoredValue() -> bool",
+    "description": "Returns whether this attribute has an authored value.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "HasAuthoredValue(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredValue@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasAuthoredValueOpinion",
+    "signature": "Usd.Attribute.HasAuthoredValueOpinion() -> bool",
+    "description": "Returns whether this attribute has an authored value opinion.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "HasAuthoredValueOpinion(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredValueOpinion@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasColorSpace",
+    "signature": "Usd.Attribute.HasColorSpace() -> bool",
+    "description": "Returns whether this attribute has an authored color space.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "False",
+      "error_sigs": [
+        "HasColorSpace(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasColorSpace@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasFallbackValue",
+    "signature": "Usd.Attribute.HasFallbackValue() -> bool",
+    "description": "Returns whether this attribute has a fallback value.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "False",
+      "error_sigs": [
+        "HasFallbackValue(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasFallbackValue@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasSpline",
+    "signature": "Usd.Attribute.HasSpline() -> bool",
+    "description": "Returns whether this attribute has an authored spline.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "False",
+      "error_sigs": [
+        "HasSpline(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasSpline@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "HasValue",
+    "signature": "Usd.Attribute.HasValue() -> bool",
+    "description": "Returns whether this attribute resolves to a value.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "HasValue(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?HasValue@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  },
+  {
+    "name": "RemoveConnection",
+    "signature": "Usd.Attribute.RemoveConnection(source: Sdf.Path | str) -> bool",
+    "description": "Removes a connection target from this attribute.",
+    "parameters": "source (Sdf.Path | str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "RemoveConnection(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath source)"
+      ],
+      "symbols": [
+        "?RemoveConnection@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVSdfPath@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "Set",
+    "signature": "Usd.Attribute.Set(value: object, time: float | Usd.TimeCode = Usd.TimeCode.Default()) -> bool",
+    "description": "Sets the value of this attribute.",
+    "parameters": "value (object); time (float | Usd.TimeCode), default Usd.TimeCode.Default().",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "Set(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute, class pxrInternal_v0_25_11__pxrReserved__::pxr_boost::python::api::object value, class pxrInternal_v0_25_11__pxrReserved__::UsdTimeCode time=Usd.TimeCode.Default())"
+      ],
+      "symbols": [
+        "?Set@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVVtValue@2@VUsdTimeCode@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetArraySizeConstraint",
+    "signature": "Usd.Attribute.SetArraySizeConstraint() -> bool",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": null,
+      "runtime_repr": "Python argument types in\n    Attribute.SetArraySizeConstraint(Attribute)\ndid not match C++ signature:\n    SetArraySizeConstraint(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, __int64)",
+      "error_sigs": [
+        "SetArraySizeConstraint(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, __int64)"
+      ],
+      "symbols": [
+        "?SetArraySizeConstraint@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_N_J@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetColorSpace",
+    "signature": "Usd.Attribute.SetColorSpace(colorSpace: str)",
+    "description": "Sets the color space for this attribute.",
+    "parameters": "colorSpace (str).",
+    "returns": "None.",
+    "evidence": {
+      "runtime_return": "None",
+      "runtime_repr": "None",
+      "error_sigs": [
+        "SetColorSpace(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken)"
+      ],
+      "symbols": [
+        "?SetColorSpace@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBAXAEBVTfToken@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetConnections",
+    "signature": "Usd.Attribute.SetConnections(sources: list[Sdf.Path | str]) -> bool",
+    "description": "Sets the connection targets for this attribute.",
+    "parameters": "sources (list[Sdf.Path | str]).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "SetConnections(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class std::vector<class pxrInternal_v0_25_11__pxrReserved__::SdfPath,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::SdfPath> > sources)"
+      ],
+      "symbols": [
+        "?SetConnections@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBV?$vector@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetLimits",
+    "signature": "Usd.Attribute.SetLimits() -> bool",
+    "description": "Operates on this attribute.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": null,
+      "runtime_repr": "Python argument types in\n    Attribute.SetLimits(Attribute)\ndid not match C++ signature:\n    SetLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::VtDictionary)",
+      "error_sigs": [
+        "SetLimits(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::VtDictionary)"
+      ],
+      "symbols": [
+        "?SetLimits@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVVtDictionary@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetSpline",
+    "signature": "Usd.Attribute.SetSpline(spline: object) -> bool",
+    "description": "Sets the spline value for this attribute.",
+    "parameters": "spline (object).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": null,
+      "runtime_repr": "Python argument types in\n    Attribute.SetSpline(Attribute)\ndid not match C++ signature:\n    SetSpline(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TsSpline)",
+      "error_sigs": [
+        "SetSpline(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TsSpline)"
+      ],
+      "symbols": [
+        "?SetSpline@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEAA_NAEBVTsSpline@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetTypeName",
+    "signature": "Usd.Attribute.SetTypeName(typeName: Sdf.ValueTypeName) -> bool",
+    "description": "Sets this attribute's value type name.",
+    "parameters": "typeName (Sdf.ValueTypeName).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "SetTypeName(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfValueTypeName typeName)"
+      ],
+      "symbols": [
+        "?SetTypeName@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVSdfValueTypeName@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "SetVariability",
+    "signature": "Usd.Attribute.SetVariability(variability: Sdf.Variability) -> bool",
+    "description": "Sets this attribute's variability.",
+    "parameters": "variability (Sdf.Variability).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "True",
+      "error_sigs": [
+        "SetVariability(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue}, enum pxrInternal_v0_25_11__pxrReserved__::SdfVariability variability)"
+      ],
+      "symbols": [
+        "?SetVariability@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NW4SdfVariability@2@@Z"
+      ]
+    }
+  },
+  {
+    "name": "ValueMightBeTimeVarying",
+    "signature": "Usd.Attribute.ValueMightBeTimeVarying() -> bool",
+    "description": "Returns whether this attribute's value may vary over time.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "runtime_return": "bool",
+      "runtime_repr": "False",
+      "error_sigs": [
+        "ValueMightBeTimeVarying(class pxrInternal_v0_25_11__pxrReserved__::UsdAttribute {lvalue})"
+      ],
+      "symbols": [
+        "?ValueMightBeTimeVarying@UsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1171 @@
+﻿
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>UsdMedia module &#8212; Omniverse Kit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=767de534" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script rel="preload" src="../_static/modal-table.js"></script>
+    <script src="../_static/documentation_options.js?v=48e306b8"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scrollspy-patch.js?v=edc4054a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pxr/UsdMedia';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '../versions1.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '110.0.0';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script src="../_static/version-patch.js?v=3e13fdd2"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UsdPhysics module" href="UsdPhysics.html" />
+    <link rel="prev" title="UsdLux module" href="UsdLux.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Mar 06, 2026"/>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nvidia-logo-horiz-rgb-blk-for-screen.svg" class="logo__image only-light" alt="Omniverse Kit - Home"/>
+    <img src="../_static/nvidia-logo-horiz-rgb-wht-for-screen.svg" class="logo__image only-dark pst-js-only" alt="Omniverse Kit - Home"/>
+  
+  
+    <p class="title logo__title">Omniverse Kit</p>
+  
+</a>
+
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    110.0.0
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/nvidiaomniverse" title="twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" title="youtube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-youtube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">youtube</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/nvidiaomniverse" title="instagram" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-instagram fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">instagram</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.nvidia.com/en-us/omniverse/" title="www" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-globe fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">www</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/showcase/nvidia-omniverse" title="linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">linkedin</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.twitch.tv/nvidiaomniverse" title="twitch" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitch fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">twitch</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Table of Contents">
+  <p class="bd-links__title" role="heading" aria-level="1">Table of Contents</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">pxr-usd-api</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../pxr.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ar.html">Ar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CameraUtil.html">CameraUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Garch.html">Garch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeomUtil.html">GeomUtil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gf.html">Gf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Glf.html">Glf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kind.html">Kind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ndr.html">Ndr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pcp.html">Pcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plug.html">Plug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdf.html">Sdf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sdr.html">Sdr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tf.html">Tf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Trace.html">Trace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Usd.html">Usd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdAppUtils.html">UsdAppUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdGeom.html">UsdGeom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdHydra.html">UsdHydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdLux.html">UsdLux</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UsdMedia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdPhysics.html">UsdPhysics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdProc.html">UsdProc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRender.html">UsdRender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdRi.html">UsdRi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdShade.html">UsdShade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdSkel.html">UsdSkel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUI.html">UsdUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdUtils.html">UsdUtils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UsdVol.html">UsdVol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vt.html">Vt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Work.html">Work</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../pxr.html" class="nav-link">Modules</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">UsdMedia module</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usdmedia-module">
+<h1>UsdMedia module<a class="headerlink" href="#usdmedia-module" title="Link to this heading">#</a></h1>
+<p>Summary: The UsdMedia module provides a representation for including other media, such as audio, in the context of a stage. UsdMedia currently contains one media type, UsdMediaSpatialAudio, which allows the playback of audio files both spatially and non-spatially.</p>
+<hr class="docutils" />
+<p id="module-pxr.UsdMedia"><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI" title="pxr.UsdMedia.AssetPreviewsAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetPreviewsAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio" title="pxr.UsdMedia.SpatialAudio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpatialAudio</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens" title="pxr.UsdMedia.Tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Tokens</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdMedia.</span></span><span class="sig-name descname"><span class="pre">AssetPreviewsAPI</span></span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI" title="Link to this definition">#</a></dt>
+<dd><p><strong>Classes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.Thumbnails" title="pxr.UsdMedia.AssetPreviewsAPI.Thumbnails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Thumbnails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.Apply" title="pxr.UsdMedia.AssetPreviewsAPI.Apply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Apply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.CanApply" title="pxr.UsdMedia.AssetPreviewsAPI.CanApply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CanApply</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.ClearDefaultThumbnails" title="pxr.UsdMedia.AssetPreviewsAPI.ClearDefaultThumbnails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClearDefaultThumbnails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.Get" title="pxr.UsdMedia.AssetPreviewsAPI.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.GetAssetDefaultPreviews" title="pxr.UsdMedia.AssetPreviewsAPI.GetAssetDefaultPreviews"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAssetDefaultPreviews</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.GetDefaultThumbnails" title="pxr.UsdMedia.AssetPreviewsAPI.GetDefaultThumbnails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetDefaultThumbnails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.GetSchemaAttributeNames" title="pxr.UsdMedia.AssetPreviewsAPI.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.SetDefaultThumbnails" title="pxr.UsdMedia.AssetPreviewsAPI.SetDefaultThumbnails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetDefaultThumbnails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.Thumbnails">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Thumbnails</span></span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.Thumbnails" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.AssetPreviewsAPI.Thumbnails.defaultImage" title="pxr.UsdMedia.AssetPreviewsAPI.Thumbnails.defaultImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultImage</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.Thumbnails.defaultImage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">defaultImage</span></span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.Thumbnails.defaultImage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.Apply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Apply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.Apply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.CanApply">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CanApply</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.CanApply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.ClearDefaultThumbnails">
+<span class="sig-name descname"><span class="pre">ClearDefaultThumbnails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.ClearDefaultThumbnails" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.GetAssetDefaultPreviews">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetAssetDefaultPreviews</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.GetAssetDefaultPreviews" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.GetDefaultThumbnails">
+<span class="sig-name descname"><span class="pre">GetDefaultThumbnails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.GetDefaultThumbnails" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.AssetPreviewsAPI.SetDefaultThumbnails">
+<span class="sig-name descname"><span class="pre">SetDefaultThumbnails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.AssetPreviewsAPI.SetDefaultThumbnails" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdMedia.</span></span><span class="sig-name descname"><span class="pre">SpatialAudio</span></span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio" title="Link to this definition">#</a></dt>
+<dd><p><strong>Methods:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreateAuralModeAttr" title="pxr.UsdMedia.SpatialAudio.CreateAuralModeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateAuralModeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreateEndTimeAttr" title="pxr.UsdMedia.SpatialAudio.CreateEndTimeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateEndTimeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreateFilePathAttr" title="pxr.UsdMedia.SpatialAudio.CreateFilePathAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateFilePathAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreateGainAttr" title="pxr.UsdMedia.SpatialAudio.CreateGainAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateGainAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreateMediaOffsetAttr" title="pxr.UsdMedia.SpatialAudio.CreateMediaOffsetAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateMediaOffsetAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreatePlaybackModeAttr" title="pxr.UsdMedia.SpatialAudio.CreatePlaybackModeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreatePlaybackModeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.CreateStartTimeAttr" title="pxr.UsdMedia.SpatialAudio.CreateStartTimeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CreateStartTimeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.Define" title="pxr.UsdMedia.SpatialAudio.Define"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Define</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.Get" title="pxr.UsdMedia.SpatialAudio.Get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Get</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetAuralModeAttr" title="pxr.UsdMedia.SpatialAudio.GetAuralModeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetAuralModeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetEndTimeAttr" title="pxr.UsdMedia.SpatialAudio.GetEndTimeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetEndTimeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetFilePathAttr" title="pxr.UsdMedia.SpatialAudio.GetFilePathAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetFilePathAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetGainAttr" title="pxr.UsdMedia.SpatialAudio.GetGainAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetGainAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetMediaOffsetAttr" title="pxr.UsdMedia.SpatialAudio.GetMediaOffsetAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetMediaOffsetAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetPlaybackModeAttr" title="pxr.UsdMedia.SpatialAudio.GetPlaybackModeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetPlaybackModeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetSchemaAttributeNames" title="pxr.UsdMedia.SpatialAudio.GetSchemaAttributeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetSchemaAttributeNames</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.SpatialAudio.GetStartTimeAttr" title="pxr.UsdMedia.SpatialAudio.GetStartTimeAttr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetStartTimeAttr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreateAuralModeAttr">
+<span class="sig-name descname"><span class="pre">CreateAuralModeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreateAuralModeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreateEndTimeAttr">
+<span class="sig-name descname"><span class="pre">CreateEndTimeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreateEndTimeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreateFilePathAttr">
+<span class="sig-name descname"><span class="pre">CreateFilePathAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreateFilePathAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreateGainAttr">
+<span class="sig-name descname"><span class="pre">CreateGainAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreateGainAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreateMediaOffsetAttr">
+<span class="sig-name descname"><span class="pre">CreateMediaOffsetAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreateMediaOffsetAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreatePlaybackModeAttr">
+<span class="sig-name descname"><span class="pre">CreatePlaybackModeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreatePlaybackModeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.CreateStartTimeAttr">
+<span class="sig-name descname"><span class="pre">CreateStartTimeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.CreateStartTimeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.Define">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Define</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.Define" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.Get">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.Get" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetAuralModeAttr">
+<span class="sig-name descname"><span class="pre">GetAuralModeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetAuralModeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetEndTimeAttr">
+<span class="sig-name descname"><span class="pre">GetEndTimeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetEndTimeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetFilePathAttr">
+<span class="sig-name descname"><span class="pre">GetFilePathAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetFilePathAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetGainAttr">
+<span class="sig-name descname"><span class="pre">GetGainAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetGainAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetMediaOffsetAttr">
+<span class="sig-name descname"><span class="pre">GetMediaOffsetAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetMediaOffsetAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetPlaybackModeAttr">
+<span class="sig-name descname"><span class="pre">GetPlaybackModeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetPlaybackModeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetSchemaAttributeNames">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">GetSchemaAttributeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetSchemaAttributeNames" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdMedia.SpatialAudio.GetStartTimeAttr">
+<span class="sig-name descname"><span class="pre">GetStartTimeAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pxr.UsdMedia.SpatialAudio.GetStartTimeAttr" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pxr.UsdMedia.</span></span><span class="sig-name descname"><span class="pre">Tokens</span></span><a class="headerlink" href="#pxr.UsdMedia.Tokens" title="Link to this definition">#</a></dt>
+<dd><p><strong>Attributes:</strong></p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.AssetPreviewsAPI" title="pxr.UsdMedia.Tokens.AssetPreviewsAPI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetPreviewsAPI</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.SpatialAudio" title="pxr.UsdMedia.Tokens.SpatialAudio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpatialAudio</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.auralMode" title="pxr.UsdMedia.Tokens.auralMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">auralMode</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.defaultImage" title="pxr.UsdMedia.Tokens.defaultImage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultImage</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.endTime" title="pxr.UsdMedia.Tokens.endTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">endTime</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.filePath" title="pxr.UsdMedia.Tokens.filePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filePath</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.gain" title="pxr.UsdMedia.Tokens.gain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gain</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.loopFromStage" title="pxr.UsdMedia.Tokens.loopFromStage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loopFromStage</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.loopFromStart" title="pxr.UsdMedia.Tokens.loopFromStart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loopFromStart</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.loopFromStartToEnd" title="pxr.UsdMedia.Tokens.loopFromStartToEnd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loopFromStartToEnd</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.mediaOffset" title="pxr.UsdMedia.Tokens.mediaOffset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mediaOffset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.nonSpatial" title="pxr.UsdMedia.Tokens.nonSpatial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonSpatial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.onceFromStart" title="pxr.UsdMedia.Tokens.onceFromStart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">onceFromStart</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.onceFromStartToEnd" title="pxr.UsdMedia.Tokens.onceFromStartToEnd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">onceFromStartToEnd</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.playbackMode" title="pxr.UsdMedia.Tokens.playbackMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playbackMode</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.previewThumbnails" title="pxr.UsdMedia.Tokens.previewThumbnails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previewThumbnails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.previewThumbnailsDefault" title="pxr.UsdMedia.Tokens.previewThumbnailsDefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previewThumbnailsDefault</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.previews" title="pxr.UsdMedia.Tokens.previews"><code class="xref py py-obj docutils literal notranslate"><span class="pre">previews</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.spatial" title="pxr.UsdMedia.Tokens.spatial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spatial</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.startTime" title="pxr.UsdMedia.Tokens.startTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startTime</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pxr.UsdMedia.Tokens.thumbnails" title="pxr.UsdMedia.Tokens.thumbnails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thumbnails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.AssetPreviewsAPI">
+<span class="sig-name descname"><span class="pre">AssetPreviewsAPI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AssetPreviewsAPI'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.AssetPreviewsAPI" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.SpatialAudio">
+<span class="sig-name descname"><span class="pre">SpatialAudio</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SpatialAudio'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.SpatialAudio" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.auralMode">
+<span class="sig-name descname"><span class="pre">auralMode</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'auralMode'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.auralMode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.defaultImage">
+<span class="sig-name descname"><span class="pre">defaultImage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'defaultImage'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.defaultImage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.endTime">
+<span class="sig-name descname"><span class="pre">endTime</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'endTime'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.endTime" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.filePath">
+<span class="sig-name descname"><span class="pre">filePath</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'filePath'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.filePath" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.gain">
+<span class="sig-name descname"><span class="pre">gain</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'gain'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.gain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.loopFromStage">
+<span class="sig-name descname"><span class="pre">loopFromStage</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'loopFromStage'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.loopFromStage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.loopFromStart">
+<span class="sig-name descname"><span class="pre">loopFromStart</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'loopFromStart'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.loopFromStart" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.loopFromStartToEnd">
+<span class="sig-name descname"><span class="pre">loopFromStartToEnd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'loopFromStartToEnd'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.loopFromStartToEnd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.mediaOffset">
+<span class="sig-name descname"><span class="pre">mediaOffset</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'mediaOffset'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.mediaOffset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.nonSpatial">
+<span class="sig-name descname"><span class="pre">nonSpatial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'nonSpatial'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.nonSpatial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.onceFromStart">
+<span class="sig-name descname"><span class="pre">onceFromStart</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'onceFromStart'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.onceFromStart" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.onceFromStartToEnd">
+<span class="sig-name descname"><span class="pre">onceFromStartToEnd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'onceFromStartToEnd'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.onceFromStartToEnd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.playbackMode">
+<span class="sig-name descname"><span class="pre">playbackMode</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'playbackMode'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.playbackMode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.previewThumbnails">
+<span class="sig-name descname"><span class="pre">previewThumbnails</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'previews:thumbnails'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.previewThumbnails" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.previewThumbnailsDefault">
+<span class="sig-name descname"><span class="pre">previewThumbnailsDefault</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'previews:thumbnails:default'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.previewThumbnailsDefault" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.previews">
+<span class="sig-name descname"><span class="pre">previews</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'previews'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.previews" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.spatial">
+<span class="sig-name descname"><span class="pre">spatial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'spatial'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.spatial" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.startTime">
+<span class="sig-name descname"><span class="pre">startTime</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'startTime'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.startTime" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pxr.UsdMedia.Tokens.thumbnails">
+<span class="sig-name descname"><span class="pre">thumbnails</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'thumbnails'</span></em><a class="headerlink" href="#pxr.UsdMedia.Tokens.thumbnails" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="UsdLux.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">UsdLux module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UsdPhysics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UsdPhysics module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+
+
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI"><code class="docutils literal notranslate"><span class="pre">AssetPreviewsAPI</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.Thumbnails"><code class="docutils literal notranslate"><span class="pre">Thumbnails</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.Thumbnails.defaultImage"><code class="docutils literal notranslate"><span class="pre">defaultImage</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.Apply"><code class="docutils literal notranslate"><span class="pre">Apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.CanApply"><code class="docutils literal notranslate"><span class="pre">CanApply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.ClearDefaultThumbnails"><code class="docutils literal notranslate"><span class="pre">ClearDefaultThumbnails()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.GetAssetDefaultPreviews"><code class="docutils literal notranslate"><span class="pre">GetAssetDefaultPreviews()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.GetDefaultThumbnails"><code class="docutils literal notranslate"><span class="pre">GetDefaultThumbnails()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.AssetPreviewsAPI.SetDefaultThumbnails"><code class="docutils literal notranslate"><span class="pre">SetDefaultThumbnails()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio"><code class="docutils literal notranslate"><span class="pre">SpatialAudio</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreateAuralModeAttr"><code class="docutils literal notranslate"><span class="pre">CreateAuralModeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreateEndTimeAttr"><code class="docutils literal notranslate"><span class="pre">CreateEndTimeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreateFilePathAttr"><code class="docutils literal notranslate"><span class="pre">CreateFilePathAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreateGainAttr"><code class="docutils literal notranslate"><span class="pre">CreateGainAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreateMediaOffsetAttr"><code class="docutils literal notranslate"><span class="pre">CreateMediaOffsetAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreatePlaybackModeAttr"><code class="docutils literal notranslate"><span class="pre">CreatePlaybackModeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.CreateStartTimeAttr"><code class="docutils literal notranslate"><span class="pre">CreateStartTimeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.Define"><code class="docutils literal notranslate"><span class="pre">Define()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.Get"><code class="docutils literal notranslate"><span class="pre">Get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetAuralModeAttr"><code class="docutils literal notranslate"><span class="pre">GetAuralModeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetEndTimeAttr"><code class="docutils literal notranslate"><span class="pre">GetEndTimeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetFilePathAttr"><code class="docutils literal notranslate"><span class="pre">GetFilePathAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetGainAttr"><code class="docutils literal notranslate"><span class="pre">GetGainAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetMediaOffsetAttr"><code class="docutils literal notranslate"><span class="pre">GetMediaOffsetAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetPlaybackModeAttr"><code class="docutils literal notranslate"><span class="pre">GetPlaybackModeAttr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetSchemaAttributeNames"><code class="docutils literal notranslate"><span class="pre">GetSchemaAttributeNames()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.SpatialAudio.GetStartTimeAttr"><code class="docutils literal notranslate"><span class="pre">GetStartTimeAttr()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens"><code class="docutils literal notranslate"><span class="pre">Tokens</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.AssetPreviewsAPI"><code class="docutils literal notranslate"><span class="pre">AssetPreviewsAPI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.SpatialAudio"><code class="docutils literal notranslate"><span class="pre">SpatialAudio</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.auralMode"><code class="docutils literal notranslate"><span class="pre">auralMode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.defaultImage"><code class="docutils literal notranslate"><span class="pre">defaultImage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.endTime"><code class="docutils literal notranslate"><span class="pre">endTime</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.filePath"><code class="docutils literal notranslate"><span class="pre">filePath</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.gain"><code class="docutils literal notranslate"><span class="pre">gain</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.loopFromStage"><code class="docutils literal notranslate"><span class="pre">loopFromStage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.loopFromStart"><code class="docutils literal notranslate"><span class="pre">loopFromStart</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.loopFromStartToEnd"><code class="docutils literal notranslate"><span class="pre">loopFromStartToEnd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.mediaOffset"><code class="docutils literal notranslate"><span class="pre">mediaOffset</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.nonSpatial"><code class="docutils literal notranslate"><span class="pre">nonSpatial</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.onceFromStart"><code class="docutils literal notranslate"><span class="pre">onceFromStart</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.onceFromStartToEnd"><code class="docutils literal notranslate"><span class="pre">onceFromStartToEnd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.playbackMode"><code class="docutils literal notranslate"><span class="pre">playbackMode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.previewThumbnails"><code class="docutils literal notranslate"><span class="pre">previewThumbnails</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.previewThumbnailsDefault"><code class="docutils literal notranslate"><span class="pre">previewThumbnailsDefault</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.previews"><code class="docutils literal notranslate"><span class="pre">previews</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.spatial"><code class="docutils literal notranslate"><span class="pre">spatial</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.startTime"><code class="docutils literal notranslate"><span class="pre">startTime</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pxr.UsdMedia.Tokens.thumbnails"><code class="docutils literal notranslate"><span class="pre">thumbnails</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+<a class="footer-brand logo" href="https://www.nvidia.com">
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-blk-for-screen.svg" class="logo__image only-light" alt="NVIDIA"/>
+  <img src="../_static/nvidia-logo-horiz-rgb-1c-wht-for-screen.svg" class="logo__image only-dark" alt="NVIDIA"/>
+</a></div>
+      
+        <div class="footer-item">
+
+
+
+
+  <p class="copyright">
+    
+      Copyright © 2019-2026, NVIDIA Corporation.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Mar 06, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

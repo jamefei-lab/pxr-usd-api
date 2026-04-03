@@ -1,0 +1,1794 @@
+[
+  {
+    "name": "AddAppliedSchema",
+    "signature": "Usd.Prim.AddAppliedSchema(appliedSchemaName: str) -> bool",
+    "description": "Adds an applied API schema to this prim.",
+    "parameters": "appliedSchemaName (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "AddAppliedSchema(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken)"
+      ],
+      "symbols": [
+        "?AddAppliedSchema@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "ApplyAPI",
+    "signature": "Usd.Prim.ApplyAPI(schemaIdentifier: str) -> bool",
+    "description": "Applies an API schema to this prim.",
+    "parameters": "schemaIdentifier (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "ApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "ApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion)",
+        "ApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "ApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier)",
+        "ApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "ApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType)"
+      ],
+      "symbols": [
+        "?ApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@@Z",
+        "?ApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@AEBVTfToken@2@@Z",
+        "?ApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z",
+        "?ApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@0@Z",
+        "?ApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I@Z",
+        "?ApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I0@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "CanApplyAPI",
+    "signature": "Usd.Prim.CanApplyAPI(schemaIdentifier: str) -> Usd._CanApplyAPIResult",
+    "description": "Checks whether an API schema can be applied to this prim.",
+    "parameters": "schemaIdentifier (str).",
+    "returns": "Usd._CanApplyAPIResult - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "CanApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "CanApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion)",
+        "CanApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "CanApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier)",
+        "CanApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "CanApplyAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType)"
+      ],
+      "symbols": [
+        "?CanApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@PEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+        "?CanApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@AEBVTfToken@2@PEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+        "?CanApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@PEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+        "?CanApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@0PEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+        "?CanApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@IPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+        "?CanApplyAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I0PEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z"
+      ],
+      "runtime_return": "Usd._CanApplyAPIResult"
+    }
+  },
+  {
+    "name": "ClearActive",
+    "signature": "Usd.Prim.ClearActive() -> bool",
+    "description": "Clears the authored active on this prim.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "ClearActive(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "ClearChildrenReorder",
+    "signature": "Usd.Prim.ClearChildrenReorder()",
+    "description": "Clears the authored children reorder on this prim.",
+    "parameters": "None.",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "ClearChildrenReorder(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "ClearInstanceable",
+    "signature": "Usd.Prim.ClearInstanceable() -> bool",
+    "description": "Clears the authored instanceable on this prim.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "ClearInstanceable(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "ClearPayload",
+    "signature": "Usd.Prim.ClearPayload() -> bool",
+    "description": "Clears the authored payload on this prim.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "ClearPayload(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?ClearPayload@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "ClearPropertyOrder",
+    "signature": "Usd.Prim.ClearPropertyOrder()",
+    "description": "Clears the authored property order on this prim.",
+    "parameters": "None.",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "ClearPropertyOrder(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "ClearTypeName",
+    "signature": "Usd.Prim.ClearTypeName() -> bool",
+    "description": "Clears the authored type name on this prim.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "ClearTypeName(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "ComputeExpandedPrimIndex",
+    "signature": "Usd.Prim.ComputeExpandedPrimIndex() -> Pcp.PrimIndex",
+    "description": "Computes the expanded prim index for this prim.",
+    "parameters": "None.",
+    "returns": "Pcp.PrimIndex - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "ComputeExpandedPrimIndex(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?ComputeExpandedPrimIndex@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVPcpPrimIndex@2@XZ"
+      ],
+      "runtime_return": "Pcp.PrimIndex"
+    }
+  },
+  {
+    "name": "CreateAttribute",
+    "signature": "Usd.Prim.CreateAttribute(name: str | list[str], typeName: Sdf.ValueTypeName, custom: bool = True, variability: Sdf.Variability = Sdf.VariabilityVarying) -> Usd.Attribute",
+    "description": "Creates an attribute on this prim.",
+    "parameters": "name (str | list[str]); typeName (Sdf.ValueTypeName); custom (bool), default True; variability (Sdf.Variability), default Sdf.VariabilityVarying.",
+    "returns": "Usd.Attribute - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "CreateAttribute(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > nameElts, class pxrInternal_v0_25_11__pxrReserved__::SdfValueTypeName typeName, bool custom=True, enum pxrInternal_v0_25_11__pxrReserved__::SdfVariability variability=Sdf.VariabilityVarying)",
+        "CreateAttribute(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken name, class pxrInternal_v0_25_11__pxrReserved__::SdfValueTypeName typeName, bool custom=True, enum pxrInternal_v0_25_11__pxrReserved__::SdfVariability variability=Sdf.VariabilityVarying)"
+      ],
+      "symbols": [
+        "?CreateAttribute@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttribute@2@AEBVTfToken@2@AEBVSdfValueTypeName@2@_NW4SdfVariability@2@@Z",
+        "?CreateAttribute@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttribute@2@AEBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEBVSdfValueTypeName@2@_NW4SdfVariability@2@@Z"
+      ],
+      "runtime_return": "Usd.Attribute"
+    }
+  },
+  {
+    "name": "CreateRelationship",
+    "signature": "Usd.Prim.CreateRelationship(name: str | list[str], custom: bool = True) -> Usd.Relationship",
+    "description": "Creates a relationship on this prim.",
+    "parameters": "name (str | list[str]); custom (bool), default True.",
+    "returns": "Usd.Relationship - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "CreateRelationship(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > nameElts, bool custom=True)",
+        "CreateRelationship(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken name, bool custom=True)"
+      ],
+      "symbols": [
+        "?CreateRelationship@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdRelationship@2@AEBVTfToken@2@_N@Z",
+        "?CreateRelationship@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdRelationship@2@AEBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@_N@Z"
+      ],
+      "runtime_return": "Usd.Relationship"
+    }
+  },
+  {
+    "name": "FindAllAttributeConnectionPaths",
+    "signature": "Usd.Prim.FindAllAttributeConnectionPaths() -> list",
+    "description": "Finds all attribute connection paths for this prim.",
+    "parameters": "None.",
+    "returns": "list - The resulting value.",
+    "evidence": {
+      "sig_lines": [],
+      "symbols": [
+        "?FindAllAttributeConnectionPaths@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBVUsd_PrimFlagsPredicate@2@AEBV?$function@$$A6A_NAEBVUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@@Z@4@_N@Z"
+      ],
+      "runtime_return": "list"
+    }
+  },
+  {
+    "name": "FindAllRelationshipTargetPaths",
+    "signature": "Usd.Prim.FindAllRelationshipTargetPaths() -> list",
+    "description": "Finds all relationship target paths for this prim.",
+    "parameters": "None.",
+    "returns": "list - The resulting value.",
+    "evidence": {
+      "sig_lines": [],
+      "symbols": [
+        "?FindAllRelationshipTargetPaths@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VSdfPath@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBVUsd_PrimFlagsPredicate@2@AEBV?$function@$$A6A_NAEBVUsdRelationship@pxrInternal_v0_25_11__pxrReserved__@@@Z@4@_N@Z"
+      ],
+      "runtime_return": "list"
+    }
+  },
+  {
+    "name": "GetAllChildren",
+    "signature": "Usd.Prim.GetAllChildren() -> list[Usd.Prim]",
+    "description": "Returns the all children for this prim.",
+    "parameters": "None.",
+    "returns": "list[Usd.Prim] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAllChildren(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "list[Usd.Prim]"
+    }
+  },
+  {
+    "name": "GetAllChildrenNames",
+    "signature": "Usd.Prim.GetAllChildrenNames() -> list[str]",
+    "description": "Returns the all children names for this prim.",
+    "parameters": "None.",
+    "returns": "list[str] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAllChildrenNames(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetAllChildrenNames@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[str]"
+    }
+  },
+  {
+    "name": "GetAppliedSchemas",
+    "signature": "Usd.Prim.GetAppliedSchemas() -> list[str]",
+    "description": "Returns the applied schemas for this prim.",
+    "parameters": "None.",
+    "returns": "list[str] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAppliedSchemas(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetAppliedSchemas@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBAAEBV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[str]"
+    }
+  },
+  {
+    "name": "GetAttribute",
+    "signature": "Usd.Prim.GetAttribute(attrName: str) -> Usd.Attribute",
+    "description": "Returns the attribute for this prim.",
+    "parameters": "attrName (str).",
+    "returns": "Usd.Attribute - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetAttribute(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken attrName)"
+      ],
+      "symbols": [
+        "?GetAttribute@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttribute@2@AEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "Usd.Attribute"
+    }
+  },
+  {
+    "name": "GetAttributeAtPath",
+    "signature": "Usd.Prim.GetAttributeAtPath(path: Sdf.Path | str) -> Usd.Attribute",
+    "description": "Returns the attribute at path for this prim.",
+    "parameters": "path (Sdf.Path | str).",
+    "returns": "Usd.Attribute - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetAttributeAtPath(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?GetAttributeAtPath@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdAttribute@2@AEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "Usd.Attribute"
+    }
+  },
+  {
+    "name": "GetAttributes",
+    "signature": "Usd.Prim.GetAttributes() -> list[Usd.Attribute]",
+    "description": "Returns the attributes for this prim.",
+    "parameters": "None.",
+    "returns": "list[Usd.Attribute] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAttributes(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetAttributes@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[Usd.Attribute]"
+    }
+  },
+  {
+    "name": "GetAuthoredAttributes",
+    "signature": "Usd.Prim.GetAuthoredAttributes() -> list[Usd.Attribute]",
+    "description": "Returns the authored attributes for this prim.",
+    "parameters": "None.",
+    "returns": "list[Usd.Attribute] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAuthoredAttributes(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetAuthoredAttributes@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdAttribute@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[Usd.Attribute]"
+    }
+  },
+  {
+    "name": "GetAuthoredProperties",
+    "signature": "Usd.Prim.GetAuthoredProperties(predicate: object = None) -> list[Usd.Relationship]",
+    "description": "Returns the authored properties for this prim.",
+    "parameters": "predicate (object), default None.",
+    "returns": "list[Usd.Relationship] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAuthoredProperties(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::pxr_boost::python::api::object predicate=None)"
+      ],
+      "symbols": [
+        "?GetAuthoredProperties@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$function@$$A6A_NAEBVTfToken@pxrInternal_v0_25_11__pxrReserved__@@@Z@4@@Z"
+      ],
+      "runtime_return": "list[Usd.Relationship]"
+    }
+  },
+  {
+    "name": "GetAuthoredPropertiesInNamespace",
+    "signature": "Usd.Prim.GetAuthoredPropertiesInNamespace(namespaces: str) -> list[Usd.Property]",
+    "description": "Returns the authored properties in namespace for this prim.",
+    "parameters": "namespaces (str).",
+    "returns": "list[Usd.Property] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAuthoredPropertiesInNamespace(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > namespaces)",
+        "GetAuthoredPropertiesInNamespace(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > namespaces)"
+      ],
+      "symbols": [
+        "?GetAuthoredPropertiesInNamespace@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@4@@Z",
+        "?GetAuthoredPropertiesInNamespace@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@@Z"
+      ],
+      "runtime_return": "list[Usd.Property]"
+    }
+  },
+  {
+    "name": "GetAuthoredPropertyNames",
+    "signature": "Usd.Prim.GetAuthoredPropertyNames(predicate: object = None) -> list[str]",
+    "description": "Returns the authored property names for this prim.",
+    "parameters": "predicate (object), default None.",
+    "returns": "list[str] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAuthoredPropertyNames(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::pxr_boost::python::api::object predicate=None)"
+      ],
+      "symbols": [
+        "?GetAuthoredPropertyNames@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$function@$$A6A_NAEBVTfToken@pxrInternal_v0_25_11__pxrReserved__@@@Z@4@@Z"
+      ],
+      "runtime_return": "list[str]"
+    }
+  },
+  {
+    "name": "GetAuthoredRelationships",
+    "signature": "Usd.Prim.GetAuthoredRelationships() -> list[Usd.Relationship]",
+    "description": "Returns the authored relationships for this prim.",
+    "parameters": "None.",
+    "returns": "list[Usd.Relationship] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetAuthoredRelationships(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetAuthoredRelationships@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdRelationship@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdRelationship@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[Usd.Relationship]"
+    }
+  },
+  {
+    "name": "GetChild",
+    "signature": "Usd.Prim.GetChild(name: str) -> Usd.Prim",
+    "description": "Returns the child for this prim.",
+    "parameters": "name (str).",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetChild(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken name)"
+      ],
+      "symbols": [
+        "?GetChild@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV12@AEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetChildren",
+    "signature": "Usd.Prim.GetChildren() -> list[Usd.Prim]",
+    "description": "Returns the children for this prim.",
+    "parameters": "None.",
+    "returns": "list[Usd.Prim] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetChildren(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "list[Usd.Prim]"
+    }
+  },
+  {
+    "name": "GetChildrenNames",
+    "signature": "Usd.Prim.GetChildrenNames() -> list[str]",
+    "description": "Returns the children names for this prim.",
+    "parameters": "None.",
+    "returns": "list[str] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetChildrenNames(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetChildrenNames@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[str]"
+    }
+  },
+  {
+    "name": "GetChildrenReorder",
+    "signature": "Usd.Prim.GetChildrenReorder() -> list",
+    "description": "Returns the children reorder for this prim.",
+    "parameters": "None.",
+    "returns": "list - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetChildrenReorder(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetChildrenReorder@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list"
+    }
+  },
+  {
+    "name": "GetFilteredChildren",
+    "signature": "Usd.Prim.GetFilteredChildren(predicate: Usd.PrimFlagsPredicate) -> list[Usd.Prim]",
+    "description": "Returns this prim's child prims that match the given predicate.",
+    "parameters": "predicate (Usd.PrimFlagsPredicate).",
+    "returns": "list[Usd.Prim] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetFilteredChildren(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::Usd_PrimFlagsPredicate predicate)"
+      ],
+      "symbols": [],
+      "runtime_return": "list[Usd.Prim]"
+    }
+  },
+  {
+    "name": "GetFilteredChildrenNames",
+    "signature": "Usd.Prim.GetFilteredChildrenNames(predicate: Usd.PrimFlagsPredicate) -> list[str]",
+    "description": "Returns the names of child prims that match the given predicate.",
+    "parameters": "predicate (Usd.PrimFlagsPredicate).",
+    "returns": "list[str] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetFilteredChildrenNames(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::Usd_PrimFlagsPredicate)"
+      ],
+      "symbols": [
+        "?GetFilteredChildrenNames@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBVUsd_PrimFlagsPredicate@2@@Z"
+      ],
+      "runtime_return": "list[str]"
+    }
+  },
+  {
+    "name": "GetFilteredNextSibling",
+    "signature": "Usd.Prim.GetFilteredNextSibling(predicate: Usd.PrimFlagsPredicate) -> Usd.Prim",
+    "description": "Returns the next sibling prim that matches the given predicate.",
+    "parameters": "predicate (Usd.PrimFlagsPredicate).",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetFilteredNextSibling(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::Usd_PrimFlagsPredicate)"
+      ],
+      "symbols": [
+        "?GetFilteredNextSibling@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV12@AEBVUsd_PrimFlagsPredicate@2@@Z"
+      ],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetInherits",
+    "signature": "Usd.Prim.GetInherits() -> Usd.Inherits",
+    "description": "Returns the inherits for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Inherits - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetInherits(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetInherits@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdInherits@2@XZ"
+      ],
+      "runtime_return": "Usd.Inherits"
+    }
+  },
+  {
+    "name": "GetInstances",
+    "signature": "Usd.Prim.GetInstances() -> list",
+    "description": "Returns the instances for this prim.",
+    "parameters": "None.",
+    "returns": "list - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetInstances(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetInstances@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdPrim@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdPrim@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list"
+    }
+  },
+  {
+    "name": "GetKind",
+    "signature": "Usd.Prim.GetKind() -> str",
+    "description": "Returns the kind for this prim.",
+    "parameters": "None.",
+    "returns": "str - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetKind(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim)"
+      ],
+      "symbols": [
+        "?GetKind@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NPEAVTfToken@2@@Z"
+      ],
+      "runtime_return": "str"
+    }
+  },
+  {
+    "name": "GetNextSibling",
+    "signature": "Usd.Prim.GetNextSibling() -> Usd.Prim",
+    "description": "Returns the next sibling for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetNextSibling(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetNextSibling@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV12@XZ"
+      ],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetObjectAtPath",
+    "signature": "Usd.Prim.GetObjectAtPath(path: Sdf.Path | str) -> Usd.Prim",
+    "description": "Returns the object at path for this prim.",
+    "parameters": "path (Sdf.Path | str).",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetObjectAtPath(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?GetObjectAtPath@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdObject@2@AEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetParent",
+    "signature": "Usd.Prim.GetParent() -> Usd.Prim",
+    "description": "Returns the parent for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetParent(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetPayloads",
+    "signature": "Usd.Prim.GetPayloads() -> Usd.Payloads",
+    "description": "Returns the payloads for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Payloads - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPayloads(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetPayloads@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdPayloads@2@XZ"
+      ],
+      "runtime_return": "Usd.Payloads"
+    }
+  },
+  {
+    "name": "GetPrimAtPath",
+    "signature": "Usd.Prim.GetPrimAtPath(path: Sdf.Path | str) -> Usd.Prim",
+    "description": "Returns the prim at path for this prim.",
+    "parameters": "path (Sdf.Path | str).",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimAtPath(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?GetPrimAtPath@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV12@AEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetPrimDefinition",
+    "signature": "Usd.Prim.GetPrimDefinition() -> Usd.PrimDefinition",
+    "description": "Returns the prim definition for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.PrimDefinition - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimDefinition(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "Usd.PrimDefinition"
+    }
+  },
+  {
+    "name": "GetPrimInPrototype",
+    "signature": "Usd.Prim.GetPrimInPrototype() -> Usd.Prim",
+    "description": "Returns the prim in prototype for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimInPrototype(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetPrimIndex",
+    "signature": "Usd.Prim.GetPrimIndex() -> Pcp.PrimIndex",
+    "description": "Returns the prim index for this prim.",
+    "parameters": "None.",
+    "returns": "Pcp.PrimIndex - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimIndex(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "Pcp.PrimIndex"
+    }
+  },
+  {
+    "name": "GetPrimStack",
+    "signature": "Usd.Prim.GetPrimStack() -> list[Sdf.PrimSpec]",
+    "description": "Returns the prim stack for this prim.",
+    "parameters": "None.",
+    "returns": "list[Sdf.PrimSpec] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimStack(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetPrimStack@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@V?$SdfHandle@VSdfPrimSpec@pxrInternal_v0_25_11__pxrReserved__@@@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@V?$SdfHandle@VSdfPrimSpec@pxrInternal_v0_25_11__pxrReserved__@@@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[Sdf.PrimSpec]"
+    }
+  },
+  {
+    "name": "GetPrimStackWithLayerOffsets",
+    "signature": "Usd.Prim.GetPrimStackWithLayerOffsets() -> list[tuple]",
+    "description": "Returns the prim stack with layer offsets for this prim.",
+    "parameters": "None.",
+    "returns": "list[tuple] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimStackWithLayerOffsets(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetPrimStackWithLayerOffsets@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@U?$pair@V?$SdfHandle@VSdfPrimSpec@pxrInternal_v0_25_11__pxrReserved__@@@pxrInternal_v0_25_11__pxrReserved__@@VSdfLayerOffset@2@@std@@V?$allocator@U?$pair@V?$SdfHandle@VSdfPrimSpec@pxrInternal_v0_25_11__pxrReserved__@@@pxrInternal_v0_25_11__pxrReserved__@@VSdfLayerOffset@2@@std@@@2@@std@@XZ"
+      ],
+      "runtime_return": "list[tuple]"
+    }
+  },
+  {
+    "name": "GetPrimTypeInfo",
+    "signature": "Usd.Prim.GetPrimTypeInfo() -> Usd.PrimTypeInfo",
+    "description": "Returns the prim type info for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.PrimTypeInfo - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrimTypeInfo(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "Usd.PrimTypeInfo"
+    }
+  },
+  {
+    "name": "GetProperties",
+    "signature": "Usd.Prim.GetProperties(predicate: object = None) -> list[Usd.Relationship]",
+    "description": "Returns the properties for this prim.",
+    "parameters": "predicate (object), default None.",
+    "returns": "list[Usd.Relationship] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetProperties(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::pxr_boost::python::api::object predicate=None)"
+      ],
+      "symbols": [
+        "?GetProperties@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$function@$$A6A_NAEBVTfToken@pxrInternal_v0_25_11__pxrReserved__@@@Z@4@@Z"
+      ],
+      "runtime_return": "list[Usd.Relationship]"
+    }
+  },
+  {
+    "name": "GetPropertiesInNamespace",
+    "signature": "Usd.Prim.GetPropertiesInNamespace(namespaces: str) -> list[Usd.Property]",
+    "description": "Returns the properties in namespace for this prim.",
+    "parameters": "namespaces (str).",
+    "returns": "list[Usd.Property] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetPropertiesInNamespace(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > namespaces)",
+        "GetPropertiesInNamespace(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > namespaces)"
+      ],
+      "symbols": [
+        "?GetPropertiesInNamespace@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@4@@Z",
+        "?GetPropertiesInNamespace@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdProperty@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@@Z"
+      ],
+      "runtime_return": "list[Usd.Property]"
+    }
+  },
+  {
+    "name": "GetProperty",
+    "signature": "Usd.Prim.GetProperty(propName: str) -> Usd.Attribute",
+    "description": "Returns the property for this prim.",
+    "parameters": "propName (str).",
+    "returns": "Usd.Attribute - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetProperty(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken propName)"
+      ],
+      "symbols": [
+        "?GetProperty@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdProperty@2@AEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "Usd.Attribute"
+    }
+  },
+  {
+    "name": "GetPropertyAtPath",
+    "signature": "Usd.Prim.GetPropertyAtPath(path: Sdf.Path | str) -> Usd.Attribute",
+    "description": "Returns the property at path for this prim.",
+    "parameters": "path (Sdf.Path | str).",
+    "returns": "Usd.Attribute - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPropertyAtPath(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?GetPropertyAtPath@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdProperty@2@AEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "Usd.Attribute"
+    }
+  },
+  {
+    "name": "GetPropertyNames",
+    "signature": "Usd.Prim.GetPropertyNames(predicate: object = None) -> list[str]",
+    "description": "Returns the property names for this prim.",
+    "parameters": "predicate (object), default None.",
+    "returns": "list[str] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetPropertyNames(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::pxr_boost::python::api::object predicate=None)"
+      ],
+      "symbols": [
+        "?GetPropertyNames@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@AEBV?$function@$$A6A_NAEBVTfToken@pxrInternal_v0_25_11__pxrReserved__@@@Z@4@@Z"
+      ],
+      "runtime_return": "list[str]"
+    }
+  },
+  {
+    "name": "GetPropertyOrder",
+    "signature": "Usd.Prim.GetPropertyOrder() -> list",
+    "description": "Returns the property order for this prim.",
+    "parameters": "None.",
+    "returns": "list - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPropertyOrder(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetPropertyOrder@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VTfToken@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list"
+    }
+  },
+  {
+    "name": "GetPrototype",
+    "signature": "Usd.Prim.GetPrototype() -> Usd.Prim",
+    "description": "Returns the prototype for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Prim - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetPrototype(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetPrototype@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV12@XZ"
+      ],
+      "runtime_return": "Usd.Prim"
+    }
+  },
+  {
+    "name": "GetReferences",
+    "signature": "Usd.Prim.GetReferences() -> Usd.References",
+    "description": "Returns the references for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.References - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetReferences(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetReferences@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdReferences@2@XZ"
+      ],
+      "runtime_return": "Usd.References"
+    }
+  },
+  {
+    "name": "GetRelationship",
+    "signature": "Usd.Prim.GetRelationship(relName: str) -> Usd.Relationship",
+    "description": "Returns the relationship for this prim.",
+    "parameters": "relName (str).",
+    "returns": "Usd.Relationship - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetRelationship(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken relName)"
+      ],
+      "symbols": [
+        "?GetRelationship@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdRelationship@2@AEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "Usd.Relationship"
+    }
+  },
+  {
+    "name": "GetRelationshipAtPath",
+    "signature": "Usd.Prim.GetRelationshipAtPath(path: Sdf.Path | str) -> Usd.Relationship",
+    "description": "Returns the relationship at path for this prim.",
+    "parameters": "path (Sdf.Path | str).",
+    "returns": "Usd.Relationship - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetRelationshipAtPath(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?GetRelationshipAtPath@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdRelationship@2@AEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "Usd.Relationship"
+    }
+  },
+  {
+    "name": "GetRelationships",
+    "signature": "Usd.Prim.GetRelationships() -> list[Usd.Relationship]",
+    "description": "Returns the relationships for this prim.",
+    "parameters": "None.",
+    "returns": "list[Usd.Relationship] - A list of matching values.",
+    "evidence": {
+      "sig_lines": [
+        "GetRelationships(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetRelationships@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AV?$vector@VUsdRelationship@pxrInternal_v0_25_11__pxrReserved__@@V?$allocator@VUsdRelationship@pxrInternal_v0_25_11__pxrReserved__@@@std@@@std@@XZ"
+      ],
+      "runtime_return": "list[Usd.Relationship]"
+    }
+  },
+  {
+    "name": "GetSpecializes",
+    "signature": "Usd.Prim.GetSpecializes() -> Usd.Specializes",
+    "description": "Returns the specializes for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.Specializes - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetSpecializes(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetSpecializes@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdSpecializes@2@XZ"
+      ],
+      "runtime_return": "Usd.Specializes"
+    }
+  },
+  {
+    "name": "GetSpecifier",
+    "signature": "Usd.Prim.GetSpecifier() -> Sdf.Specifier",
+    "description": "Returns the specifier for this prim.",
+    "parameters": "None.",
+    "returns": "Sdf.Specifier - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetSpecifier(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "Sdf.Specifier"
+    }
+  },
+  {
+    "name": "GetTypeName",
+    "signature": "Usd.Prim.GetTypeName() -> str",
+    "description": "Returns the type name for this prim.",
+    "parameters": "None.",
+    "returns": "str - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetTypeName(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "str"
+    }
+  },
+  {
+    "name": "GetVariantSet",
+    "signature": "Usd.Prim.GetVariantSet(variantSetName: str) -> Usd.VariantSet",
+    "description": "Returns the variant set on this prim with the given name.",
+    "parameters": "variantSetName (str).",
+    "returns": "Usd.VariantSet - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetVariantSet(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)"
+      ],
+      "symbols": [
+        "?GetVariantSet@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdVariantSet@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z"
+      ],
+      "runtime_return": "Usd.VariantSet"
+    }
+  },
+  {
+    "name": "GetVariantSets",
+    "signature": "Usd.Prim.GetVariantSets() -> Usd.VariantSets",
+    "description": "Returns the variant sets for this prim.",
+    "parameters": "None.",
+    "returns": "Usd.VariantSets - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "GetVariantSets(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?GetVariantSets@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdVariantSets@2@XZ"
+      ],
+      "runtime_return": "Usd.VariantSets"
+    }
+  },
+  {
+    "name": "GetVersionIfHasAPIInFamily",
+    "signature": "Usd.Prim.GetVersionIfHasAPIInFamily(schemaFamily: str)",
+    "description": "Looks up version information for applied API schemas in the given schema family.",
+    "parameters": "schemaFamily (str).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "GetVersionIfHasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken, class pxrInternal_v0_25_11__pxrReserved__::TfToken)",
+        "GetVersionIfHasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken)"
+      ],
+      "symbols": [
+        "?GetVersionIfHasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@PEAI@Z",
+        "?GetVersionIfHasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@0PEAI@Z"
+      ],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "GetVersionIfIsInFamily",
+    "signature": "Usd.Prim.GetVersionIfIsInFamily(schemaFamily: str)",
+    "description": "Looks up version information when this prim's schema is in the given schema family.",
+    "parameters": "schemaFamily (str).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "GetVersionIfIsInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim, class pxrInternal_v0_25_11__pxrReserved__::TfToken)"
+      ],
+      "symbols": [
+        "?GetVersionIfIsInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@PEAI@Z"
+      ],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "HasAPI",
+    "signature": "Usd.Prim.HasAPI(schemaIdentifier: str) -> bool",
+    "description": "Returns whether this prim has api.",
+    "parameters": "schemaIdentifier (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion)",
+        "HasAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier)",
+        "HasAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType)"
+      ],
+      "symbols": [
+        "?HasAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@@Z",
+        "?HasAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@AEBVTfToken@2@@Z",
+        "?HasAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z",
+        "?HasAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@0@Z",
+        "?HasAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I@Z",
+        "?HasAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I0@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAPIInFamily",
+    "signature": "Usd.Prim.HasAPIInFamily(schemaFamily: str) -> bool",
+    "description": "Returns whether this prim has apiin family.",
+    "parameters": "schemaFamily (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "HasAPIInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy)"
+      ],
+      "symbols": [
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@0@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@IW4VersionPolicy@UsdSchemaRegistry@2@@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@IW4VersionPolicy@UsdSchemaRegistry@2@0@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@W4VersionPolicy@UsdSchemaRegistry@2@@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@W4VersionPolicy@UsdSchemaRegistry@2@AEBVTfToken@2@@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@W4VersionPolicy@UsdSchemaRegistry@2@@Z",
+        "?HasAPIInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@W4VersionPolicy@UsdSchemaRegistry@2@0@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAttribute",
+    "signature": "Usd.Prim.HasAttribute(attrName: str) -> bool",
+    "description": "Returns whether this prim has attribute.",
+    "parameters": "attrName (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAttribute(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken attrName)"
+      ],
+      "symbols": [
+        "?HasAttribute@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredActive",
+    "signature": "Usd.Prim.HasAuthoredActive() -> bool",
+    "description": "Returns whether this prim has authored active.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredActive(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredInherits",
+    "signature": "Usd.Prim.HasAuthoredInherits() -> bool",
+    "description": "Returns whether this prim has authored inherits.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredInherits(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredInherits@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredInstanceable",
+    "signature": "Usd.Prim.HasAuthoredInstanceable() -> bool",
+    "description": "Returns whether this prim has authored instanceable.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredInstanceable(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredPayloads",
+    "signature": "Usd.Prim.HasAuthoredPayloads() -> bool",
+    "description": "Returns whether this prim has authored payloads.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredPayloads(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredPayloads@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredReferences",
+    "signature": "Usd.Prim.HasAuthoredReferences() -> bool",
+    "description": "Returns whether this prim has authored references.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredReferences(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredReferences@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredSpecializes",
+    "signature": "Usd.Prim.HasAuthoredSpecializes() -> bool",
+    "description": "Returns whether this prim has authored specializes.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredSpecializes(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?HasAuthoredSpecializes@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasAuthoredTypeName",
+    "signature": "Usd.Prim.HasAuthoredTypeName() -> bool",
+    "description": "Returns whether this prim has authored type name.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasAuthoredTypeName(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasDefiningSpecifier",
+    "signature": "Usd.Prim.HasDefiningSpecifier() -> bool",
+    "description": "Returns whether this prim has defining specifier.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasDefiningSpecifier(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasPayload",
+    "signature": "Usd.Prim.HasPayload() -> bool",
+    "description": "Returns whether this prim has payload.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasPayload(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?HasPayload@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasProperty",
+    "signature": "Usd.Prim.HasProperty(propName: str) -> bool",
+    "description": "Returns whether this prim has property.",
+    "parameters": "propName (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasProperty(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken propName)"
+      ],
+      "symbols": [
+        "?HasProperty@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasRelationship",
+    "signature": "Usd.Prim.HasRelationship(relName: str) -> bool",
+    "description": "Returns whether this prim has relationship.",
+    "parameters": "relName (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasRelationship(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken relName)"
+      ],
+      "symbols": [
+        "?HasRelationship@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "HasVariantSets",
+    "signature": "Usd.Prim.HasVariantSets() -> bool",
+    "description": "Returns whether this prim has variant sets.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "HasVariantSets(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?HasVariantSets@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsA",
+    "signature": "Usd.Prim.IsA(schemaIdentifier: str) -> bool",
+    "description": "Returns whether this prim is a.",
+    "parameters": "schemaIdentifier (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsA(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int version)",
+        "IsA(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier)",
+        "IsA(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType)"
+      ],
+      "symbols": [
+        "?IsA@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@@Z",
+        "?IsA@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z",
+        "?IsA@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsAbstract",
+    "signature": "Usd.Prim.IsAbstract() -> bool",
+    "description": "Returns whether this prim is abstract.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsAbstract(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsActive",
+    "signature": "Usd.Prim.IsActive() -> bool",
+    "description": "Returns whether this prim is active.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsActive(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsComponent",
+    "signature": "Usd.Prim.IsComponent() -> bool",
+    "description": "Returns whether this prim is component.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsComponent(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsDefined",
+    "signature": "Usd.Prim.IsDefined() -> bool",
+    "description": "Returns whether this prim is defined.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsDefined(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsGroup",
+    "signature": "Usd.Prim.IsGroup() -> bool",
+    "description": "Returns whether this prim is group.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsGroup(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsInFamily",
+    "signature": "Usd.Prim.IsInFamily(schemaFamily: str) -> bool",
+    "description": "Returns whether this prim is in family.",
+    "parameters": "schemaFamily (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy)",
+        "IsInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy)",
+        "IsInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int version, enum pxrInternal_v0_25_11__pxrReserved__::UsdSchemaRegistry::VersionPolicy versionPolicy)",
+        "IsInFamily(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily)"
+      ],
+      "symbols": [
+        "?IsInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z",
+        "?IsInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@IW4VersionPolicy@UsdSchemaRegistry@2@@Z",
+        "?IsInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@W4VersionPolicy@UsdSchemaRegistry@2@@Z",
+        "?IsInFamily@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@W4VersionPolicy@UsdSchemaRegistry@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsInPrototype",
+    "signature": "Usd.Prim.IsInPrototype() -> bool",
+    "description": "Returns whether this prim is in prototype.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsInPrototype(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsInstance",
+    "signature": "Usd.Prim.IsInstance() -> bool",
+    "description": "Returns whether this prim is instance.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsInstance(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsInstanceProxy",
+    "signature": "Usd.Prim.IsInstanceProxy() -> bool",
+    "description": "Returns whether this prim is instance proxy.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsInstanceProxy(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsInstanceable",
+    "signature": "Usd.Prim.IsInstanceable() -> bool",
+    "description": "Returns whether this prim is instanceable.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsInstanceable(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsLoaded",
+    "signature": "Usd.Prim.IsLoaded() -> bool",
+    "description": "Returns whether this prim is loaded.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsLoaded(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsModel",
+    "signature": "Usd.Prim.IsModel() -> bool",
+    "description": "Returns whether this prim is model.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsModel(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsPathInPrototype",
+    "signature": "Usd.Prim.IsPathInPrototype() -> bool",
+    "description": "Returns whether this prim is path in prototype.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsPathInPrototype(class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?IsPathInPrototype@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@SA_NAEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsPrototype",
+    "signature": "Usd.Prim.IsPrototype() -> bool",
+    "description": "Returns whether this prim is prototype.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsPrototype(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsPrototypePath",
+    "signature": "Usd.Prim.IsPrototypePath() -> bool",
+    "description": "Returns whether this prim is prototype path.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsPrototypePath(class pxrInternal_v0_25_11__pxrReserved__::SdfPath path)"
+      ],
+      "symbols": [
+        "?IsPrototypePath@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@SA_NAEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsPseudoRoot",
+    "signature": "Usd.Prim.IsPseudoRoot() -> bool",
+    "description": "Returns whether this prim is pseudo root.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsPseudoRoot(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?IsPseudoRoot@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "IsSubComponent",
+    "signature": "Usd.Prim.IsSubComponent() -> bool",
+    "description": "Returns whether this prim is sub component.",
+    "parameters": "None.",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "IsSubComponent(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?IsSubComponent@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NXZ"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "Load",
+    "signature": "Usd.Prim.Load(policy: Usd.LoadPolicy = Usd.LoadWithDescendants)",
+    "description": "Loads this prim according to the requested load policy.",
+    "parameters": "policy (Usd.LoadPolicy), default Usd.LoadWithDescendants.",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "Load(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, enum pxrInternal_v0_25_11__pxrReserved__::UsdLoadPolicy policy=Usd.LoadWithDescendants)"
+      ],
+      "symbols": [
+        "?Load@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBAXW4UsdLoadPolicy@2@@Z"
+      ],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "MakeResolveTargetStrongerThanEditTarget",
+    "signature": "Usd.Prim.MakeResolveTargetStrongerThanEditTarget() -> Usd.ResolveTarget",
+    "description": "Builds a resolve target derived from this prim and the current edit target.",
+    "parameters": "None.",
+    "returns": "Usd.ResolveTarget - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "MakeResolveTargetStrongerThanEditTarget(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::UsdEditTarget)"
+      ],
+      "symbols": [
+        "?MakeResolveTargetStrongerThanEditTarget@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdResolveTarget@2@AEBVUsdEditTarget@2@@Z"
+      ],
+      "runtime_return": "Usd.ResolveTarget"
+    }
+  },
+  {
+    "name": "MakeResolveTargetUpToEditTarget",
+    "signature": "Usd.Prim.MakeResolveTargetUpToEditTarget() -> Usd.ResolveTarget",
+    "description": "Builds a resolve target derived from this prim and the current edit target.",
+    "parameters": "None.",
+    "returns": "Usd.ResolveTarget - The resulting value.",
+    "evidence": {
+      "sig_lines": [
+        "MakeResolveTargetUpToEditTarget(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::UsdEditTarget)"
+      ],
+      "symbols": [
+        "?MakeResolveTargetUpToEditTarget@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA?AVUsdResolveTarget@2@AEBVUsdEditTarget@2@@Z"
+      ],
+      "runtime_return": "Usd.ResolveTarget"
+    }
+  },
+  {
+    "name": "RemoveAPI",
+    "signature": "Usd.Prim.RemoveAPI(schemaIdentifier: str) -> bool",
+    "description": "Removes the api from this prim.",
+    "parameters": "schemaIdentifier (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "RemoveAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "RemoveAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaFamily, unsigned int schemaVersion)",
+        "RemoveAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "RemoveAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken schemaIdentifier)",
+        "RemoveAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType, class pxrInternal_v0_25_11__pxrReserved__::TfToken instanceName)",
+        "RemoveAPI(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfType schemaType)"
+      ],
+      "symbols": [
+        "?RemoveAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@@Z",
+        "?RemoveAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfType@2@AEBVTfToken@2@@Z",
+        "?RemoveAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z",
+        "?RemoveAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@0@Z",
+        "?RemoveAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I@Z",
+        "?RemoveAPI@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@I0@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "RemoveAppliedSchema",
+    "signature": "Usd.Prim.RemoveAppliedSchema(appliedSchemaName: str) -> bool",
+    "description": "Removes an applied API schema from this prim.",
+    "parameters": "appliedSchemaName (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "RemoveAppliedSchema(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken)"
+      ],
+      "symbols": [
+        "?RemoveAppliedSchema@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "RemoveProperty",
+    "signature": "Usd.Prim.RemoveProperty(propName: str) -> bool",
+    "description": "Removes the property from this prim.",
+    "parameters": "propName (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "RemoveProperty(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken propName)"
+      ],
+      "symbols": [
+        "?RemoveProperty@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEAA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "SetActive",
+    "signature": "Usd.Prim.SetActive(active: bool) -> bool",
+    "description": "Sets the active on this prim.",
+    "parameters": "active (bool).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "SetActive(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, bool active)"
+      ],
+      "symbols": [],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "SetChildrenReorder",
+    "signature": "Usd.Prim.SetChildrenReorder(order: list[str])",
+    "description": "Sets the children reorder on this prim.",
+    "parameters": "order (list[str]).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "SetChildrenReorder(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::vector<class pxrInternal_v0_25_11__pxrReserved__::TfToken,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::TfToken> > order)"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "SetInstanceable",
+    "signature": "Usd.Prim.SetInstanceable(instanceable: bool)",
+    "description": "Sets the instanceable on this prim.",
+    "parameters": "instanceable (bool).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "SetInstanceable(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, bool instanceable)"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "SetKind",
+    "signature": "Usd.Prim.SetKind(value: str) -> bool",
+    "description": "Sets the kind on this prim.",
+    "parameters": "value (str).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "SetKind(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken value)"
+      ],
+      "symbols": [
+        "?SetKind@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVTfToken@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "SetPayload",
+    "signature": "Usd.Prim.SetPayload(payload: object) -> bool",
+    "description": "Sets the payload on this prim.",
+    "parameters": "payload (object).",
+    "returns": "bool - True if the operation succeeds or the condition is met; otherwise False.",
+    "evidence": {
+      "sig_lines": [
+        "SetPayload(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfWeakPtr<class pxrInternal_v0_25_11__pxrReserved__::SdfLayer> layer, class pxrInternal_v0_25_11__pxrReserved__::SdfPath primPath)",
+        "SetPayload(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > assetPath, class pxrInternal_v0_25_11__pxrReserved__::SdfPath primPath)",
+        "SetPayload(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::SdfPayload payload)"
+      ],
+      "symbols": [
+        "?SetPayload@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBVSdfPayload@2@@Z",
+        "?SetPayload@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBVSdfPath@2@@Z",
+        "?SetPayload@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBA_NAEBV?$TfWeakPtr@VSdfLayer@pxrInternal_v0_25_11__pxrReserved__@@@2@AEBVSdfPath@2@@Z"
+      ],
+      "runtime_return": "bool"
+    }
+  },
+  {
+    "name": "SetPropertyOrder",
+    "signature": "Usd.Prim.SetPropertyOrder(order: list[str])",
+    "description": "Sets the property order on this prim.",
+    "parameters": "order (list[str]).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "SetPropertyOrder(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class std::vector<class pxrInternal_v0_25_11__pxrReserved__::TfToken,class std::allocator<class pxrInternal_v0_25_11__pxrReserved__::TfToken> > order)"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "SetSpecifier",
+    "signature": "Usd.Prim.SetSpecifier(specifier: Sdf.Specifier)",
+    "description": "Sets the specifier on this prim.",
+    "parameters": "specifier (Sdf.Specifier).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "SetSpecifier(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, enum pxrInternal_v0_25_11__pxrReserved__::SdfSpecifier specifier)"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "SetTypeName",
+    "signature": "Usd.Prim.SetTypeName(typeName: str)",
+    "description": "Sets the type name on this prim.",
+    "parameters": "typeName (str).",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "SetTypeName(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue}, class pxrInternal_v0_25_11__pxrReserved__::TfToken typeName)"
+      ],
+      "symbols": [],
+      "runtime_return": "None"
+    }
+  },
+  {
+    "name": "Unload",
+    "signature": "Usd.Prim.Unload()",
+    "description": "Unloads this prim.",
+    "parameters": "None.",
+    "returns": "None.",
+    "evidence": {
+      "sig_lines": [
+        "Unload(class pxrInternal_v0_25_11__pxrReserved__::UsdPrim {lvalue})"
+      ],
+      "symbols": [
+        "?Unload@UsdPrim@pxrInternal_v0_25_11__pxrReserved__@@QEBAXXZ"
+      ],
+      "runtime_return": "None"
+    }
+  }
+]
