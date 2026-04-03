@@ -116,6 +116,60 @@ USDGEOM_REPLACEMENTS = {
 <span class="sig-name descname"><span class="pre">SetNormalsInterpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">interpolation:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Mesh.SetNormalsInterpolation" title="Link to this definition">#</a></dt>
 <dd><p>Sets the interpolation token used for this mesh's normals.</p><p><strong>Parameters:</strong> interpolation (str) - Common values include <code class="docutils literal notranslate"><span class="pre">UsdGeom.Tokens.vertex</span></code> and <code class="docutils literal notranslate"><span class="pre">UsdGeom.Tokens.faceVarying</span></code>.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
 """,
+    "pxr.UsdGeom.Xformable.AddTranslateOp": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.AddTranslateOp">
+<span class="sig-name descname"><span class="pre">AddTranslateOp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">precision:</span> <span class="pre">UsdGeom.XformOp.Precision = UsdGeom.XformOp.PrecisionDouble</span></em>, <em class="sig-param"><span class="pre">opSuffix:</span> <span class="pre">str = &quot;&quot;</span></em>, <em class="sig-param"><span class="pre">isInverseOp:</span> <span class="pre">bool = False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.XformOp</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.AddTranslateOp" title="Link to this definition">#</a></dt>
+<dd><p>Adds a translate xform op to this xformable.</p><p><strong>Parameters:</strong> precision (UsdGeom.XformOp.Precision), default <code class="docutils literal notranslate"><span class="pre">UsdGeom.XformOp.PrecisionDouble</span></code>; opSuffix (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>; isInverseOp (bool), default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p><p><strong>Returns:</strong> UsdGeom.XformOp.</p></dd></dl>
+""",
+    "pxr.UsdGeom.Xformable.AddScaleOp": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.AddScaleOp">
+<span class="sig-name descname"><span class="pre">AddScaleOp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">precision:</span> <span class="pre">UsdGeom.XformOp.Precision = UsdGeom.XformOp.PrecisionFloat</span></em>, <em class="sig-param"><span class="pre">opSuffix:</span> <span class="pre">str = &quot;&quot;</span></em>, <em class="sig-param"><span class="pre">isInverseOp:</span> <span class="pre">bool = False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.XformOp</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.AddScaleOp" title="Link to this definition">#</a></dt>
+<dd><p>Adds a scale xform op to this xformable.</p><p><strong>Parameters:</strong> precision (UsdGeom.XformOp.Precision), default <code class="docutils literal notranslate"><span class="pre">UsdGeom.XformOp.PrecisionFloat</span></code>; opSuffix (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>; isInverseOp (bool), default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p><p><strong>Returns:</strong> UsdGeom.XformOp.</p></dd></dl>
+""",
+    "pxr.UsdGeom.Xformable.AddRotateXYZOp": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.AddRotateXYZOp">
+<span class="sig-name descname"><span class="pre">AddRotateXYZOp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">precision:</span> <span class="pre">UsdGeom.XformOp.Precision = UsdGeom.XformOp.PrecisionFloat</span></em>, <em class="sig-param"><span class="pre">opSuffix:</span> <span class="pre">str = &quot;&quot;</span></em>, <em class="sig-param"><span class="pre">isInverseOp:</span> <span class="pre">bool = False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.XformOp</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.AddRotateXYZOp" title="Link to this definition">#</a></dt>
+<dd><p>Adds a rotateXYZ xform op to this xformable.</p><p><strong>Parameters:</strong> precision (UsdGeom.XformOp.Precision), default <code class="docutils literal notranslate"><span class="pre">UsdGeom.XformOp.PrecisionFloat</span></code>; opSuffix (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>; isInverseOp (bool), default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p><p><strong>Returns:</strong> UsdGeom.XformOp.</p></dd></dl>
+""",
+    "pxr.UsdGeom.Xformable.AddXformOp": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.AddXformOp">
+<span class="sig-name descname"><span class="pre">AddXformOp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">opType:</span> <span class="pre">UsdGeom.XformOp.Type</span></em>, <em class="sig-param"><span class="pre">precision:</span> <span class="pre">UsdGeom.XformOp.Precision = UsdGeom.XformOp.PrecisionDouble</span></em>, <em class="sig-param"><span class="pre">opSuffix:</span> <span class="pre">str = &quot;&quot;</span></em>, <em class="sig-param"><span class="pre">isInverseOp:</span> <span class="pre">bool = False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.XformOp</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.AddXformOp" title="Link to this definition">#</a></dt>
+<dd><p>Adds an xform op of the requested type to this xformable.</p><p><strong>Parameters:</strong> opType (UsdGeom.XformOp.Type); precision (UsdGeom.XformOp.Precision), default <code class="docutils literal notranslate"><span class="pre">UsdGeom.XformOp.PrecisionDouble</span></code>; opSuffix (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>; isInverseOp (bool), default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p><p><strong>Returns:</strong> UsdGeom.XformOp.</p></dd></dl>
+""",
+    "pxr.UsdGeom.Xformable.GetOrderedXformOps": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.GetOrderedXformOps">
+<span class="sig-name descname"><span class="pre">GetOrderedXformOps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list[UsdGeom.XformOp]</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.GetOrderedXformOps" title="Link to this definition">#</a></dt>
+<dd><p>Returns the ordered xform ops authored on this xformable.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> list[UsdGeom.XformOp].</p></dd></dl>
+""",
+    "pxr.UsdGeom.Xformable.GetLocalTransformation": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.GetLocalTransformation">
+<span class="sig-name descname"><span class="pre">GetLocalTransformation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Gf.Matrix4d</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.GetLocalTransformation" title="Link to this definition">#</a></dt>
+<dd><p>Computes the local transformation matrix from this xformable's ordered xform ops.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> Gf.Matrix4d.</p></dd></dl>
+""",
+    "pxr.UsdGeom.Xformable.GetXformOp": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.Xformable.GetXformOp">
+<span class="sig-name descname"><span class="pre">GetXformOp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">opType:</span> <span class="pre">UsdGeom.XformOp.Type</span></em>, <em class="sig-param"><span class="pre">opSuffix:</span> <span class="pre">str = &quot;&quot;</span></em>, <em class="sig-param"><span class="pre">isInverseOp:</span> <span class="pre">bool = False</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.XformOp</span></span></span><a class="headerlink" href="#pxr.UsdGeom.Xformable.GetXformOp" title="Link to this definition">#</a></dt>
+<dd><p>Returns the authored xform op matching the requested type.</p><p><strong>Parameters:</strong> opType (UsdGeom.XformOp.Type); opSuffix (str), default <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>; isInverseOp (bool), default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p><p><strong>Returns:</strong> UsdGeom.XformOp.</p></dd></dl>
+""",
+    "pxr.UsdGeom.XformOp.GetOpType": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.XformOp.GetOpType">
+<span class="sig-name descname"><span class="pre">GetOpType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UsdGeom.Type</span></span></span><a class="headerlink" href="#pxr.UsdGeom.XformOp.GetOpType" title="Link to this definition">#</a></dt>
+<dd><p>Returns the op type for this xform op.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> UsdGeom.Type.</p></dd></dl>
+""",
+    "pxr.UsdGeom.XformOp.Set": """
+<dl class="py method">
+<dt class="sig sig-object py" id="pxr.UsdGeom.XformOp.Set">
+<span class="sig-name descname"><span class="pre">Set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value:</span> <span class="pre">Any</span></em>, <em class="sig-param"><span class="pre">time:</span> <span class="pre">Usd.TimeCode = Usd.TimeCode.Default()</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.UsdGeom.XformOp.Set" title="Link to this definition">#</a></dt>
+<dd><p>Sets the value of this xform op.</p><p><strong>Parameters:</strong> value (Any); time (Usd.TimeCode), default <code class="docutils literal notranslate"><span class="pre">Usd.TimeCode.Default()</span></code>.</p><p><strong>Returns:</strong> bool.</p></dd></dl>
+""",
 }
 
 
@@ -183,15 +237,6 @@ FILES = {
 }
 
 INSERTS = {
-    ROOT / "Usd.html": {
-        "pxr.Usd.Prim.IsValid": ("pxr.Usd.Prim", USD_REPLACEMENTS["pxr.Usd.Prim.IsValid"]),
-        "pxr.Usd.Prim.GetPath": ("pxr.Usd.Prim", USD_REPLACEMENTS["pxr.Usd.Prim.GetPath"]),
-        "pxr.Usd.Prim.GetStage": ("pxr.Usd.Prim", USD_REPLACEMENTS["pxr.Usd.Prim.GetStage"]),
-        "pxr.Usd.Prim.GetParent": ("pxr.Usd.Prim", USD_REPLACEMENTS["pxr.Usd.Prim.GetParent"]),
-        "pxr.Usd.Prim.GetName": ("pxr.Usd.Prim", USD_REPLACEMENTS["pxr.Usd.Prim.GetName"]),
-        "pxr.Usd.Prim.IsActive": ("pxr.Usd.Prim", USD_REPLACEMENTS["pxr.Usd.Prim.IsActive"]),
-        "pxr.Usd.Attribute.IsValid": ("pxr.Usd.Attribute", USD_REPLACEMENTS["pxr.Usd.Attribute.IsValid"]),
-    },
     ROOT / "UsdGeom.html": {
         "pxr.UsdGeom.Mesh.GetPointsAttr": ("pxr.UsdGeom.Mesh", USDGEOM_REPLACEMENTS["pxr.UsdGeom.Mesh.GetPointsAttr"]),
         "pxr.UsdGeom.Mesh.GetNormalsAttr": ("pxr.UsdGeom.Mesh", USDGEOM_REPLACEMENTS["pxr.UsdGeom.Mesh.GetNormalsAttr"]),
