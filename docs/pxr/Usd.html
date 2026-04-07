@@ -4271,7 +4271,11 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.AddAppliedSchema">
 <span class="sig-name descname"><span class="pre">AddAppliedSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">appliedSchemaName:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.AddAppliedSchema" title="Link to this definition">#</a></dt>
-<dd><p>Adds an applied API schema to this prim.</p><p><strong>Parameters:</strong> appliedSchemaName (str).</p><p><strong>Returns:</strong> bool - True if the operation succeeds or the condition is met; otherwise False.</p></dd></dl>
+<dd><p>Adds an applied API schema to this prim.</p><p><strong>Parameters:</strong> appliedSchemaName (str).</p><p><strong>Examples:</strong></p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pxr</span><span class="w"> </span><span class="kn">import</span> <span class="n">Usd</span>
+<span class="n">add_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">prim</span><span class="o">.</span><span class="n">AddAppliedSchema</span><span class="p">(</span><span class="s2">&quot;MaterialBindingAPI&quot;</span><span class="p">)</span>
+</pre></div></div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pxr</span><span class="w"> </span><span class="kn">import</span> <span class="n">Usd</span>
+<span class="n">add_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">prim</span><span class="o">.</span><span class="n">AddAppliedSchema</span><span class="p">(</span><span class="s2">&quot;CollectionAPI:plasticStuff&quot;</span><span class="p">)</span>
+</pre></div></div><p><strong>Returns:</strong> bool - True if the API schema name is added successfully, or is already present in the current edit target.</p></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.ApplyAPI">
