@@ -4323,7 +4323,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.ClearTypeName">
 <span class="sig-name descname"><span class="pre">ClearTypeName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pxr.Usd.Prim.ClearTypeName" title="Link to this definition">#</a></dt>
-<dd><p>Clears the authored type name on this prim.</p><p><strong>Parameters:</strong> None.</p><p><strong>Returns:</strong> bool - True if the operation succeeds or the condition is met; otherwise False.</p></dd></dl>
+<dd><p>Clears the authored type name on this prim at the current edit target.</p><p><strong>Parameters:</strong> None.</p><p><strong>Examples:</strong></p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># before: prim.GetTypeName() == &quot;Xform&quot;</span>
+<span class="n">clear_result</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">prim</span><span class="o">.</span><span class="n">ClearTypeName</span><span class="p">()</span>
+<span class="c1"># after: prim.GetTypeName() == &quot;&quot;  # undefined type name</span>
+</pre></div></div><p><strong>Returns:</strong> bool - True on success.</p></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pxr.Usd.Prim.ComputeExpandedPrimIndex">
